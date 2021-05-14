@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -133,6 +133,8 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ALWTYP"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ASNUM"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ALWVRF"/>
@@ -146,6 +148,10 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="ALWCHG"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ALWN02"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ALWC01"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ALWC02"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ALWSNN"/>
       <elementValue elementRef="TRIM" value="false"/>
@@ -163,7 +169,7 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TRNID"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SCNDWN_"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SCNDWN"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ALWLOC"/>
       <elementValue elementRef="TRIM" value="false"/>
@@ -171,11 +177,48 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ALWPYR"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ALWTYP"/>
-      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" key="false" length="3" name="ALWTYP" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="ASNUM" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="ALWVRF" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="9" name="INUMBR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="9" name="ALWDQT" nullable="false" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="9" name="ALWDTL" nullable="false" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="9" name="ALWCHG" nullable="false" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="8" name="ALWN02" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="150" name="ALWC01" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="150" name="ALWC02" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="ALWSNN" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="ALWBGDT" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="ALWENDT" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="ALWTRDT" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="ALWFPR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="ALWFYR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="9" name="ALWCHGOR" nullable="false" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="11" name="TRNID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="9" name="SCNDWN" nullable="false" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="ALWLOC" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="ALWPPR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="ALWPYR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_f_gQ4LQnEeuCt_JUHmOsXA-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="alw537ppf">
       <column comment="" defaultValue="" key="false" length="-1" name="ASNUM" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="ASNUM"/>
       </column>
@@ -237,8 +280,58 @@
         <additionalField key="AVRO_TECHNICAL_KEY" value="ALWTYP"/>
       </column>
     </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="alw537ppf" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row1.ASNUM" name="ASNUM" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWVRF" name="ALWVRF" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.INUMBR" name="INUMBR" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWDQT" name="ALWDQT" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWDTL" name="ALWDTL" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWCHG" name="ALWCHG" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWN02" name="ALWN02" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWSNN" name="ALWSNN" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWBGDT" name="ALWBGDT" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWENDT" name="ALWENDT" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWTRDT" name="ALWTRDT" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWFPR" name="ALWFPR" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWFYR" name="ALWFYR" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWCHGOR" name="ALWCHGOR" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.TRNID" name="TRNID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.SCNDWN " name="SCNDWN_" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWLOC" name="ALWLOC" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWPPR" name="ALWPPR" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWPYR" name="ALWPYR" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.ALWTYP" name="ALWTYP" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="ALWTYP" type="id_String"/>
+        <mapperTableEntries name="ASNUM" type="id_Float"/>
+        <mapperTableEntries name="ALWVRF" type="id_Float"/>
+        <mapperTableEntries name="INUMBR" type="id_BigDecimal"/>
+        <mapperTableEntries name="ALWDQT" type="id_BigDecimal"/>
+        <mapperTableEntries name="ALWDTL" type="id_BigDecimal"/>
+        <mapperTableEntries name="ALWCHG" type="id_BigDecimal"/>
+        <mapperTableEntries name="ALWN02" type="id_Float"/>
+        <mapperTableEntries name="ALWC01" type="id_String"/>
+        <mapperTableEntries name="ALWC02" type="id_String"/>
+        <mapperTableEntries name="ALWSNN" type="id_Float"/>
+        <mapperTableEntries name="ALWBGDT" type="id_BigDecimal"/>
+        <mapperTableEntries name="ALWENDT" type="id_BigDecimal"/>
+        <mapperTableEntries name="ALWTRDT" type="id_BigDecimal"/>
+        <mapperTableEntries name="ALWFPR" type="id_Float"/>
+        <mapperTableEntries name="ALWFYR" type="id_Float"/>
+        <mapperTableEntries name="ALWCHGOR" type="id_BigDecimal"/>
+        <mapperTableEntries name="TRNID" type="id_BigDecimal"/>
+        <mapperTableEntries name="SCNDWN" type="id_BigDecimal"/>
+        <mapperTableEntries name="ALWLOC" type="id_BigDecimal"/>
+        <mapperTableEntries name="ALWPPR" type="id_Float"/>
+        <mapperTableEntries name="ALWPYR" type="id_Float"/>
+      </inputTables>
+    </nodeData>
   </node>
-  <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="352" posY="64">
+  <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="544" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -337,22 +430,26 @@
       </column>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="alw537ppf" lineStyle="0" metaname="alw537ppf" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="alw537ppf"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_04d02b88-c827-4d71-a2aa-27621928ebe2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VKi41hMEe464ju48UmsAIXlza5qt6RhtB6K4zEq2wYrl+I+O36nk1m2lDpUziqjuAGLiIqh9MFvw
-yJYtoe0peQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b7f059ef-6d20-4209-b4d7-cf6eea33b71c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aiEezHLknK01uf+49fiJQLKyXn+4Bhyn9mLj1UBVm8cz/OF8b+1kwbDAljWlGqeGylb4yAZ+f/KU
-oaL+IwNvcw==</DigestValue></Reference></SignedInfo><SignatureValue>nwD47CtyrtpZKkDTu+JXh7bvUPM+hrXprbJ6wQq1l61c0D9YAf11Qx7jTphHw8Kf4539S3B/Mm8r
-aSde1hd7IqyViQasnkS/lQ1z65vffWOXn1Uo/HGWuKbhld5GJZENfwGOKJr2rsUw6+yW7t/u9zdi
-owU8Cnmv84Iqa13TezBSPZ3MNcHImGmXq8+yTpWePiRCvjlg2mEYHCWeou7WaV8tZ+y5yJ9Y4JhB
-H0j7ujFCcGPycWpCR+ibT1yhQO5AlgLiJm5/5tt91Tzqi5qSXAbetsbQ1rDIprcjnlqXj0o+q2tC
-QigQshHG55GJrJ6mj7rzVWI359CLNQjwoGN6Tg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4ab35c69-43ed-4655-b0db-a8260c692992"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DDBpKooeVYj2agWCvt9jDFYrfXWAsPnpUPH9YLFKJRmwIaLwqme/WVNpJzq9leUr8XhXa6SFnz8U
+Ybk2CQVxrg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b6911c98-7131-4d9e-8897-1f6bad906aa9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HoJJupIP/Yb9q+eWz0EFyFpFI2jw/+wtu0NhPO/EnjWjujpy0wiSLNnOJP6iRIIWU2O/OGyNIvFQ
+KQUZesifGg==</DigestValue></Reference></SignedInfo><SignatureValue>lVuBOi7nia38iWGpRpDnZre0SOrqSpXyBH1cmuN4G4Jo660ukdPNXu8wp+vYUsZVjMUOvccyAwkF
+dNhBXK0XUz0crpth2bxXqeE1IEJJqqP16WZcxl+bq6KWlGZfEC5AWl7k1iRnazjkZP+qz5tcdu9r
+32QntJqbTTRcSazon5uBJ4Mb2BocGKj1uInnwtJbp+gE/o/UVq6nr7xxC6+8wrujjzxo8cl/lTg/
+IJCNLK5v+vNZ2KYYFrcyfhw+ta9YGUvzEe+dSFx0YXJyb5D3PzC9/jVVq0cgdzbXxb3Z8198/0ZJ
+aUrygSBwwkwmmvqXYeTdLZtUZrqB3yx5J++o9w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -374,4 +471,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b7f059ef-6d20-4209-b4d7-cf6eea33b71c" Target="#_04d02b88-c827-4d71-a2aa-27621928ebe2"><Timestamp>2021-05-14 14:49:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b6911c98-7131-4d9e-8897-1f6bad906aa9" Target="#_4ab35c69-43ed-4655-b0db-a8260c692992"><Timestamp>2021-05-14 15:01:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -138,36 +138,62 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="FISCAL_YEAR"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Fiscal_Year"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FISCAL_QUARTER"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Fiscal_Quarter"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FISCAL_MONTH"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Fiscal_Month"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FISCAL_WEEK"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Fiscal_Week"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="DC"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DEPT"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Dept"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="REG"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Reg"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="OT"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TEMP"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Temp"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <metadata connector="FLOW" name="tDBInput_1">
-      <column comment="" defaultValue="" key="false" length="-1" name="FISCAL_YEAR" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="Fiscal_Year" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Fiscal_Quarter" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Fiscal_Month" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Fiscal_Week" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="DC" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="Dept" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="Reg" nullable="true" originalLength="-1" pattern="" precision="4" sourceType="MONEY" type="id_Object" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="OT" nullable="true" originalLength="-1" pattern="" precision="4" sourceType="MONEY" type="id_Object" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="Temp" nullable="true" originalLength="-1" pattern="" precision="4" sourceType="MONEY" type="id_Object" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="384" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_s_l2QLTbEeuJcYSNjO9-vA-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="bod_dollar">
+      <column comment="" key="false" length="-1" name="FISCAL_YEAR" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="FISCAL_YEAR"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="FISCAL_QUARTER" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="FISCAL_QUARTER" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="FISCAL_QUARTER"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="FISCAL_MONTH" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="FISCAL_MONTH" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="FISCAL_MONTH"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="FISCAL_WEEK" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="FISCAL_WEEK" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="FISCAL_WEEK"/>
       </column>
       <column comment="" key="false" length="-1" name="DC" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
@@ -186,8 +212,34 @@
         <additionalField key="AVRO_TECHNICAL_KEY" value="TEMP"/>
       </column>
     </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="bod_dollar" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row1.Fiscal_Year" name="FISCAL_YEAR" type="id_String"/>
+        <mapperTableEntries expression="row1.Fiscal_Quarter" name="FISCAL_QUARTER" type="id_String"/>
+        <mapperTableEntries expression="row1.Fiscal_Month" name="FISCAL_MONTH" type="id_String"/>
+        <mapperTableEntries expression="row1.Fiscal_Week" name="FISCAL_WEEK" type="id_String"/>
+        <mapperTableEntries expression="row1.DC" name="DC" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.Dept" name="DEPT" type="id_String"/>
+        <mapperTableEntries expression="row1.Reg" name="REG" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="row1.OT" name="OT" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="row1.Temp" name="TEMP" nullable="true" type="id_Double"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="Fiscal_Year" type="id_String"/>
+        <mapperTableEntries name="Fiscal_Quarter" type="id_String"/>
+        <mapperTableEntries name="Fiscal_Month" type="id_String"/>
+        <mapperTableEntries name="Fiscal_Week" type="id_String"/>
+        <mapperTableEntries name="DC" type="id_Integer"/>
+        <mapperTableEntries name="Dept" type="id_String"/>
+        <mapperTableEntries name="Reg" nullable="true" type="id_Object"/>
+        <mapperTableEntries name="OT" nullable="true" type="id_Object"/>
+        <mapperTableEntries name="Temp" nullable="true" type="id_Object"/>
+      </inputTables>
+    </nodeData>
   </node>
-  <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="448" posY="64">
+  <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="576" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -253,22 +305,26 @@
       </column>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="bod_dollar" lineStyle="0" metaname="bod_dollar" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="bod_dollar"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4fee4340-20ac-432f-a81b-4e31e279e57e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OxyPfEFM3lJWk0u6QmzU9HZ7slt6/Tz2qVsiYxLtq18+s8qCscjl6nS9htZn2Or9ajpI93xBzjo8
-qDmiVUwXzw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0729ead9-287b-47d5-815d-d387991028bb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kRcfwQXKFnqJhJk/jfA728JPu16RNYRLmjSfLRMYVLtU8hhEfYaEo8zNbkOAJABs2xqjacALUHnV
-h9tKexznqw==</DigestValue></Reference></SignedInfo><SignatureValue>K8YwOBcBYP6t92vUk2jOOATJJdI1HlRUbEq6tN/jBduln+XuuUQ5GrotROZDwJvEFky+2syM67Y4
-Vn2ufFh/X6W+IxBzlPgZCwycF8RmJkAlBwZIMjiXAQfg6kD0WBq9dKkn6R1aNK/P2XfNfhIL0qu0
-hUzX5J2JXSN6cFme42tKp4o8gluBrTbDLSHlL9ZVytEIrgFmEC8s+cJtYJu0w9tEuxAUTRnu/PhH
-5053Z4VJ0xTc154xClk3mwVBgLLumm5LrmD4zG+v9eS4kjht93YNNmr/0J/RsC97yonguh9jer4f
-7RAb2h6sz/rqcM1bpuHQKdyXR0Z+d3HWX5j4ow==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_31b6e9da-b899-4bfe-a5e4-7d5e491e5261"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qRawdb9b7sIAU6m4ZRydFXyVRZQB4jUJgMcAFAo3awSn+6FyGTsZlGSNBDZ3psqTI6MT68iSDlk3
+2O3713nhuQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d89a819d-87fb-46fd-8181-9bcc1411cdec"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>uEMElpKka/M2EQUOSIhWpyiPT/aL89srvYa784QeZueNCGsg8uuQSSO4nYKZNUECf9kcQ06PeBT2
+HQaWherG7w==</DigestValue></Reference></SignedInfo><SignatureValue>jRh+ShOq7I+41ziD8ftCINoTNag15a3TqAo6PSL+nY3vF1e/KnhAVhdGOXRyaIG0ZNw0CHweTKcv
+YDJ8JcgkirD4IeSoV57jQO0rDOsrXQXCeqrH5J7uZaM3AhQYKp0bM4iCwv11Z6LjiIBvI3r2ax1P
+5vSdC5EhqUE3k9Qo9D0Cuxc+iyPHO+ofXO3WBBGhi9Qf9wrAFttqbGAlPhCJ84bdVjVTHWBDELOC
+XylqXFUqH4E9eMK4FZEj27opbmYZBTxtDqoCoVkMbyKK5GcIkDX+FC552XjlD0DUFTECJBWnTMyW
+qUR344yDF9/UBlPmvGC7b7VAeyGec3hJlk2/VA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -290,4 +346,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0729ead9-287b-47d5-815d-d387991028bb" Target="#_4fee4340-20ac-432f-a81b-4e31e279e57e"><Timestamp>2021-05-14 20:57:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d89a819d-87fb-46fd-8181-9bcc1411cdec" Target="#_31b6e9da-b899-4bfe-a5e4-7d5e491e5261"><Timestamp>2021-05-14 21:01:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

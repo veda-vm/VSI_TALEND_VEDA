@@ -302,15 +302,40 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;BASETABLE_file_&quot;+TalendDate.formatDate(&quot;MMddyyyy&quot;,TalendDate.getCurrentDate())+&quot;*.csv&quot;);&#10;&#10;//TalendDate.formatDate(&quot;MMddyyyy&quot;,TalendDate.getCurrentDate())&#10;//Vitamin_Shoppe_cancelled_subscriptions_09102019014014"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+  <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_1"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;the end is near&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="0"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
+    <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJava_1"/>
+    <metadata connector="FLOW" name="tDie_1"/>
+  </node>
+  <node componentName="tStatCatcher" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="864" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tStatCatcher_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tStatCatcher_1">
+      <column defaultValue="" key="false" length="0" name="moment" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="pid" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="father_pid" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="root_pid" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="8" name="system_pid" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="50" name="project" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="job" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="job_repository_id" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="job_version" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="50" name="context" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="origin" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="message_type" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="message" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="8" name="duration" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+    </metadata>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFTPGet_1" offsetLabelX="0" offsetLabelY="0" source="tFTPGet_1" target="tDBRow_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSendMail_2" offsetLabelX="0" offsetLabelY="0" source="tSendMail_2" target="tDie_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk3"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_2" offsetLabelX="0" offsetLabelY="0" source="tDBRow_2" target="tSendMail_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
@@ -328,12 +353,9 @@
     <elementParameter field="MEMO_JAVA" name="CONDITION" value=" ((int)globalMap.get(&quot;test&quot;)) == 0"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If1"/>
   </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSetGlobalVar_1" target="tJava_1">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((int)globalMap.get(&quot;test&quot;)) == 1"/>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSetGlobalVar_1" target="tFTPGet_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="  ((int)globalMap.get(&quot;test&quot;)) == 1"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If2"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tFTPGet_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk3"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPGet_1"/>
@@ -361,17 +383,22 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3747ce11-a799-49b0-92a7-2fb42b93a07e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>R3oc1dmYq0n3Sdo3L1JowpmDrf/gvdMRaySJSIOW2QZVrATch2e25XPt9yjEiXRPEnODXoEVbE2G
-Hppc+9BWMA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_43901541-59bf-4e80-b96a-2efd1cb13c57"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>egrteAk4Xp/AAqaboQcvL3HSwsGOVaBaTQrXy+9Bv3lEuXun0Pc94OOrTjTSCf0pGdEXdVDzZf7m
-7BEsyCb/0w==</DigestValue></Reference></SignedInfo><SignatureValue>KTDfYxeQ9CeS44mkXqnVe7hMgzciqjB6oSc1ptb72hM7R7iJv2WXJkUgJl2GRvXs6LrAEOLCeXJa
-5j85QmDVGw4HwCaQQEx3caR82rn/5+zrIIBbAmmyGsL3reqBNjBFHWkxRtsKDcyZXaJZYdOF07NT
-UZSTJWvTHtULm5KUfKHgTIeRtu174QEJee/HXAdUzgZllw8W5JZvxql3BGiZa+bfllklUHfeo2aP
-xPmJZndO7BRFlDjlehm7MzleQXUwf3mSgjqEIWtrtln+ED5KRrVIkXuMrJT65tsmhyCu6TOCNYay
-1duB80XgHeI3FfDzjyNVKe4+FXj8r6nceXM0hQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tStatCatcher_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_43671499-f922-428c-8f10-5a32252931ee"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>75rACKXpHvAAsoAMmI/JHTqiBRfwv9hDV6oi3GfiptixXiI6iBem9Z2kHjyDfA0rZFdONmzuCMmv
+FRqtndVuTg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_83d0a692-91f4-4c33-9fa5-39858a85a3b2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qBr5iGv5ucZtfgoFjTnXCGOkTmoFWK06LZ5A8OUyiGk3GG8QlRdCS3Em2/HPRwPwnTQhgZsOgBaV
+9wlIsX6siw==</DigestValue></Reference></SignedInfo><SignatureValue>WrEuF+rxZx/9igp5/0p+LBFwFNf8aUCxRIFTpnOq+6YYXUIdTD3N0QeIwMQ5J3oGQKriUuaXfut9
+o5IAsFOwKCVh/oUSR/CZ9UuAvQDEUWo/SaXwQ1hxBNAlvIJgWgfbY33kE5C9m6xmM2XwcH16vS8Z
+LIsNIJNoR7FPs1ZpZ71Rc8VCYQbvLZI+GVqmArExL4H82TeDowX+BEUJ0Xkp78l/Cun5VwGF3CbI
+gVmG4HaxY9PWrXoh+5pi4Afqsn2wLyyFZ44rt78785L6EGM4Y7dYimryAbN5kdH5FFB7FODOxThS
+43lScG5cm9/wInl+COmSsfaauftSt8MiFaWYbQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -393,4 +420,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_43901541-59bf-4e80-b96a-2efd1cb13c57" Target="#_3747ce11-a799-49b0-92a7-2fb42b93a07e"><Timestamp>2021-06-04 18:21:50</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_83d0a692-91f4-4c33-9fa5-39858a85a3b2" Target="#_43671499-f922-428c-8f10-5a32252931ee"><Timestamp>2021-06-04 19:06:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

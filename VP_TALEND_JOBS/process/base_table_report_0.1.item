@@ -111,7 +111,6 @@
   </parameters>
   <node componentName="tFTPGet" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPGet_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TEXT" name="HOST" value="&quot;13.66.58.68&quot;"/>
@@ -163,8 +162,7 @@
   </node>
   <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TEXT" name="TO" value="&quot;BIAlerts@vitaminshoppe.com&quot;"/>
+    <elementParameter field="TEXT" name="TO" value="&quot;vaishali.patil@vitaminshoppe.com&quot;"/>
     <elementParameter field="TEXT" name="FROM" value="&quot;From_Mail@vitaminshoppe.com&quot;"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
     <elementParameter field="TEXT" name="PERSONAL_NAME" show="false" value="&quot;sender&quot;"/>
@@ -195,8 +193,7 @@
   </node>
   <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TEXT" name="TO" value="&quot;BIAlerts@vitaminshoppe.com&quot;"/>
+    <elementParameter field="TEXT" name="TO" value="&quot;vaishali.patil@vitaminshoppe.com&quot;"/>
     <elementParameter field="TEXT" name="FROM" value="&quot;From_Mail@vitaminshoppe.com&quot;"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
     <elementParameter field="TEXT" name="PERSONAL_NAME" show="false" value="&quot;sender&quot;"/>
@@ -229,9 +226,15 @@
       </column>
     </metadata>
   </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="{&#10;  &#10;  System.exit(99);&#10;} "/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_1"/>
+  </node>
   <node componentName="tSnowflakeRow" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="768" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -261,13 +264,11 @@
   </node>
   <node componentName="tInfiniteLoop" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tInfiniteLoop_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="WAIT_MS" value="900000"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tSnowflakeRow" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="192" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -297,7 +298,6 @@
   </node>
   <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TABLE" name="VARIABLES">
       <elementValue elementRef="KEY" value="&quot;test&quot;"/>
       <elementValue elementRef="VALUE" value="(int)row1.FLAG"/>
@@ -309,46 +309,32 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="96">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="{&#10;  &#10;  System.exit(99);&#10;} "/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJavaRow_1"/>
-  </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFTPGet_1" offsetLabelX="0" offsetLabelY="0" source="tFTPGet_1" target="tDBRow_2">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tSendMail_2" offsetLabelX="0" offsetLabelY="0" source="tSendMail_2" target="tJavaRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_2" offsetLabelX="0" offsetLabelY="0" source="tDBRow_2" target="tSendMail_2">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
   </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tInfiniteLoop_1" offsetLabelX="0" offsetLabelY="0" source="tInfiniteLoop_1" target="tDBRow_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
   </connection>
   <connection connectorName="MAIN" label="row1" lineStyle="0" metaname="MAIN" offsetLabelX="0" offsetLabelY="0" source="tDBRow_1" target="tSetGlobalVar_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSetGlobalVar_1" target="tSendMail_1">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((int)globalMap.get(&quot;test&quot;)) == 0"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If2"/>
-  </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSetGlobalVar_1" target="tFTPGet_1">
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSetGlobalVar_1" target="tFTPGet_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((int)globalMap.get(&quot;test&quot;)) == 1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If1"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSetGlobalVar_1" target="tSendMail_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((int)globalMap.get(&quot;test&quot;)) == 0"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If2"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPGet_1"/>
@@ -375,18 +361,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5bed3d6e-e9fb-496b-b165-233b1bd37d09"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MBdAATi/UFk88+9mqqZRgHznB84GQy1LaQ/9fiZ/j5edg5BQHDUs8gJ79b2jhPh1JtBX1zzep8e5
-M3LhuFDCEA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6a121e35-e9e1-4585-990b-0de28bacf54c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NMLUKnx5wRHQ4dIOgXL20ohHDF1xzyjIuZbGpYS3Jh7WEV9eKJbTfiq7k8CHBBnXtvi0TqHgeEl/
-hUCPX5qhqg==</DigestValue></Reference></SignedInfo><SignatureValue>MxUoSZw2Gl295hXIHNIl0F0ANupNp8N7KtHBCqiSIlWc/ihwTkLpgAtnbcSuMX/qOCKbpQN9nh4C
-lh6NCNQ0dI6V7X4ux/6H6MksP3kxqz275/GeKkeoun4cOowGilY/HT7VwRq2W/fRWfTghwmbtvUH
-Eaf5xfer4ECpRzfHPIXNvXWdmLgKaoS6fEpyCCdgQsucdtcg3ecdRjJnbHtgmKfyGF+StUSCqI8O
-pSIS5kQ02Klcv4j+ZceWnuZXEIz0fEq+L6B1HoB5tmh+orTlWgs5xPwm7GhQQxJK65GN9jg4L2I4
-9rY3D6cGsmljc6O7ZZl2WuaXgieRdfWDjPWKdA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_564b697d-136f-4fae-9ad0-8f579d60d9d8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Y75sVvOT68cOogQVzZxhqh86+cTnQ+jDhLKes8JxcJOHWL7kpzx3ECJFD/Ge2YzzHqHSCoAidVuG
+asWZ20CRow==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_70ecf683-bd0c-4069-a9c0-a5c8a65ae77f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ayirYtlf7cRxRoXsroRtr3xwS77oQ2m8D2L28sGQl/Fuc3GYN4l7b03Sm1PKPtqwP/6mUgprAAe0
+8uADvDl19g==</DigestValue></Reference></SignedInfo><SignatureValue>iekKG0ltoJIYGKsLCuW/4tx+ko2SpBwCATzvPVo0xoSHyE+CXyEpKt9hYFl1FSZa//r6voc3dDC2
+/UAIgWrblcUKNrLJETzy5Z7VEgzURvaES5UGhzOKh5Ex5ie/74JB3EV3GivDDtR6yyieQZPHJkog
+eISlE1WLymC9he+dPZnSeGqKO3EI+kMk8KAbkE5scBDyEVvD3RjJKeUOKTPX62DsmUVPxkUZr6Qz
+ED6Gx/a0LhNY4fKUqphotQWrhOTcIpArLMwtyfJnQHeX4g4dUqCmmFOQL1BCSjB5MIjA6656A4eJ
+61nZpUqFhLKOyG8T7HfgdTWkoLcYYGpuece/TQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -408,4 +389,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6a121e35-e9e1-4585-990b-0de28bacf54c" Target="#_5bed3d6e-e9fb-496b-b165-233b1bd37d09"><Timestamp>2021-06-04 16:02:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_70ecf683-bd0c-4069-a9c0-a5c8a65ae77f" Target="#_564b697d-136f-4fae-9ad0-8f579d60d9d8"><Timestamp>2021-06-04 16:04:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

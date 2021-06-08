@@ -597,27 +597,9 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="256">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="context.dte = context.dte+&quot;\n&quot;+input_row.CALENDAR_DATE;&#10;context.receipts = context.receipts+&quot;\n&quot;+input_row.RECEIPTS;&#10;context.dollars = context.dollars+&quot;\n&quot;+input_row.RECEIPTS;&#10;&#10;"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="MAIN" name="tJavaRow_1">
-      <column comment="" key="false" length="-1" name="CALENDAR_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="di.date.date" value="true"/>
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CALENDAR_DATE"/>
-        <additionalField key="di.column.logicalType" value="date"/>
-      </column>
-      <column comment="" key="false" length="-1" name="RECEIPTS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIPTS"/>
-      </column>
-      <column comment="" key="false" length="-1" name="CHAIN_INV_DOLLARS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CHAIN_INV_DOLLARS"/>
-      </column>
-    </metadata>
-  </node>
   <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="TO" value="&quot;Vaishali.patil@vitaminshoppe.com&quot;"/>
     <elementParameter field="TEXT" name="FROM" value="&quot;From_Mail@vitaminshoppe.com&quot;"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
@@ -647,6 +629,26 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSendMail_3"/>
   </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.dte = context.dte+&quot;\n&quot;+input_row.CALENDAR_DATE;&#10;context.receipts = context.receipts+&quot;\n&quot;+input_row.RECEIPTS;&#10;context.dollars = context.dollars+&quot;\n&quot;+input_row.RECEIPTS;&#10;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="MAIN" name="tJavaRow_1">
+      <column comment="" key="false" length="-1" name="CALENDAR_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CALENDAR_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="-1" name="RECEIPTS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIPTS"/>
+      </column>
+      <column comment="" key="false" length="-1" name="CHAIN_INV_DOLLARS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CHAIN_INV_DOLLARS"/>
+      </column>
+    </metadata>
+  </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_3" offsetLabelX="0" offsetLabelY="0" source="tDBRow_3" target="tDBRow_4">
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
@@ -671,10 +673,12 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tSendMail_3">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tJavaRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <subjob>
@@ -707,13 +711,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3469d2d8-810e-408f-852c-4523766f736c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7MJt/3ghhcxSRZV+k175I6HFxobmAroSgoM4YfYIYWYE3SInKLNnAc4KvHvBUQzVVNttF8t7FsmC
-A5GRmowUIg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_10883961-7ddc-48f4-af49-46628eb224b7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oJm+pFnW3LkusxJyRHN4gXXDNQdPrAFJSR++3b1gg2vtdKM2pmIdYIUnvHGSw0DKihLfxQuLaWkY
-gc2A+J1nUA==</DigestValue></Reference></SignedInfo><SignatureValue>emp16f1MfempPhLE4UYf50mx5ROEKYmYfNpb+K2aIwc9AWa2CGBK6dlcEwx7uf4vphk+u/gsuF2N
-idSxKHCTAzvy6iCeuYjpSsEpIU6xNiXg9BVd2i1Ev1qoIos7GSAhWepsGp0qqUiMo7rpyC20Iqe7
-f0Op/N7g3ocNyah/uqwCnl9W5xtjSY7u2Abx8XjYVh5x0vVGKJvynutUl8vGzXtPIeD+3vDk6gkQ
-QS+CnYNiHnwopM6IL/wGrOtyNqA5M6qUF9TJ5WoF3gGEjFmWd3xtYjPGFtuBih+sZS1tNEr4n5Gc
-5Q12Xq4RwPMlWeT2I4Y0/Y/vUxTjTMvai+tQrg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3bc5641f-baa4-46bd-9539-ac0700414fbe"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>eAn1PWC9RN9Wm+BvpQGpI0rSHUE5+jshQ2mMh36oacM18tKKDqWWFlzLdBeuRiFmenx+rDQmatMW
+kBWH4E1wsg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a0fda74b-1587-4f51-90ad-f82ffa9234dc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>uOuW+L2ezxj5O3WoQSklkWliHafjWbicnuklqgSiUY06R3+iA3BtbMnOzBuIIMWmuO9miOrvEIgs
+sO7CwpcZLQ==</DigestValue></Reference></SignedInfo><SignatureValue>AMP3mZk2prixhvQ7KL93vu4q9TiaQ/pNf9exM1Krmq6cGTAkF2CFdfSbo0k9JBVvx7OlIvt/F7P9
+Ds4CVQwfD0NeWGaPbLzIZ1e5IIzxk110g6GiG0CQqURdflPCNlRAKKE58txnpHSmcIJGYrkaBVYF
+6xmA+B6V4+n4LwYi60WKun/uxOlfqtxPoSYKM+9PWEHgyVUqpSMqZf40vc2ZONQZWVQXUSxUzjiW
+WxR+xz5+OQlp+vA/O+ezP1vD3J3ONj8Es3gKTdrkI6wi4Oq0DsSyQ/YCUFp9NAiU1nkXGY6ULqZb
+qw9cgPOozMpnENmcONqNGSxfZlfgW3OVdKVyqg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -735,4 +744,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_10883961-7ddc-48f4-af49-46628eb224b7" Target="#_3469d2d8-810e-408f-852c-4523766f736c"><Timestamp>2021-06-08 16:31:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a0fda74b-1587-4f51-90ad-f82ffa9234dc" Target="#_3bc5641f-baa4-46bd-9539-ac0700414fbe"><Timestamp>2021-06-08 16:31:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

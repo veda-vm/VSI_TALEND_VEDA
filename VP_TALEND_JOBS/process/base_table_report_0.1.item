@@ -125,7 +125,7 @@
     <elementParameter field="PASSWORD" name="PASSPHRASE" show="false" value="wiXuUBxiyoc5L4zXsOuoEQ=="/>
     <elementParameter field="FILE" name="KEYSTORE_FILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="KEYSTORE_PASS" show="false" value="k0OOTVG4MsZpHb1iYbZyRw=="/>
-    <elementParameter field="DIRECTORY" name="LOCALDIR" value="&quot;//WNJ-FS-p02/Merchandising/Planogram Refresh Documents/Reports/Productivity/BaseTable_Sales2.xlsx&quot;"/>
+    <elementParameter field="DIRECTORY" name="LOCALDIR" value="&quot;//WNJ-FS-p02/Merchandising/Planogram Refresh Documents/Reports/Productivity/&quot;"/>
     <elementParameter field="TEXT" name="REMOTEDIR" value="&quot;/&quot;"/>
     <elementParameter field="CHECK" name="MOVE_TO_THE_CURRENT_DIRECTORY" show="false" value="true"/>
     <elementParameter field="CLOSED_LIST" name="MODE" show="false" value="ascii"/>
@@ -341,15 +341,15 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSetGlobalVar_1" target="tFTPGet_1">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="  ((int)globalMap.get(&quot;test&quot;)) == 1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If2"/>
-  </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSetGlobalVar_1" target="tSendMail_1">
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSetGlobalVar_1" target="tSendMail_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value=" ((int)globalMap.get(&quot;test&quot;)) == 0"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If1"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSetGlobalVar_1" target="tFTPGet_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="  ((int)globalMap.get(&quot;test&quot;)) == 1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If2"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPGet_1"/>
@@ -381,13 +381,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b582ab03-b4b4-4c54-9e0b-93636f44d42f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aFT9sRopc87T/zssLcyUQ+n8rttMwrUKShKvLDo6mT7yLR04jTP2LEndRAllxelf1DKT5uLGHWZv
-H3PNtOaQgQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c8daa837-319b-40b3-92a0-01deb6340e3a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>A38P3/s7RtqnCHBTchqjUkeGl3lJJY5Ahgcqhi0iShm1Z/zudI6sdJ6Gu3D9ppvZhaSnFhbajnPn
-E+GSSI+Z8g==</DigestValue></Reference></SignedInfo><SignatureValue>ois2p1lOWa/EyQpW9Mf8Sm8w8o/+DRsMO4PqX7kKbdY4rC8FmWA/EnzlCK0a/ypan8jYYa/f5caM
-sOU/kehHQ7uK+KTngc2sZYny9xI2qdzFzkHOPoGjj+jfBJSDg5HEM1W/Qfawb8gDfdpfXNBBpHWX
-FCYP3GBR2LQySpzSZskET8p/sNP/SPfbxdxMT/STeXqxb/plirZOxEpMZC0MiOrh5UXQxSU6ePXP
-jp75LWl/7H7BJcA9Q3o+IRuD0GCUVOk+8HZ0LtX8RiRl09JrK/SmIscnKzt+TGfts/njTv3d59P8
-GEw8KstyaDtGwRxgvM4+C2kCVB6x33DCDJ6h5Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_bba82e2e-4d48-463e-8e56-0c00cdc0e7ef"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3fK2M9mfos04QtrGZY1CHSH6bKXnlxKlIY7Sai6wY+QiEaQO7T3ZgPuL/YnB/BJFr1eacstFFx69
+/kDc9eZ4CQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2538b83d-c719-4c3c-bca7-c5c1973889b7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xtkyq/qItc+DKwfuDPowzjmOOI7kvcCR6COLznRJlRp4rLj0d+LS6J/SAkIE1LgUxfUw1QV/r1HR
+xFCX/4rqGg==</DigestValue></Reference></SignedInfo><SignatureValue>M+EP5DvvY1snSC4/T2IqBeaqsAYoAxQDJyljmXAaOI/KvM8nnpb91JM2a9SJSD61dWJlwjvLMsWd
+TFNOrNgG/gbX49Zee1cmGSQiSmXEf8pcDkczhN+5lNwZoBKvN7fY99H2SG4bBPCBHxZywVhI2+xf
+qT4eHvZJ8ipIQ9PN6EX5bElk9E77B4W1ax6AGMJUci0ux/EtSKDBySuf5gS6vSZibRBzdpY+GV6h
+MNErntVHsjcWKYEmsUyQc+6krmcaxQEzHslb4KxT0utYZywnYk4pVCHNqxwkvwkLLwdGCGYB9ZxB
+tvjwkPsmVqL2/rcBhNVcIcsntS3JGb+paDsCcw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -409,4 +409,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c8daa837-319b-40b3-92a0-01deb6340e3a" Target="#_b582ab03-b4b4-4c54-9e0b-93636f44d42f"><Timestamp>2021-06-09 13:46:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2538b83d-c719-4c3c-bca7-c5c1973889b7" Target="#_bba82e2e-4d48-463e-8e56-0c00cdc0e7ef"><Timestamp>2021-06-11 13:42:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

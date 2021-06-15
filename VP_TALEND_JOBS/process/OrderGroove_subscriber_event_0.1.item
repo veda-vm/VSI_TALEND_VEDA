@@ -54,7 +54,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/TalendStudio/Talend-Studio-20190620_1446-V7.2.1/Talend-Studio-20190620_1446-V7.2.1/workspace/.metadata&quot;"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Talend_7.2/Talend-Studio-20190620_1446-V7.2.1/workspace/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
@@ -625,14 +625,14 @@
     <elementParameter field="TEXT" name="FROM" value="&quot;FROM_MAIL@vitaminshoppe.com&quot;"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
     <elementParameter field="TEXT" name="PERSONAL_NAME" show="false" value="&quot;sender&quot;"/>
-    <elementParameter field="TEXT" name="CC" value=""/>
+    <elementParameter field="TEXT" name="CC" value="&quot;BIAlerts@vitaminshoppe.com&quot;"/>
     <elementParameter field="TEXT" name="BCC" value=""/>
-    <elementParameter field="TEXT" name="SUBJECT" value="&quot;Subscriber_event  file is missing from the SFTP server for today.&quot;"/>
-    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="&quot;Hello&quot;"/>
+    <elementParameter field="TEXT" name="SUBJECT" value="&quot;Subscriber_event  file not found.&quot;"/>
+    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="&quot;Subscriber Event file is missing from sftp server.&quot;"/>
     <elementParameter field="CHECK" name="CHECK_ATTACHMENT" value="true"/>
     <elementParameter field="TABLE" name="ATTACHMENTS"/>
     <elementParameter field="TABLE" name="HEADERS"/>
-    <elementParameter field="TEXT" name="SMTP_HOST" value="&quot;w2k8-vsi-exhub1&quot;"/>
+    <elementParameter field="TEXT" name="SMTP_HOST" value="&quot;Mail13.vsi-nj.vitshoppe.com&quot;"/>
     <elementParameter field="TEXT" name="SMTP_PORT" value="25"/>
     <elementParameter field="CHECK" name="SSL" value="false"/>
     <elementParameter field="CHECK" name="STARTTLS" value="false"/>
@@ -1165,11 +1165,11 @@
     <elementParameter field="TEXT" name="CC" value=""/>
     <elementParameter field="TEXT" name="BCC" value=""/>
     <elementParameter field="TEXT" name="SUBJECT" value="&quot;subscriber_event file uploaded successfully&quot;"/>
-    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="&quot;Hello&quot;"/>
+    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="&quot;Subscriber Event ETL Successful&quot;"/>
     <elementParameter field="CHECK" name="CHECK_ATTACHMENT" value="true"/>
     <elementParameter field="TABLE" name="ATTACHMENTS"/>
     <elementParameter field="TABLE" name="HEADERS"/>
-    <elementParameter field="TEXT" name="SMTP_HOST" value="&quot;w2k8-vsi-exhub1&quot;"/>
+    <elementParameter field="TEXT" name="SMTP_HOST" value="&quot;Mail13.vsi-nj.vitshoppe.com&quot;"/>
     <elementParameter field="TEXT" name="SMTP_PORT" value="25"/>
     <elementParameter field="CHECK" name="SSL" value="false"/>
     <elementParameter field="CHECK" name="STARTTLS" value="false"/>
@@ -1337,13 +1337,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_709e7172-f938-4ef4-837e-7e98f66cd6a4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VZApT+SXj0jtCr+6WmXvtN95PCbHny3z8ZOlKMLJoQsmvymvZTeW1y/3IJ7715YURnqcVaYOyshC
-hblOwt6L4A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_19ee6aac-1d7d-4a50-b22e-4989a410fe62"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Syg9DFe/qZLgYpTEZsftJwe3rdLGafKBM83IyQdfgV9zRkMyJ5g2V1Dz4nKrql1JA0pbdF56flFj
-lgmnVK1QhQ==</DigestValue></Reference></SignedInfo><SignatureValue>IlNEM+yZHIOp+HyY/Z9STRXRHhikoi2ojAYXJX6xhcyGy7Bci5ycMURLqM2wq64f9YzOMwnqS5k6
-X0rX2LwEQE5jqykesb8LsI712PdHd2dBc48RgXNrlDBnnkbrPdgsrOYp9onbhwgNLr4rWy9He3Dz
-DmCIJAgGsvzGR+Yf8Pp2y6cpVKTDJsNT5tXZJEE7j5Pnbh5rMWqR1YOH5vigJpgTxu5tza7LCxPp
-yKshBo4QBkIWVb2+WMDBO3Hw/jCx1BmEhE5OLSvYHp6Klg9NMY/vVPxd6M2hN7Q8GxVn/MtlrfMP
-Go9khrVeLczTbfy7Ez9kK7ND2pEX6/+jHuod1A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fff9e2c1-52a4-4902-b568-8c5ddd04bb2b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xEnsNwqWeembb3EU2jjHSXluebg4656lWeg3rTeLkw2OLggDvEvLXFIDYdFeIW1QTKZ1JDkhobog
+O+gzToQE6w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2b3e8a49-1083-4842-9b12-6761bfe69432"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vYT0Pzw3Um/K61peBHP7+Kfx/AwxGwC8VEerx3YCReBe2LeKm/YpkkY2lUIxvmiLFIITEkc4lBBR
+tzkgQpZw4A==</DigestValue></Reference></SignedInfo><SignatureValue>KOsR7g7RS504vb01VRqIJStQBe3upzOOFI9PvjjfCwu0ViyS/YQPPGsmN/m/XPdy/36y2QzB7atd
+tPmFFKdyVIcKLKXM064GLP8Tt0DhhBAdVc3Fx0bJtJueQ3NU30ckofaoPPn9O5F54ek+wg45JX5Q
+UH4lejLcrN6uH5aOKd7YorwoDKFS05s+6O7G08ib0aGMoahu8YvOxH3ImF0et+gChMT1wsVUz8mL
+sckNJeI6C5nt4SZu8rOMkYhnOzy9GrMkBpOzhwd04RnXsLpubJznRTmGIhgxe8/aoCt0XRPXB9th
+MxHLWjKB+Z7Xvi5V1d7nuFC+foSGMwdUXg7pnA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1365,4 +1365,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_19ee6aac-1d7d-4a50-b22e-4989a410fe62" Target="#_709e7172-f938-4ef4-837e-7e98f66cd6a4"><Timestamp>2021-04-21 20:03:53</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2b3e8a49-1083-4842-9b12-6761bfe69432" Target="#_fff9e2c1-52a4-4902-b568-8c5ddd04bb2b"><Timestamp>2021-06-15 18:03:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

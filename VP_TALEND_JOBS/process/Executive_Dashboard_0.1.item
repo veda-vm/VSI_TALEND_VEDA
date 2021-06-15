@@ -193,7 +193,7 @@
     <elementParameter field="TEXT" name="FROM" value="&quot;From_Mail@vitaminshoppe.com&quot;"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
     <elementParameter field="TEXT" name="PERSONAL_NAME" show="false" value="&quot;sender&quot;"/>
-    <elementParameter field="TEXT" name="CC" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="CC" value="&quot;BIAlerts@vitaminshoppe.com&quot;"/>
     <elementParameter field="TEXT" name="BCC" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SUBJECT" value="&quot;Executive Dashboard Successful&quot;"/>
     <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="&quot;Date:&quot; +context.dte +&quot; &quot;+&#13;&#10;&quot;Receipts :&quot; +context.receipts +&quot; &quot;+&#13;&#10;&quot;INV_Dollars  :&quot; +context.dollars &#13;&#10;&#13;&#10;"/>
@@ -582,10 +582,10 @@
     <elementParameter field="TEXT" name="FROM" value="&quot;From_Mail@vitaminshoppe.com&quot;"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
     <elementParameter field="TEXT" name="PERSONAL_NAME" show="false" value="&quot;sender&quot;"/>
-    <elementParameter field="TEXT" name="CC" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="CC" value="&quot;BIAlerts@vitaminshoppe.com&quot;"/>
     <elementParameter field="TEXT" name="BCC" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SUBJECT" value="&quot;Exexutive Dashboard Failed&quot;"/>
-    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="&quot;Executive Dashboard ETL Failed.Missing yesterday's data.&quot;"/>
     <elementParameter field="CHECK" name="CHECK_ATTACHMENT" value="true"/>
     <elementParameter field="TABLE" name="ATTACHMENTS"/>
     <elementParameter field="TABLE" name="HEADERS"/>
@@ -661,10 +661,10 @@
     <elementParameter field="TEXT" name="FROM" value="&quot;From_Mail@vitaminshoppe.com&quot;"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
     <elementParameter field="TEXT" name="PERSONAL_NAME" show="false" value="&quot;sender&quot;"/>
-    <elementParameter field="TEXT" name="CC" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="CC" value="&quot;BIAlerts@vitaminshoppe.com&quot;"/>
     <elementParameter field="TEXT" name="BCC" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SUBJECT" value="&quot;Source tables are not updated&quot;"/>
-    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="&quot;Source tables are not updated for exec dashboard.The job will run again in 5 mins.&quot;"/>
     <elementParameter field="CHECK" name="CHECK_ATTACHMENT" value="true"/>
     <elementParameter field="TABLE" name="ATTACHMENTS"/>
     <elementParameter field="TABLE" name="HEADERS"/>
@@ -779,13 +779,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7c4cfbf1-8c65-4903-9ca8-03f3a8ba2bb5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mjhbsTmFf6oRneq/628siw70zU/3zGw1uFOBFiSs1RY3yZnFW38lh/2T+fPgNf2aMnm3SvywU5Wr
-2d2D2BR1vg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_68218989-f72f-47a1-8e4b-70e62806562a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>L5T6hL3fWJsrY/Ma5qUqHnSTNKhNat7OVQb9cow3JI+rJz1Oj61EuZHF6bso0eicZOUJgf+3YDOK
-Yt5J6BbW+A==</DigestValue></Reference></SignedInfo><SignatureValue>CRN7HVhCtzMdMs8fDd1UZSOooyb2F0jva08To/FsrngXhLuz89qsTdyFmy/Vqst42stkM+uoVvgy
-bDO6j2QJj9FR656zjAtVSbvouFInrs8I+8j/Ff6rhiIfq9Zk3WyljqWawSOopvel0hCCPUISQ/O6
-xZGipqJ+mQtysjE2vhMPz+Tzjw9cJTAMGURUIqbVWE33gTvi2KxY5Xef76bcsr67+jrt+PyCZa08
-qifKTyt7nWrUvVIaxKqfhmY52SwaQwFZIFOZUALyqjPS9Q04EreDW6spPnIewB07AcWGjAp8tPa9
-keVH79fD00pNUkSpUfdIHI5nRldUgwcnv51sfw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2a0e56b3-fee6-40be-8a52-6c01d0b551f1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Kdb8XLNaom0x9Oyov+myuJkSPw8gUvTBgmdMRgNera6rG4MxYG8fnd0onlsmd7V9DYxkteaYtNIG
+sfrnRCSOhQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_28a71c8c-b6e9-4fa9-94f0-1781837196da"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZOPgWWnp3zep2HOLduLAtP5ALoaNNrV7dkrFbHBT8p9y3F1C6P/wPyK00HsHZ30hcaD+53CqQx0E
+GDoEGO0k5w==</DigestValue></Reference></SignedInfo><SignatureValue>iFVpyWl0NOksy52vQ3p9IHsbqd0n1NSyPGipKd6bZATB11K4ImQXWjwS9f8QLcOdlCUHy8FY+XGN
+0t6/XCawpeXbxSer4yHph9e3oYehP0li0WgJ9Ro46JExiKW0Z242E2k88wuyGF43K8Sw+VTkyoA7
+8tB3mdugVKKnR0bBNKtymTI9D5BqCMSXGu+imDPmIxkWWI2t6yixlDOXLrT3frnXDvhuS9lItl4l
+GT2fy76Zgyr3WAfOYRSyZ5StqVCq1B++/ZbCSfGCwEut/fqBBh6xa9RctQ27fC9IdMaL5Pt5/Z0G
+Bw6KgEIUvSxf64XX57s8qDIUk1Mf42fQgXnrJA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -807,4 +807,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_68218989-f72f-47a1-8e4b-70e62806562a" Target="#_7c4cfbf1-8c65-4903-9ca8-03f3a8ba2bb5"><Timestamp>2021-06-11 21:16:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_28a71c8c-b6e9-4fa9-94f0-1781837196da" Target="#_2a0e56b3-fee6-40be-8a52-6c01d0b551f1"><Timestamp>2021-06-15 18:16:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

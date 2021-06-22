@@ -321,8 +321,7 @@
   </node>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;//WNJ-FS-p02/Merchandising/Planogram Refresh Documents/Reports/Productivity/&quot;"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;//wva-sql-etl/SFTP/FTP_FILES/Base_table_report/&quot;"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
     <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="YES"/>
@@ -344,7 +343,6 @@
   </node>
   <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="false"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
@@ -359,8 +357,6 @@
     <elementParameter field="TEXT" name="FIRST_COLUMN" value="1"/>
     <elementParameter field="TEXT" name="LAST_COLUMN" value=""/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_fPlX4NLIEeu60PKCbPjLtw - metadata"/>
     <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
     <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
     <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
@@ -471,50 +467,49 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tFileInputExcel_1">
       <column comment="" key="false" length="35" name="VS_RTPL" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="SKU_s_With_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="_2wk_Units" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="_2wk_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="4" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="_2wk_Margin__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="4" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="SKU_s_With_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="_2wk_Units" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="11" name="_2wk_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="4" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="11" name="_2wk_Margin__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="4" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="16" name="Average___Per_Store_Per_Wk" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="17" name="Average_Units_Per_Store_Per_Week" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="18" name="Average_Margin___Per_Store_Per_Week" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="LY_SKU_s_With_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="LY_52wk_Units" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="LY_52wk_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="LY_52wk_Margin__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="4" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="TY_vs_LY_Units" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="19" name="TY_vs_LY_Units__Percent" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="17" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="17" name="TY_vs_LY_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="9" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="19" name="TY_vs_LY_Sales__Percent" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="17" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="17" name="TY_vs_LY_Margin" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="9" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="19" name="TY_vs_LY_Margin_Percent" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="17" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="LY_SKU_s_With_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="LY_52wk_Units" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="11" name="LY_52wk_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="11" name="LY_52wk_Margin__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="4" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="TY_vs_LY_Units" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="TY_vs_LY_Units__Percent" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="17" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="17" name="TY_vs_LY_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="9" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="TY_vs_LY_Sales__Percent" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="17" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="17" name="TY_vs_LY_Margin" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="9" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="TY_vs_LY_Margin_Percent" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="17" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="metadata" name="REJECT">
       <column comment="" key="false" length="35" name="VS_RTPL" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="SKU_s_With_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="_2wk_Units" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="_2wk_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="4" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="_2wk_Margin__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="4" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="SKU_s_With_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="_2wk_Units" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="11" name="_2wk_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="4" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="11" name="_2wk_Margin__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="4" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="16" name="Average___Per_Store_Per_Wk" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="17" name="Average_Units_Per_Store_Per_Week" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="18" name="Average_Margin___Per_Store_Per_Week" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="LY_SKU_s_With_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="LY_52wk_Units" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="LY_52wk_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="LY_52wk_Margin__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="4" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="TY_vs_LY_Units" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="19" name="TY_vs_LY_Units__Percent" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="17" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="17" name="TY_vs_LY_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="9" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="19" name="TY_vs_LY_Sales__Percent" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="17" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="17" name="TY_vs_LY_Margin" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="9" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="19" name="TY_vs_LY_Margin_Percent" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="17" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="LY_SKU_s_With_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="LY_52wk_Units" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="11" name="LY_52wk_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="11" name="LY_52wk_Margin__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="4" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="TY_vs_LY_Units" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="TY_vs_LY_Units__Percent" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="17" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="17" name="TY_vs_LY_Sales" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="9" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="TY_vs_LY_Sales__Percent" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="17" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="17" name="TY_vs_LY_Margin" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="9" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="TY_vs_LY_Margin_Percent" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="17" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="512" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -584,7 +579,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="RTPL_sales" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row2.VS_RTPL" name="VS_RTPL" nullable="true" type="id_String"/>
@@ -608,29 +603,28 @@
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
         <mapperTableEntries name="VS_RTPL" nullable="true" type="id_String"/>
-        <mapperTableEntries name="SKU_s_With_Sales" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="_2wk_Units" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="_2wk_Sales" nullable="true" type="id_Float"/>
-        <mapperTableEntries name="_2wk_Margin__" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="SKU_s_With_Sales" nullable="true" type="id_String"/>
+        <mapperTableEntries name="_2wk_Units" nullable="true" type="id_String"/>
+        <mapperTableEntries name="_2wk_Sales" nullable="true" type="id_String"/>
+        <mapperTableEntries name="_2wk_Margin__" nullable="true" type="id_String"/>
         <mapperTableEntries name="Average___Per_Store_Per_Wk" nullable="true" type="id_String"/>
         <mapperTableEntries name="Average_Units_Per_Store_Per_Week" nullable="true" type="id_String"/>
         <mapperTableEntries name="Average_Margin___Per_Store_Per_Week" nullable="true" type="id_String"/>
-        <mapperTableEntries name="LY_SKU_s_With_Sales" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="LY_52wk_Units" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="LY_52wk_Sales" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="LY_52wk_Margin__" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="TY_vs_LY_Units" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="TY_vs_LY_Units__Percent" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="TY_vs_LY_Sales" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="TY_vs_LY_Sales__Percent" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="TY_vs_LY_Margin" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="TY_vs_LY_Margin_Percent" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="LY_SKU_s_With_Sales" nullable="true" type="id_String"/>
+        <mapperTableEntries name="LY_52wk_Units" nullable="true" type="id_String"/>
+        <mapperTableEntries name="LY_52wk_Sales" nullable="true" type="id_String"/>
+        <mapperTableEntries name="LY_52wk_Margin__" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TY_vs_LY_Units" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TY_vs_LY_Units__Percent" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TY_vs_LY_Sales" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TY_vs_LY_Sales__Percent" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TY_vs_LY_Margin" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TY_vs_LY_Margin_Percent" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="704" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -724,6 +718,7 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -834,6 +829,7 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -954,21 +950,19 @@
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileInputExcel_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate2"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <connection connectorName="FLOW" label="RTPL_sales" lineStyle="0" metaname="RTPL_sales" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="RTPL_sales"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <subjob>
@@ -1011,13 +1005,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cb106ef9-6e68-4152-928f-716c2b2fb6d6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Wpl/87oa2yYTO3DVsevD8ON2Vd3L0Z6OfAjO+/scziXTFCC25ILOFRkT8bkamXkzqI8GQpaKxvRX
-Vk08/UPjsw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6f864311-dc65-43d2-882d-61d80aee0de1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>67R44sHZ+7Kc4KvRTWyRd0P0WnMIXm0NbwZSB0/1yvm7CkJ73bZkIdo9Zilcj9D0PkfMDpgHr0R0
-TBFQqaffKQ==</DigestValue></Reference></SignedInfo><SignatureValue>jLtiVfjXFh1kCnU0JCG+oXYa3B/3Y2bgE4onXAX6hn0DzhrihEiRAi2MLA87ZbXVZSyTJFkKr7Wz
-FV9wPDiil2x83xc/WpB1gqLDG/MUuyMjjA7P+Qm//Wr8f0tRUEZBkqeBmauwtqz++43YI0UxU7Wn
-6+4LbvdGZfEBkHzmm82qYiddbSUeNdVQ0s12I5s1ez6Q/qWtf7KYHm9CZtxNmuiYPn8I5A9zAXQa
-tKgJz504bbJDNHub1UxnA1YNlHSRc4cbAPpkH/sqIU7R+3a1v9HxL4r6W4e5OJXXkJ250vUfuA/G
-MQP5rdmEsJN9iN7lTsNJ8GNPNcOSAyWeq+hOZQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3edd1d54-c8cf-4ea1-a2cf-97433e47af43"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hrsbVLm9xFMSHJFG5YIeuWTlUKJkVkSrEe0KRZHk4BIYvaOWd0/OAThw9ICLROOSSm0dvlbjgFdh
+Ubz9sMo3Zw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9952797c-a9de-49ff-b69d-15fb433ccc89"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xNN9LKeDIbJzkgjQYKfxYbqczktimQLKS6zMPYGBVWev4D7LTkxSvDVP3O1jkJQ4jWbfp9Mid5zF
+GEIs9Vq6XA==</DigestValue></Reference></SignedInfo><SignatureValue>EX5Vnrr++HFrZYmE7nfdTDALBYG7A8GXklGtXlPWx62crjsYvUuqShwcuBiQusbz73Ak4fW1x/Sq
+9j11799BWhM7zmn8su/o5JYIZZDSlzUHbJyhL+qJ+GkzJJRS2nyW+VCLNBe6tFXty9561ztwiTcV
+VDQWRewQQK6K4nKbUWSJs2rYHkZIAUV1Ysemgtnd0uiMhtVhLnMZAgUMMBpafoM07SbQD/RzhQJt
+cx/++Yvx8hiOjFwQOTg3JqFIszsGm3KG0/vvVT65LudxFsnKTLoNje7EDkDb50CBFfFTvEwMAbgX
+JSxYnz7KwwK0FOTFLysnwPQVLJUePeJnx/hMfA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1039,4 +1033,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6f864311-dc65-43d2-882d-61d80aee0de1" Target="#_cb106ef9-6e68-4152-928f-716c2b2fb6d6"><Timestamp>2021-06-22 18:12:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9952797c-a9de-49ff-b69d-15fb433ccc89" Target="#_3edd1d54-c8cf-4ea1-a2cf-97433e47af43"><Timestamp>2021-06-22 18:36:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

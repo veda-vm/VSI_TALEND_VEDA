@@ -343,7 +343,7 @@
   </node>
   <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
-    <elementParameter field="CHECK" name="VERSION_2007" value="false"/>
+    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST">
@@ -399,7 +399,7 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="TY_vs_LY_Margin_Percent"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
-    <elementParameter field="CHECK" name="CONVERTDATETOSTRING" show="false" value="false"/>
+    <elementParameter field="CHECK" name="CONVERTDATETOSTRING" value="false"/>
     <elementParameter field="TABLE" name="DATESELECT" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="VS_RTPL"/>
       <elementValue elementRef="CONVERTDATE" value="false"/>
@@ -458,11 +458,11 @@
     </elementParameter>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="READ_REAL_VALUE" value="false"/>
+    <elementParameter field="CHECK" name="READ_REAL_VALUE" show="false" value="false"/>
     <elementParameter field="CHECK" name="STOPREAD_ON_EMPTYROW" value="false"/>
-    <elementParameter field="CHECK" name="NOVALIDATE_ON_CELL" value="false"/>
-    <elementParameter field="CHECK" name="SUPPRESS_WARN" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" show="false" value="USER_MODE"/>
+    <elementParameter field="CHECK" name="NOVALIDATE_ON_CELL" show="false" value="false"/>
+    <elementParameter field="CHECK" name="SUPPRESS_WARN" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="USER_MODE"/>
     <elementParameter field="CHECK" name="INCLUDE_PHONETICRUNS" show="false" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tFileInputExcel_1">
@@ -1092,13 +1092,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_badd67ec-9deb-4479-87e8-38023137fd4c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>51sVr4JVGGrwnkOnq3yrWb7MI240yGWqU7vNkg8msCGcck98meRstezNfD3B1uUTaGWD0mrR5lRn
-gFk42VWc0Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7303aa8e-47ce-4e2e-a821-c1aadab75f35"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>eBhpMmzAZT/NtwB9AtjdzENydMNUkE6TlkblHOfSOpLM6NnWEm4jXafJv3u/uRCV/OdhC/cHkbAl
-3rXFTwliLg==</DigestValue></Reference></SignedInfo><SignatureValue>CXgt9DxvW3r8l7Ia3UwpYyhh3FEUUJnr58zs22nahGI479IbA6lWUTINKYo/gYgYtbn2s0tX1di+
-le5tM1bZTaFBwz8QKyVrsRGqGvE8j5yQ8Dzmdry2VSxbaXnJd3vn3jUfOSEqCOVwYDIBClh6PKOG
-Pgxy+14+Pum1z2SGAQnw1Qn/PzLPjDCCAbgln4+PXWqbIPV/SiJFm+zLhmoil1RBbCe1zWr4Mtnz
-cHGbWHuktNd1ZbcH5YQKABsQtZ/OeKTPPTqWZS61M5msm9mVWsefU3ln84Zpb1jG1HdgHzDQRgAj
-n7mZwxwWAMvrpsYZ8+k0zZv9WuSxh0lVSEm+uA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8fe36459-1ad6-4e7f-a8cd-c0b8503a05cb"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>P9H4vPZ7cO4OK0jHfur2jSH9ZkpLb49kcT1RFDUflpObY+KJxoPSNPQs7d5c8s/ryIA7Od0pNkKi
+4fmP4sjbRg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7a4f97a5-556e-47be-98bf-eb63b2c912bd"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>C4qS7ugpdEn64BVd+hbxq7giVUt7itoUzuPymDn8gQzZ9p2XV+Um0D7WeZKh8CklCR5urLffqd+Y
+6A9EwKy/0A==</DigestValue></Reference></SignedInfo><SignatureValue>PdExtE6V+VS7YGQy5WHO6Byw4RVF/WMFlq3Bh5KRY7MmZ8Q9/5CKlSoPHvQBVMZ8TJIrkMGHKiR2
+Nek0vb6S5FQRn67JCwptnEeUgHl2Q+jUXf04sSGvY/+KiEv7voZy+DoIrbC7TxGBwVafhBOHttiA
+UlSqqdKB3SFN/83qhH8Gq51y3T6ebjAUDclbvfvxhwxZ0VFL5AEXDhi/dRhlcQwcupynMKUUkvEI
+LB3PYwoMW2+WDz10KZsDyjhjOhDT+LO6C2iDc6h29OLvDBsITwnUwVpdsmCeRxp3L4GliIqP7rCt
+T+LW/936w+mAtbiglTsvhyFb1J4tKVbg98yeqg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1120,4 +1120,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7303aa8e-47ce-4e2e-a821-c1aadab75f35" Target="#_badd67ec-9deb-4479-87e8-38023137fd4c"><Timestamp>2021-06-22 18:55:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7a4f97a5-556e-47be-98bf-eb63b2c912bd" Target="#_8fe36459-1ad6-4e7f-a8cd-c0b8503a05cb"><Timestamp>2021-06-22 18:59:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

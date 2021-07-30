@@ -309,7 +309,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select 'KPIImport' as H,'' as A,'' as B,'' as C,'' as D,'' as E,'' as F,'' as G&#13;&#10;  union all&#13;&#10;  select 'H','ImportOption','ImportOption','Forma','TimeType','AggregateToDay','AxisId',''&#13;&#10;  union all&#13;&#10;  select 'D','ImportOption','ImportOption','Actual','Day','False','8',''&#13;&#10;  union all&#13;&#10;  select 'H','KPI','KPI','XrefCode','DayId','TicXrefCode','KPIXrefCode','Value'&#13;&#10;  union all&#13;&#10;  select 'D' as H&#13;&#10;  ,'KPI' as KPI&#13;&#10;  ,'KPI' as KPII&#13;&#10;  , case when len(store_no) = 1 then 'STORE_000'+cast(store_no as varchar) &#13;&#10;       when len(store_no) = 2 then 'STORE_00' + cast(store_no as varchar)&#13;&#10;       when len(store_no) = 3 then 'STORE_0' + cast(store_no as varchar)&#13;&#10;       else 'STORE_'+ cast(store_no as varchar) end as XrefCode&#13;&#10;  ,Format(transaction_date,'yyyy-MM-dd') as DayId&#13;&#10;  ,'STORE' as TicXrefCode&#13;&#10;  ,'TransImport' as KPIXrefCode&#13;&#10;  ,cast(sum([Transactions]) as varchar) as Value&#13;&#10;   FROM [FIND].[dbo].[SalesReporting]&#13;&#10;   where transaction_date between convert(char(10),getdate()-3,121) and convert(char(10),getdate()-1,121)&#13;&#10;   group by store_no,transaction_date&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select 'KPIImport' as H,'' as A,'' as B,'' as C,'' as D,'' as E,'' as F,'' as G&#13;&#10;  union all&#13;&#10;  select 'H','ImportOption','ImportOption','Forma','TimeType','AggregateToDay','AxisId',''&#13;&#10;  union all&#13;&#10;  select 'D','ImportOption','ImportOption','Actual','Day','False','8',''&#13;&#10;  union all&#13;&#10;  select 'H','KPI','KPI','XrefCode','DayId','TicXrefCode','KPIXrefCode','Value'&#13;&#10;  union all&#13;&#10;  select 'D' as H&#13;&#10;  ,'KPI' as KPI&#13;&#10;  ,'KPI' as KPII&#13;&#10;  , case when len(store_no) = 1 then 'STORE_000'+cast(store_no as varchar) &#13;&#10;       when len(store_no) = 2 then 'STORE_00' + cast(store_no as varchar)&#13;&#10;       when len(store_no) = 3 then 'STORE_0' + cast(store_no as varchar)&#13;&#10;       else 'STORE_'+ cast(store_no as varchar) end as XrefCode&#13;&#10;  ,Format(transaction_date,'yyyy-MM-dd') as DayId&#13;&#10;  ,'STORE' as TicXrefCode&#13;&#10;  ,'TransImport' as KPIXrefCode&#13;&#10;  ,cast(sum([TransactionsTotal]) as varchar) as Value&#13;&#10;   FROM [FIND].[dbo].[SalesReporting]&#13;&#10;   where transaction_date between convert(char(10),getdate()-3,121) and convert(char(10),getdate()-1,121)&#13;&#10;   group by store_no,transaction_date&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -378,7 +378,7 @@
     <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
     <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
-    <elementParameter field="TEXT" name="LABEL" value="traffic_import_file"/>
+    <elementParameter field="TEXT" name="LABEL" value="trans_import_file"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_1">
       <column comment="" key="false" length="9" name="H" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -1298,13 +1298,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f9c831e9-25f1-4750-810e-1370af930c26"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aI5L7DAwjpYWPYfQ/ih5/gInwKYFl+AyU42i6OxLGZMKdeJMr25N88njq12WPJ9MSJItp0QhBQSY
-4YIXNwDP6w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f8e56414-3b3b-4d08-9134-d26c93f65995"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dn1nkplHdVRxL/tPjCOwVjVYIFje1VA86La+Y6nEiBMx3nO7xZPXPxfhOaRPK3XhgaFiDBY6gHJS
-5UdGR+cIcg==</DigestValue></Reference></SignedInfo><SignatureValue>IcMPJ7btEJk5PAHqrvURHhuW4dC1x88GpdxC+PVequNYXR9H7ezbj+VyzQg0vhF+Cj3AqA+F5Hgz
-TVHx/f6nfvYH1S8NSm5w+WQpgeeuM9f0TkvMi3v5qAZKmWmcdvUKMzlagk0SUJLXHzb5O1y2swcD
-hEbANylwxhnJsspffWQvs7X4HUwCAFyKBtYRShcA8b7dwTPS8XVKEFAwz/b2CZGW1P07fBsX4Kgl
-0aZ7bvfzq0F+BmWVOHeLYJdmTMomZTU0XdvkdcJ4GqL7I0IFRvsjfVB8kwoZnEM6+UnJ+lxMj3Ye
-/QZLjOQZydeI7Mn4w5jTyezalIrzyOXXoZldDw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d27cd8ce-0be8-45a5-8124-327bbe46db7c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>y6NluQdV0x374RQ7UKhC9/TKYMT/ARoeWENi39tX/uaAua5I7Mr2hLyM3q31nh82dmwFey756gFQ
+JGkZNLBaNA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2070bbe7-ca0c-4bbe-914c-1958b888a15d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PGUMXXRDZ3xYtinY4T1T3DtRcDntEM2W1dkpACaOOJMDRxktY9CGDoh3rWxO38lSn2XtnvlwqWE9
+U2bU+eTlVg==</DigestValue></Reference></SignedInfo><SignatureValue>WI5beFgS8SQfdmFRtoOm6AReNuaWchvOiRxlaxg/3Hz07UHgo6KytQGYwFK2P5y2KIQv0U6dEZ/d
+Xocf1ROsWANWkYqj/WeV9dnj1tOnwI/Q5iPKNgTJsSyDFugc0l2Uq4yNLlxkQZwIWTTSVAF9YP6w
+M5oZqskOaG6vIrq8NioVPC8HlqdKRE19HUzvv9xk9kfhhyFkuq/Fyjjs4mLalSS0bFq4EBEJQu3x
+/RiWDDm83M0UeGKByFrvmlyBv4MoLpDJ+gGYYUfadfjVrPXelxgzIpVSTbTs+i5RFIpwcTufhdBV
+KpgyUmL7wB4bpTnMlGTbXHYtR50UdInnuWTg4Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1326,4 +1326,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f8e56414-3b3b-4d08-9134-d26c93f65995" Target="#_f9c831e9-25f1-4750-810e-1370af930c26"><Timestamp>2021-07-29 20:31:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2070bbe7-ca0c-4bbe-914c-1958b888a15d" Target="#_d27cd8ce-0be8-45a5-8124-327bbe46db7c"><Timestamp>2021-07-30 15:53:50</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

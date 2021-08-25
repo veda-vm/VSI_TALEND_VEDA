@@ -111,7 +111,6 @@
   </parameters>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -230,7 +229,6 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="288" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -323,7 +321,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -341,7 +338,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * FROM [crm].[dbo].[customer_division]&#13;&#10;where division_id = 2&#13;&#10;and customer_id = 408&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * FROM [crm].[dbo].[customer_division]&#13;&#10;where division_id = 2&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -481,7 +478,6 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="608" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -599,7 +595,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -617,7 +612,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * FROM [crm].[dbo].[transaction_header]&#13;&#10;where cast(posted_date as date) &gt;= '2018-12-30'&#13;&#10;and transaction_id = 392416936&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * FROM [crm].[dbo].[transaction_header]&#13;&#10;where cast(posted_date as date) &gt;= '2017-12-31'&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -796,7 +791,6 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="928" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -935,7 +929,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_4"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -953,7 +946,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#13;&#10; a.[transaction_id]&#13;&#10;      ,[transaction_line_no]&#13;&#10;      ,[sale_or_return_indicator]&#13;&#10;      ,a.[sales_associate_no]&#13;&#10;      ,[style_id]&#13;&#10;      ,[color_code]&#13;&#10;      ,[size_description]&#13;&#10;      ,[quantity]&#13;&#10;      ,[net_retail]&#13;&#10;      ,[cost]&#13;&#10;      ,[markdown_percent]&#13;&#10;      ,[comments]&#13;&#10;      ,[promotion_flag]&#13;&#10;      ,[class_code]&#13;&#10;      ,[net_retail_central]&#13;&#10;      ,[cost_central]&#13;&#10;      ,[markdown_amount]&#13;&#10;      ,[markdown_amount_central]&#13;&#10;&#9;  ,cast(b.transaction_date as date) as transaction_date&#13;&#10;,b.posted_date&#13;&#10;&#9;&#13;&#10;  FROM [crm].[dbo].[transaction_detail] a&#13;&#10;  left join [crm].[dbo].[transaction_header] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;--where cast(b.posted_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)\&quot;&#13;&#10;where cast(posted_date as date) &gt;= '2018-12-30'&#13;&#10;and a.transaction_id = 360656878&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#13;&#10; a.[transaction_id]&#13;&#10;      ,[transaction_line_no]&#13;&#10;      ,[sale_or_return_indicator]&#13;&#10;      ,a.[sales_associate_no]&#13;&#10;      ,[style_id]&#13;&#10;      ,[color_code]&#13;&#10;      ,[size_description]&#13;&#10;      ,[quantity]&#13;&#10;      ,[net_retail]&#13;&#10;      ,[cost]&#13;&#10;      ,[markdown_percent]&#13;&#10;      ,[comments]&#13;&#10;      ,[promotion_flag]&#13;&#10;      ,[class_code]&#13;&#10;      ,[net_retail_central]&#13;&#10;      ,[cost_central]&#13;&#10;      ,[markdown_amount]&#13;&#10;      ,[markdown_amount_central]&#13;&#10;&#9;  ,cast(b.transaction_date as date) as transaction_date&#13;&#10;,b.posted_date&#13;&#10;&#9;&#13;&#10;  FROM [crm].[dbo].[transaction_detail] a&#13;&#10;  left join [crm].[dbo].[transaction_header] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;--where cast(b.posted_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)\&quot;&#13;&#10;where cast(posted_date as date) &gt;= '2017-12-31'&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1075,7 +1068,6 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="256" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_4"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -1179,7 +1171,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_5"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -1197,7 +1188,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT a.[transaction_id]&#13;&#10;      ,[tender_line_no]&#13;&#10;      ,[sales_module_tender_type]&#13;&#10;      ,a.[tender_type]&#13;&#10;      ,[tender_identifier]&#13;&#10;      ,[tender_amount]&#13;&#10;      ,[tender_amount_central]&#13;&#10;      ,[alternate_key_code]&#13;&#10;      ,[tender_identifier_hash]&#13;&#10;&#9;  ,b.transaction_date&#13;&#10;,b.posted_date&#13;&#10;  FROM [crm].[dbo].[transaction_tender] a&#13;&#10;    left join [crm].[dbo].[transaction_header] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;where cast(b.posted_date as date) &gt;= '2018-12-30'&#13;&#10;and a.transaction_id = 392417417&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT a.[transaction_id]&#13;&#10;      ,[tender_line_no]&#13;&#10;      ,[sales_module_tender_type]&#13;&#10;      ,a.[tender_type]&#13;&#10;      ,[tender_identifier]&#13;&#10;      ,[tender_amount]&#13;&#10;      ,[tender_amount_central]&#13;&#10;      ,[alternate_key_code]&#13;&#10;      ,[tender_identifier_hash]&#13;&#10;&#9;  ,b.transaction_date&#13;&#10;,b.posted_date&#13;&#10;  FROM [crm].[dbo].[transaction_tender] a&#13;&#10;    left join [crm].[dbo].[transaction_header] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;where cast(b.posted_date as date) &gt;= '2017-12-31'&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1274,7 +1265,6 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="576" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_5"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -1368,7 +1358,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;SELECT  a.[transaction_id]&#13;&#10;      ,a.[transaction_line_no]&#13;&#10;      ,a.[line_sequence]&#13;&#10;      ,a.[coupon_code],b.transaction_date,b.posted_date&#13;&#10;  FROM [crm].[dbo].[transaction_coupon] a&#13;&#10;  join [crm].[dbo].[transaction_header] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;   where cast(b.posted_date as date) &gt;= '2019-12-29'&#13;&#10;and a.transaction_id = 420965296&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;SELECT  a.[transaction_id]&#13;&#10;      ,a.[transaction_line_no]&#13;&#10;      ,a.[line_sequence]&#13;&#10;      ,a.[coupon_code],b.transaction_date,b.posted_date&#13;&#10;  FROM [crm].[dbo].[transaction_coupon] a&#13;&#10;  join [crm].[dbo].[transaction_header] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;   where cast(b.posted_date as date) &gt;= '2019-12-29'&#13;&#10;&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1481,28 +1471,38 @@
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBInput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBOutput_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBInput_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tDBOutput_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tDBInput_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tDBOutput_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tDBInput_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tDBInput_5" offsetLabelX="0" offsetLabelY="0" source="tDBInput_5" target="tDBOutput_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_5" offsetLabelX="0" offsetLabelY="0" source="tDBInput_5" target="tDBInput_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
   </connection>
   <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tDBInput_6" offsetLabelX="0" offsetLabelY="0" source="tDBInput_6" target="tDBOutput_6">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1538,13 +1538,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b9daa571-59c3-4887-905d-25c773a29316"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GEmDUMnJFQqNu4eOyN8cdw1QYfqppgBC6B/dLekuOAZcQxc61Jp+iE2a0yLFoWILqtOz6idhixvh
-qC+VDj52yQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3970fafc-0319-4295-a30a-44ba4c00536c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>c9d+uarOqGec3fXTWt94wCOoMV534gXtYJtd4bS6cVflOm1iDztn04jHyS6Ov2gkgqxafC52REki
-dHV252qKOA==</DigestValue></Reference></SignedInfo><SignatureValue>WayWqFoFJydbpbzpWJFYfJ85Q52NeI1TEiHvZ8kMNFnuCBvZkVR4lWINOPcJAewQltNURFfT5gjU
-eBTGC0QnIvp9ojcxuPY37cPDuoOOVweZNOqm1gdflkdq8hQLOV9aMOS1bsUOvsCBaZvMU8cFytfB
-seN30shn4/W7c+Dk3HS6mS4khDl8FIwX2B/r9z9KavxC6/AEOzvcd+nuzHcyBjfWOFUnF0q6kN93
-ZyfKwk9yK5gaH6Vr389v54pdTa3ktbkdPUp7PPLQINh5GTB05Nh2ixV4B/9pvi2A9k1dT8CmVacn
-WuMf9ypm4gxZDyiErN3cXbwGRhrWIow9ZJwxUw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_45614f27-7663-4ad5-81e9-136a928d2a6c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PWPay3Pmo4VFmJDTEtuBJvu9pl03BDlEMwlCN5othZfViRPydADNIayD9QLj5mXIXAuej8wDHYTu
+AnWnebiYwA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ea8bd065-1e9a-4aa3-8de0-4afb99815417"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7FWd6rze9Aun2AYpkqHRVSgBR21i3RhY4GrbD/rGCNfd44yDLmaQaYY74BsuNZcxNtX8gAb8tUR5
+Hrl33ePoXQ==</DigestValue></Reference></SignedInfo><SignatureValue>KdqxsFD6stLSoCfQtaPBQUucGkneJS3aEkd7oFZPE9cQ00Er641hS2vQTqiKvSzFIax8/lTgYGe1
+WXfpNWi/Ral0dl9DljMofHQUbhSYTticTrq9XQcY7hrAjk7/+yHrje3RJnAB0ydBdLpH7st5DJVT
+TSe6kvJmeV61WctNo1wuwc0vztL1396CB4ION0XgB7A0EQO6r/vzFcQYBR7gci2TwzQeb05uodLF
+rYOdBZ69rtD7pwIyHNRvl6zTvWD/X+HTjwGWyn0S/LsHix8LbMNEzf67JZEYJegxUJeA5cWapd4/
+hMrcAxzXFAkDtRA+QOmfH7m/b72iWysmea7CgQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1566,4 +1566,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3970fafc-0319-4295-a30a-44ba4c00536c" Target="#_b9daa571-59c3-4887-905d-25c773a29316"><Timestamp>2021-08-25 21:19:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ea8bd065-1e9a-4aa3-8de0-4afb99815417" Target="#_45614f27-7663-4ad5-81e9-136a928d2a6c"><Timestamp>2021-08-25 21:29:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -128,7 +128,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select a.*, ad.mail_opt_in_flag,ad.mail_opt_in_date &#13;&#10;from address a, address_division ad, customer_division cd&#13;&#10;where cd.primary_address_id=a.address_id&#13;&#10;and cd.customer_id=a.customer_id&#13;&#10;and a.customer_id=ad.customer_id&#13;&#10;and a.address_id=ad.address_id and a.customer_id = 34519935&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select a.*, ad.mail_opt_in_flag,ad.mail_opt_in_date &#13;&#10;from address a, address_division ad, customer_division cd&#13;&#10;where cd.primary_address_id=a.address_id&#13;&#10;and cd.customer_id=a.customer_id&#13;&#10;and a.customer_id=ad.customer_id&#13;&#10;and a.address_id=ad.address_id &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -473,6 +473,219 @@
       </column>
     </metadata>
   </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_nPfW4H8vEeqBgcT7XpSDjA"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;wva-crm7db-p01&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;CRM&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;Talend_CRM&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="CvF3sYUD4eDWuWnJp+QWSmKx5JC3XyE1"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;address&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select p.*,pa.archive_date,pd.phone_opt_in_flag,pd.phone_opt_in_date,pd.text_opt_in_flag,pd.text_opt_in_date&#13;&#10;from phone p&#13;&#10;inner join phone_division pd&#13;&#10;on p.customer_id=pd.customer_id&#13;&#10;and  p.phone_id=pd.phone_id&#13;&#10;inner join  customer_division cd&#13;&#10;on  cd.customer_id=p.customer_id&#13;&#10;and cd.primary_phone_id=p.phone_id&#13;&#10;left outer join [crm].[dbo].[phone_archive] pa&#13;&#10;on p.customer_id = pa.customer_id and p.phone_id = pa.phone_id&#13;&#10;where p.customer_id = 2293&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="CUSTOMER_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COUNTRY_CODE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS_MATCH_KEY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS_TYPE_CODE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MAIL_INDICATOR"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CARRIER_ROUTE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS_NCOA_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS_1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS_2"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS_3"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS_4"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS_5"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS_6"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="POST_CODE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DATE_LAST_MODIFIED"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS_ERROR"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS_LONGITUDE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS_LATITUDE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TIMESTAMP"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CREATE_STORE_NO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MODIFY_STORE_NO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CREATE_USER_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CREATE_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MODIFY_USER_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CREATE_SOURCE_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CREATE_COMMENT"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MODIFY_SOURCE_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MODIFY_COMMENT"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="POSTED_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OLD_CUSTOMER_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TEMP_OLD_CUST_NO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MAIL_OPT_IN_FLAG"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MAIL_OPT_IN_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <metadata connector="FLOW" name="tDBInput_2">
+      <column comment="" defaultValue="" key="false" length="-1" name="CUSTOMER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_ID"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADDRESS_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADDRESS_ID"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="COUNTRY_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COUNTRY_CODE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADDRESS_MATCH_KEY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADDRESS_MATCH_KEY"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADDRESS_TYPE_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADDRESS_TYPE_CODE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="MAIL_INDICATOR" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MAIL_INDICATOR"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CARRIER_ROUTE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CARRIER_ROUTE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADDRESS_NCOA_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADDRESS_NCOA_DATE"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADDRESS_1" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADDRESS_1"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADDRESS_2" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADDRESS_2"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADDRESS_3" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADDRESS_3"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADDRESS_4" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADDRESS_4"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADDRESS_5" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADDRESS_5"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADDRESS_6" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADDRESS_6"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="POST_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="POST_CODE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="DATE_LAST_MODIFIED" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_LAST_MODIFIED"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADDRESS_ERROR" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADDRESS_ERROR"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADDRESS_LONGITUDE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADDRESS_LONGITUDE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADDRESS_LATITUDE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADDRESS_LATITUDE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="TIMESTAMP" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TIMESTAMP"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CREATE_STORE_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATE_STORE_NO"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="MODIFY_STORE_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MODIFY_STORE_NO"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CREATE_USER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATE_USER_ID"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CREATE_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATE_DATE"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="MODIFY_USER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MODIFY_USER_ID"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CREATE_SOURCE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATE_SOURCE_ID"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CREATE_COMMENT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATE_COMMENT"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="MODIFY_SOURCE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MODIFY_SOURCE_ID"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="MODIFY_COMMENT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MODIFY_COMMENT"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="POSTED_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="POSTED_DATE"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="OLD_CUSTOMER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="OLD_CUSTOMER_ID"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="TEMP_OLD_CUST_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TEMP_OLD_CUST_NO"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="MAIL_OPT_IN_FLAG" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MAIL_OPT_IN_FLAG"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="MAIL_OPT_IN_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MAIL_OPT_IN_DATE"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -482,13 +695,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_abe84b0e-fb46-427f-820e-b3d7547dbf80"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3mmrSbwEd/KeiCVMNGclV4sdiLmWyPgww7Ncp2nskhzwY8+NXlSckzOq+9H4bs3s2QAnGhmmTyPk
-k8Ra52EcVA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a2dfbba4-7c28-4bd1-a4eb-cf7ce4ed8bf2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rNme702SZF8BqoYq+0ANRh3UIy5UVcTb2nctn33MtBnD9E+sHjqsTMg8S6erQphtPeXAl54fY2Wo
-P2Mbp6Fw8g==</DigestValue></Reference></SignedInfo><SignatureValue>hrA1/jEs1Kg3Vgg1K3cu0JnRo3O71LXwhgTkT2Bf/0GwxlM+upOPNU39P8XT25ETbHJblAUAZtDB
-T/znys5cgFDhl/Uvm0HTewWaKobmfTs7AL1NiWM2AnQCKYMajr7+q+45bgwtL8q7Qm165QOWVrs6
-+uG3UCl/lv+iV4yPm4OhriIFP76XnIAh2lIxkAcfuw7Gll/4qWrMJS7t29gS4mw8irqHemrpNLcZ
-kz2LdF0Q3uF27ahpFXL0O/EEMUSsNcIzWKAyx2n36sdlZ4hPI5RKfPu/r2p8jgxZNxAfyFoAxWmz
-kI9yV9tVUf1knWdjXiHf9EuK0uGxWj/Lsuw3/A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7933acba-a36f-40c1-9c69-e64e5c09aeaa"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sd4V3q/gcGZFlbhG3M+Kmz/+G1KJRNcRDnjprezodA/Gpu4GleM71kETtqPEfdIa6R4uuC4vI1+l
+MBRHAGmeVw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_22f72afd-3f61-4c28-963a-fa29ca24196a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VrAQVujFAFbynBYNf86UkC4OHklJfC4+nMX/F4e1ghhmUL73kpQ3VXnxbGzatOklvikxQkDtUw9L
+op3UJBryuw==</DigestValue></Reference></SignedInfo><SignatureValue>NcicD0NLZV5nxLnUHBFl7c8Halb3w1QNcxdNynpsnXHVJnywD6+UlHM5QQUEkJegh03m0mu+apOm
+SZtpFLuQr7m0m6ujAPl0FEHWw3RhfkRMjdUeRO53+gGT+x7iCOfi7aPSWrSoArHdvsZjkOkKZvCA
+MIxqMQEvxOH6C0zgNCUPeknc2YZvg+wf7HvIR8O2uKGU5mmJSWpvow1B/LwBrkKGrkJTXQtq6nUG
+3l7HtLEISJTGMPrx5BesqtoHUuQ74v1o5dnBJuEh/bMNuTPyV5Og2sP7fqDmCMomvtTZg6QOr35k
+Dz98Y/2IC7b3nuRvT6SByW3QvLoPZUCswx6rAQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -510,4 +728,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a2dfbba4-7c28-4bd1-a4eb-cf7ce4ed8bf2" Target="#_abe84b0e-fb46-427f-820e-b3d7547dbf80"><Timestamp>2021-09-02 20:14:18</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_22f72afd-3f61-4c28-963a-fa29ca24196a" Target="#_7933acba-a36f-40c1-9c69-e64e5c09aeaa"><Timestamp>2021-09-02 22:02:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

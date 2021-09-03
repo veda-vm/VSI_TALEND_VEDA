@@ -111,7 +111,6 @@
   </parameters>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -129,7 +128,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select a.*, ad.mail_opt_in_flag,ad.mail_opt_in_date &#13;&#10;from address a, address_division ad, customer_division cd&#13;&#10;where cd.primary_address_id=a.address_id&#13;&#10;and cd.customer_id=a.customer_id&#13;&#10;and a.customer_id=ad.customer_id&#13;&#10;and a.address_id=ad.address_id &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select a.*, ad.mail_opt_in_flag,ad.mail_opt_in_date &#13;&#10;from address a, address_division ad, customer_division cd&#13;&#10;where cd.primary_address_id=a.address_id&#13;&#10;and cd.customer_id=a.customer_id&#13;&#10;and a.customer_id=ad.customer_id&#13;&#10;and a.address_id=ad.address_id&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -325,7 +324,6 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="320" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -477,7 +475,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -495,7 +492,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select p.*,pa.archive_date,pd.phone_opt_in_flag,pd.phone_opt_in_date,pd.text_opt_in_flag,pd.text_opt_in_date&#13;&#10;from phone p&#13;&#10;inner join phone_division pd&#13;&#10;on p.customer_id=pd.customer_id&#13;&#10;and  p.phone_id=pd.phone_id&#13;&#10;inner join  customer_division cd&#13;&#10;on  cd.customer_id=p.customer_id&#13;&#10;and cd.primary_phone_id=p.phone_id&#13;&#10;left outer join [crm].[dbo].[phone_archive] pa&#13;&#10;on p.customer_id = pa.customer_id and p.phone_id = pa.phone_id&#13;&#10;where p.customer_id = 2293&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select p.*,pa.archive_date,pd.phone_opt_in_flag,pd.phone_opt_in_date,pd.text_opt_in_flag,pd.text_opt_in_date&#13;&#10;from phone p&#13;&#10;inner join phone_division pd&#13;&#10;on p.customer_id=pd.customer_id&#13;&#10;and  p.phone_id=pd.phone_id&#13;&#10;inner join  customer_division cd&#13;&#10;on  cd.customer_id=p.customer_id&#13;&#10;and cd.primary_phone_id=p.phone_id&#13;&#10;left outer join [crm].[dbo].[phone_archive] pa&#13;&#10;on p.customer_id = pa.customer_id and p.phone_id = pa.phone_id&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -653,7 +650,6 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="672" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -800,7 +796,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot; select e.*,ed.email_opt_in_flag,ed.email_opt_in_date,ea.archive_date&#13;&#10;  FROM [crm].[dbo].[email] e&#13;&#10;  left outer join [crm].[dbo].[email_division] ed&#13;&#10;  on e.customer_id = ed.customer_id and e.email_id = ed.email_id&#13;&#10;  left outer join [crm].[dbo].[email_archive] ea&#13;&#10;  on e.customer_id = ea.customer_id and e.email_id = ea.email_id&#13;&#10;where e.customer_id = 2293&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot; select e.*,ed.email_opt_in_flag,ed.email_opt_in_date,ea.archive_date&#13;&#10;  FROM [crm].[dbo].[email] e&#13;&#10;  left outer join [crm].[dbo].[email_division] ed&#13;&#10;  on e.customer_id = ed.customer_id and e.email_id = ed.email_id&#13;&#10;  left outer join [crm].[dbo].[email_archive] ea&#13;&#10;  on e.customer_id = ea.customer_id and e.email_id = ea.email_id&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1051,13 +1047,17 @@
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBInput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBOutput_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBInput_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tDBOutput_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1078,13 +1078,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ef9f6b39-f432-4dd8-8221-a6c01de06483"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Zj1O0TAN33gYugyaP/ulguUqohsw5BtapTr9gNYQvRz6xINb2YS3ATqUdrhD+lUdawnmyoOH7JkL
-uMdhIww0vQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_73d493b4-9015-4871-8eef-53ff9c9ca085"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mHeWcWNIK2+C+w+rzQ3aTbeFke60KpDl5pDiwEZ3E6B1K0IaaXKzip2TSbcHQa57Fc8NZct+ge4B
-p4N8sJArCw==</DigestValue></Reference></SignedInfo><SignatureValue>PsK+UxeQPhxnNDHvxdBt7xkijhlF/qlhbdxqWjEZk0mZXX2Vfxq0k/lFnAkOW+IBdKWZGncmXGKM
-cRAtr2/fZjTtWKEtNDnO15VZ9BsYxsVRe9zGjofejj96RSJgPCaK01lYyDWucKjsTOe37cELZVQX
-vlYN86l0l5+ehzKXe1eK+z9ZKZnCoD0FlLpLic99Zp7WywZvH7qfOKWSDcAPa31eHJEOZpoEoJqk
-MYxyHae8CrDcRAP1/xQfRzWjKN0s1QhfJDLa6/9DewV3ThyEm99QrICLkTQ5jNzvWKPzrAsOHGOx
-HRe8PaiOtPdkFCi5PUGzKgL1zQq3KbsBr1aIdw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_60a1e89d-03e1-4380-8aad-fe3a7fc7fdde"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ED1GLF5kYNCbxrR0hQaawty9YZnbZk4Sf25nmihl9gbWWK9JT4z03EHmeJgY0FJS1X7u9F46i3mx
+oXOJKf+Ztw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_641a7ab1-1ff0-4f7e-b5ca-f9d66c1ed66e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Xyj5q1UpWUb0pYNUwhLd6E578y+/1Q5J/kQRa5nZDvljGFMKPcFfn9iND8DtclHEhCv5aQuyV9lc
+IyTDd7r7ZA==</DigestValue></Reference></SignedInfo><SignatureValue>VeTTOhs43ijU3NBkvtTN/6kbL3woXp560xPiDzdZ1WYs9sjoqHAeBEgwgtwRfhrPrACTT5Z1ayxa
+jV4vrXauq2YO5JIhLM/U8Fo5RzacOcTEDePgraTwkikqHSUFjzf2dC+z8wpD5NyKXGnWP/AeA8eX
+8rZySwJINd+ycVRqbmXs4Q64wGoyVMxXS25QGuuTmVzRK1I3ETyu0WHzm2QlKCm3diTUXPVoPVKf
+3BArYPcQ3K3izm0Yr/6uBJZwpMoqQjqlqQ9ZGUimeaJLs7bzNFPXwtsJlRSUx0eYXp7V4tnHwZba
+Lr3h/rbm4ciLsCWTXXBE43BiNgZjXiwzxzAqGQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1106,4 +1106,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_73d493b4-9015-4871-8eef-53ff9c9ca085" Target="#_ef9f6b39-f432-4dd8-8221-a6c01de06483"><Timestamp>2021-09-03 17:11:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_641a7ab1-1ff0-4f7e-b5ca-f9d66c1ed66e" Target="#_60a1e89d-03e1-4380-8aad-fe3a7fc7fdde"><Timestamp>2021-09-03 19:14:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -111,6 +111,7 @@
   </parameters>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -177,6 +178,7 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_UHBD4Ow0Eem8PNBRnmAJnA"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -292,6 +294,7 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -433,6 +436,7 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_UHBD4Ow0Eem8PNBRnmAJnA"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -732,7 +736,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select &#13;&#10;Convert(Varchar(max), c.customer_no) as [CustomerNo],  &#13;&#10;Convert(Varchar(max), th.customer_id) as [Customer_ID], &#13;&#10;CONVERT (date,th.transaction_date) as [Transaction Date],&#13;&#10;th.store_no as [Store No],&#13;&#10;th.register_no as [Register No],&#13;&#10;th.sales_associate_no as [HE_No],&#13;&#10;th.pos_transaction_no as [Transaction No],&#13;&#10;th.transaction_id as [Transaction_ID],&#13;&#10;sum(td.quantity) as [units],&#13;&#10;case&#13;&#10;      when th.segmentation_flag_a = 1 then 'Y'&#13;&#10;else ''&#13;&#10;end as[Employee_flag] , &#13;&#10;&#13;&#10;Case  &#13;&#10;      when th.segmentation_flag_c = '1' then 'Y'&#13;&#10;else ''&#13;&#10;end as [BOPUS_Order],&#13;&#10;&#13;&#10;case&#13;&#10;      when th.segmentation_flag_e = '1' then 'Y'&#13;&#10;else ''&#13;&#10;      end as &#13;&#10;[Continuity_Order],&#13;&#10;case&#13;&#10;      when th.segmentation_flag_g = '1' then 'Y'&#13;&#10;      else ''&#13;&#10;end as [OMS_Order],&#13;&#10;case&#13;&#10;      when th.segmentation_flag_d = '1' then 'Y'&#13;&#10;else ''&#13;&#10;end as  [Voucher_Rd],&#13;&#10;case&#13;&#10;      when th.transaction_source = '13' then 'Y'&#13;&#10;      else ''&#13;&#10;      end as [Subscription_Order],&#13;&#10;th.total_net_retail as [Transaction Total]&#13;&#10;&#13;&#10;from&#13;&#10;transaction_header th&#13;&#10;join customer c&#13;&#10;on&#13;&#10;th.customer_id = c.customer_id&#13;&#10;&#13;&#10;join transaction_detail td&#13;&#10;on td.transaction_id = th.transaction_id&#13;&#10;&#13;&#10;&#13;&#10;where th.transaction_date between CONVERT(CHAR(10), DATEADD(DAY, -7, GETDATE()), 121) and CONVERT(CHAR(10), DATEADD(DAY, -1, GETDATE()), 121)&#13;&#10;--where th.transaction_date between '2018-10-28' and '2018-12-01'&#13;&#10;&#13;&#10;&#13;&#10;--and th.transaction_source = '13'&#13;&#10;--and th.segmentation_flag_c = '1' &#13;&#10;group by&#13;&#10;customer_no,&#13;&#10;th.customer_id,&#13;&#10;th.transaction_date,&#13;&#10;th.store_no,&#13;&#10;th.register_no,&#13;&#10;th.pos_transaction_no,&#13;&#10;th.total_net_retail,&#13;&#10;th.segmentation_flag_c,&#13;&#10;th.segmentation_flag_e,&#13;&#10;th.segmentation_flag_g,&#13;&#10;th.segmentation_flag_d,&#13;&#10;th.sales_associate_no,&#13;&#10;th.transaction_source,&#13;&#10;th.transaction_id,&#13;&#10;--td.quantity,&#13;&#10;th.segmentation_flag_a&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select &#13;&#10;Convert(Varchar(max), c.customer_no) as [CustomerNo],  &#13;&#10;Convert(Varchar(max), th.customer_id) as [Customer_ID], &#13;&#10;CONVERT (date,th.transaction_date) as [Transaction Date],&#13;&#10;th.store_no as [Store No],&#13;&#10;th.register_no as [Register No],&#13;&#10;th.sales_associate_no as [HE_No],&#13;&#10;th.pos_transaction_no as [Transaction No],&#13;&#10;th.transaction_id as [Transaction_ID],&#13;&#10;sum(td.quantity) as [units],&#13;&#10;case&#13;&#10;      when th.segmentation_flag_a = 1 then 'Y'&#13;&#10;else ''&#13;&#10;end as[Employee_flag] , &#13;&#10;&#13;&#10;Case  &#13;&#10;      when th.segmentation_flag_c = '1' then 'Y'&#13;&#10;else ''&#13;&#10;end as [BOPUS_Order],&#13;&#10;&#13;&#10;case&#13;&#10;      when th.segmentation_flag_e = '1' then 'Y'&#13;&#10;else ''&#13;&#10;      end as &#13;&#10;[Continuity_Order],&#13;&#10;case&#13;&#10;      when th.segmentation_flag_g = '1' then 'Y'&#13;&#10;      else ''&#13;&#10;end as [OMS_Order],&#13;&#10;case&#13;&#10;      when th.segmentation_flag_d = '1' then 'Y'&#13;&#10;else ''&#13;&#10;end as  [Voucher_Rd],&#13;&#10;case&#13;&#10;      when th.transaction_source = '13' then 'Y'&#13;&#10;      else ''&#13;&#10;      end as [Subscription_Order],&#13;&#10;th.total_net_retail as [Transaction Total]&#13;&#10;&#13;&#10;from&#13;&#10;transaction_header th&#13;&#10;join customer c&#13;&#10;on&#13;&#10;th.customer_id = c.customer_id&#13;&#10;&#13;&#10;join transaction_detail td&#13;&#10;on td.transaction_id = th.transaction_id&#13;&#10;&#13;&#10;&#13;&#10;where th.transaction_date between CONVERT(CHAR(10), DATEADD(DAY, -9, GETDATE()), 121) and CONVERT(CHAR(10), DATEADD(DAY, -3, GETDATE()), 121)&#13;&#10;--where th.transaction_date between '2018-10-28' and '2018-12-01'&#13;&#10;&#13;&#10;&#13;&#10;--and th.transaction_source = '13'&#13;&#10;--and th.segmentation_flag_c = '1' &#13;&#10;group by&#13;&#10;customer_no,&#13;&#10;th.customer_id,&#13;&#10;th.transaction_date,&#13;&#10;th.store_no,&#13;&#10;th.register_no,&#13;&#10;th.pos_transaction_no,&#13;&#10;th.total_net_retail,&#13;&#10;th.segmentation_flag_c,&#13;&#10;th.segmentation_flag_e,&#13;&#10;th.segmentation_flag_g,&#13;&#10;th.segmentation_flag_d,&#13;&#10;th.sales_associate_no,&#13;&#10;th.transaction_source,&#13;&#10;th.transaction_id,&#13;&#10;--td.quantity,&#13;&#10;th.segmentation_flag_a&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1072,6 +1076,7 @@
   </node>
   <node componentName="tMSSqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -1111,6 +1116,7 @@
   </node>
   <node componentName="tMSSqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -1150,16 +1156,20 @@
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBInput_2">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBOutput_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBInput_3">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tDBOutput_3">
@@ -1167,9 +1177,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tDBRow_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_2" offsetLabelX="0" offsetLabelY="0" source="tDBRow_2" target="tDBInput_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <subjob>
@@ -1207,13 +1219,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_352873c7-b80c-4e7d-8e74-f920c86abcbb"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jPUWOQYWcNQ0UJiwqxwDoEUoP11gtuMQ5HfGXIXBzkQWaYAxk7PFHx7IKTe5cdgP+rD8s7Z86d0c
-Bv7Di0WpAg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ea964313-0022-4e06-a4e8-635f59b53cf8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Cqkm5cAxPVYxOMkIyD3f+yUEReCNoC2CLPev4e+M1NQdAPvXoKYwvUAYhz45RQD3bg39HvOdqBBA
-mR3UeOigpQ==</DigestValue></Reference></SignedInfo><SignatureValue>BscnP4o6R3WvgvF7MFBSmvV9fJKsLkcVSiVYMXpqjNRfqpcFWSP1Q3Fv5qqClXEbLnh0ylzG0wGp
-IZ0wVX2pvhVcHbtZ66mNx2RUs1MIphcd5/ONIXC0YVeEs3t5agrcUail+KwGm5r+mbZY7qgWi2TP
-yKZnje5AmK+E4Lx17l0HhJ7r3/DBMyw34JsAcLfuruknraltEdBYxeTUJgBIqHR66+J6ju7QGh9C
-3GEHwOmhbMkVs/gXGkwn2JRQaRGSPIVUgtc/wtfjUEnsognXH8sAK8KapSQG+dB2bUWCttUxVAwe
-yw1kYD4UJ0ly87GBkX14UPGrJfkAviEmwU47AQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4c754648-c772-464f-9d78-f589d6ea846b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cpKgc/gzfXuF2nGcqo5ToixYtsHKSJikSSOZRumgERqSJuYQaXTLvdpDfP7F82gzZLnRU/1zaEDj
+CNC+lmuMRg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_265a45cc-1742-4437-bf14-178d75a72ffc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Adr/FHdBgYmeMgrY0XUgJyhMpS3i89XfurJmmnQtzp480f8WVQdaXZ6jS1q+Dc/MCqe278nbxjqu
+Ap8aiMP8pg==</DigestValue></Reference></SignedInfo><SignatureValue>XXg6b7lPItOU5uVjI0kSrpb55incYeZiFuxUa5qIPZQDIcceVmSh5KDUoPQ5st4Gk1KCT6svbnX9
+kAuRBJOsgJ9k4E17/Y/4ZBj0AhsQEPR1NAL1IvsLGwaRBBDuF75NwAkV8TfdzoTPYrfWDbzNFgDQ
+9lxwFX6hOupV731aqvdE8QtZfwH8HS4K8mHe+vT0k3e6JPqUFOr9mukQwAMCXmHLPdWeLEvTO82G
+40L8YhG+vMWBlDpPr/HBEdLfpdlMnSoFHH+w2lvBaPy+EUJ5iMX02UioxCCyUAUvcF6/ahUi7/1d
+ia3aa/nJjlZOd2rKxx96Yf1NuiYXIyLdyrIRpA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1235,4 +1247,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ea964313-0022-4e06-a4e8-635f59b53cf8" Target="#_352873c7-b80c-4e7d-8e74-f920c86abcbb"><Timestamp>2021-08-31 12:57:49</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_265a45cc-1742-4437-bf14-178d75a72ffc" Target="#_4c754648-c772-464f-9d78-f589d6ea846b"><Timestamp>2021-09-07 13:14:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

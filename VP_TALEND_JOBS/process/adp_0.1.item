@@ -1080,7 +1080,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="out2">
       <column comment="" defaultValue="" key="false" length="10" name="Location" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Transaction_Date" nullable="true" originalDbColumnName="Transaction Date" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="Transaction_Date" nullable="true" originalDbColumnName="Transaction Date" originalLength="-1" pattern="&quot;MM-dd-yyyy&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="Transaction_No" nullable="true" originalDbColumnName="Transaction No" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="14" name="Sku_Number" nullable="true" originalDbColumnName="Sku Number" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="Transaction_Qty" nullable="true" originalDbColumnName="Transaction Qty" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
@@ -1089,7 +1089,7 @@
       <column comment="" defaultValue="" key="false" length="5" name="register_no" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_BigDecimal" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="out2" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.LOCATION " name="Location" nullable="true" type="id_BigDecimal"/>
@@ -1145,7 +1145,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_1">
       <column comment="" defaultValue="" key="false" length="10" name="Location" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Transaction_Date" nullable="true" originalDbColumnName="Transaction Date" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="Transaction_Date" nullable="true" originalDbColumnName="Transaction Date" originalLength="-1" pattern="&quot;MM-dd-yyyy&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="Transaction_No" nullable="true" originalDbColumnName="Transaction No" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="14" name="Sku_Number" nullable="true" originalDbColumnName="Sku Number" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="Transaction_Qty" nullable="true" originalDbColumnName="Transaction Qty" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
@@ -1313,13 +1313,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d0bf70fc-5601-4dca-9b08-ec064177a4f4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dRWKarOi03AAoccnTRxJlmzDVcqjrnijm1eu786Vp1FOhMSJH3jbUwd/iwNMqQbELjM/qijJo6HK
-JWfkNtrVaw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8662f434-0a97-431a-a661-3abafc0de0e3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fSnnLgOLOBWiTboql7ZMyjnaMyVevQ3JOKNdEu/pBKCRYBqZY/S/hVoGR6lPqsElo41EJjF6Lapk
-1SkNh2DdNg==</DigestValue></Reference></SignedInfo><SignatureValue>DVG6LE9IgVgzQZvUjstMS3IuN6FjrcodyW+w91otq3+wcuG3kYkz7qmWgem5yZpXuCgUg4OnFueh
-Kk8ITfY7o5azA9CBC6f2AL/FeQDPSOaCwIFsRG5i5iohEy6NkeWgcdzzUh0IlV1CnoJnWrSInPol
-fgQvqM64DYc5OSCDl6NBfn4xVanr3jUn71yrIqEcqBA1Ow+fpfNDHH/IiO1hycmZqpBRtYJMjAoa
-dNZR2Exz0sKlqlPMrqky3ouayOTR+YWVHVeKFKznfkMuqazgDGqxO57CBU62FgofU8v2U/Katmpu
-xfhIgcM7PAp+hNi/sHizN7ZYeFBf6VPfc+Yqpg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_adbb36b0-dc0d-4b86-b2cd-261bac87d9fc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0Uh+/wYDwvBaJOyRwiOa/p1bknS4zLLAkrOxmym3zfM29pc22AofUc8pLdWqrefHOn2ltBRP2uZo
+YIuV/BFP6w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3c6b44f5-74f2-4f5d-a9c8-e7e1f1042e61"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>p9gUI9R3CxrHHi48/8BZaenmJGMAUaREHklYSKaAb6EIHCMT/nvFhP/2QdkQF8NdP2pwpLND5IMD
+krmDJ4qpCg==</DigestValue></Reference></SignedInfo><SignatureValue>QIo/3WT3jwD9tTQytBlPAizsj+sLMCH1rtFUUv8cHelZ3AFBYD62wNCFxhAITXkRqT/5PLPYPzgC
+3iuKatTN2obMLlCf1g9I0NEkuxy2WP4H0tVv03CqsKcAyW1I6S7A0bI49N2dt6MQuWHfMIMZuHc3
+ps5NvRANRIsjgEyqC6BzNjL6mB9LIIzudTfeaRE5q644IGRojbubU8aO4TqIatp0VkRXvYZdx0LR
+yHggQ0qg+0WzoW8DE776eVvPXc3DgO/Tb5Fs9bLhn19Hq9DJO5fkaiHLKHad0wfTSrJB20rA6bN+
+A7QMr5vY839Xm5QN0Uorgj0G7y4Zbfj1+GtUDg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1341,4 +1341,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8662f434-0a97-431a-a661-3abafc0de0e3" Target="#_d0bf70fc-5601-4dca-9b08-ec064177a4f4"><Timestamp>2021-09-09 20:08:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3c6b44f5-74f2-4f5d-a9c8-e7e1f1042e61" Target="#_adbb36b0-dc0d-4b86-b2cd-261bac87d9fc"><Timestamp>2021-09-12 19:09:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

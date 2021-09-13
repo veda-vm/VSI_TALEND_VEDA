@@ -1344,8 +1344,22 @@
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
     <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Location"/>
+      <elementValue elementRef="VALUE" value="&quot;POS$&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Transaction_Date"/>
+      <elementValue elementRef="VALUE" value="&quot;Transaction Date&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Transaction_No"/>
+      <elementValue elementRef="VALUE" value="&quot;Transaction No&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sku_Number"/>
+      <elementValue elementRef="VALUE" value="&quot;Sku Number&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Transaction_Qty"/>
+      <elementValue elementRef="VALUE" value="&quot;Transaction Qty&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="POS"/>
       <elementValue elementRef="VALUE" value="&quot;POS$&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DSC"/>
+      <elementValue elementRef="VALUE" value="&quot;DSC$&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="register_no"/>
+      <elementValue elementRef="VALUE" value="&quot;register_no&quot;"/>
     </elementParameter>
     <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
     <elementParameter field="TABLE" name="INTABLE" show="false"/>
@@ -1355,7 +1369,14 @@
     <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="Location" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Transaction_Date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Transaction_No" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sku_Number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Transaction_Qty" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="POS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DSC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="register_no" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="448">
@@ -1389,7 +1410,14 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_3">
+      <column comment="" key="false" length="-1" name="Location" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Transaction_Date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Transaction_No" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sku_Number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Transaction_Qty" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="POS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DSC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="register_no" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFTPPut_1" offsetLabelX="0" offsetLabelY="0" source="tFTPPut_1" target="tFileDelete_1">
@@ -1542,13 +1570,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_860bf0c0-3401-420d-829c-fb58efa40466"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0gF0nK+38+zaVJ0DaI+a13OPD6ZIyNve2A1sEMHkO1vnQloXecJc2mtpq0+Of9CfnX/xTct68kvN
-EV307PzjiA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5d790754-3f92-4c10-a287-67a6a6143e50"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Tk3EyU4VTuYTsh2P/yJ1z9cjGTrdO60Zq1P1KwEZo4AOGGKilK5WsHLmEANBqkHJZkWaAfE7Xhto
-85MKP9ChNg==</DigestValue></Reference></SignedInfo><SignatureValue>HPSTqxs6TIj+L5nM2kzsfh4kffyEadeQJZUrBka0x69XXngFCX5qAkeKFQvaZCgv/LvLpT7manPm
-EkSpwWzaie0iuZmkeO7o5WtXLGtUcVmW3RuL8fJCe1QfZmUxKXUnrm7NVUdti95Z+g7peqSZDJxa
-+iTPD54eZfx6e4ciTEAAybmssGgrA9td+tAjKx98+6V1NbeK7qPaMq1xQ1Pulm/eAw99PBTb0O25
-hbf9ExyQA9kPg8Zx7A1SpJ21KTkreUiWd+pr9Di0YNdT8nWBs6hjGU2ndVWww9BEdqoC4u3y/pkj
-PShg9ixF2BEY4kXnnqCdLWMbFCdn/StJzBPUBw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9e081887-b9ce-49ea-a3a3-6059cff6b1c0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GQV+aUQmB4AI6hSLuL+YLGGcdZHIAH0gX3CdivjuakTCqwatTSx9uPj1Dk9Sg+VTTceBVR6QOw1Q
+00GY5z027g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_af2b4382-4e9a-4cfb-9306-7d27076d24ca"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wh6vUu428WWgAidwdZERZ45fZRkL6u9cDqFrYsTSpVpTgb9Q8IOPK6U0HKCmAP0tN3etwKweRwrF
+SkrFCRd0fA==</DigestValue></Reference></SignedInfo><SignatureValue>WWY++kbtBPllhIqAVTbRbKgB49hkH/0dKenpJm3O0Bk6anhfQ3ssmJFCEjoje5kjWnJAJlu+XpXb
+qOMXJxAadkaOID0UeFXGq1Wst2fwRzqhfJ3MBEcf+Yq/ctqwgoQ5O9Rlz7ZMDxnCqEPw63yC6E1w
+CqHm02z0zSb9713a7DAx2F0diGMwJreaCxFd5YH3gaXfh0GK+nErHJuIdjSdGFqjMOmDpB4pXHxo
+Y2Q29GYH0ZGX8UaXImle6jsMjRlQifCZEE31vJFwAs8/0CDzCZI/2zA7ZiVLE8FZ0n9IrwztVbQ7
+FQq9C3Cta7PcVV7uUT6tUfx7A+vOJq3C6f8xBw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1570,4 +1598,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5d790754-3f92-4c10-a287-67a6a6143e50" Target="#_860bf0c0-3401-420d-829c-fb58efa40466"><Timestamp>2021-09-13 22:46:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_af2b4382-4e9a-4cfb-9306-7d27076d24ca" Target="#_9e081887-b9ce-49ea-a3a3-6059cff6b1c0"><Timestamp>2021-09-13 22:52:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

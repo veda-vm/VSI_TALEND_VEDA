@@ -1355,7 +1355,7 @@
     <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFixedFlowInput_1">
-      <column comment="" key="false" length="-1" name="POS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="POS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="448">
@@ -1379,7 +1379,7 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_1">
-      <column comment="" key="false" length="-1" name="POS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="POS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFTPPut_1" offsetLabelX="0" offsetLabelY="0" source="tFTPPut_1" target="tFileDelete_1">
@@ -1532,13 +1532,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_57d8cb22-2ca2-40e4-ac7f-dae13e784ded"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>AQX1pxhfZscqi/2Sov9YNJWLzUWbqWbEOjHbPcjnLZ4YdW+u5HfMyBV4j38kDE3uH71sdyZgV6O/
-wpkUiyzmsw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2cb8be4f-0855-4244-a2d0-d7b1c19461ce"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vwRPP3909x9+VoFOV+2yNmYjDn8dLd0+ane1zuB/V9PvyuerEbsdprZcTfoncd7KOcPMzB5VotUh
-AVhAhGjvtw==</DigestValue></Reference></SignedInfo><SignatureValue>Y2QOVX6xds8M68wChoda6b3THfgBPy/TpXs+AfOS/Y9ZIlyrZ8QjYCneNjmA9RT6q87o5N54lOCc
-jdqTuUG6pClDdmGPbsc0nx+MBVQywRt2mWcGUykr7DiZfYfcsZ+idXAcnLrMy0Pqk/R9ciK2WfFo
-NnKFQtD1wTsCrfZF8MGM22untL7I+AQQ2z+RC1UL/i1EWbeYcDLcTppQ6qLXsVXD9dCiWanpYAU4
-uDeZpwTfi2hxQ2bS/LNxdj1DQtvXZ78J/lsabOhBQoDNRxOEccxjv3Co6UC3oKOlgkhuJk8vRGeJ
-Vd+yYFdGJ7S0wI9h/N9GYmRxCYLIYi9Sw7/FKQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_417da0c6-45fd-4c3e-8917-661c1fbd876e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YRsa3gdgkSDjwT0M3vsJ/BjSmukO2iwnvzk8RImPOZSEPy20aOTqpWyTAk0P7MYeuoz4MmF6tQtd
+FEeWnUhHGw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_50c41e5a-4588-4ad6-b9e2-0a572d2a6849"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JgKIVJWwSoU507NONGfonpoBeeZj8L3FneMLcsttg9Zna37lEqBXtpkYoJzcjPQgXohC1+7B5C9E
+GkNWOHr7aw==</DigestValue></Reference></SignedInfo><SignatureValue>Xty0mqsuX96v+JS2xqq+vCHovFjOSnhtlzwy2Pz+FPLPJ/ZIjFIA2oUeAoYTC5moEMl6/avQSj6b
+LTGVPFnuRJ8I4PdGZ9wfw0I6WtR0h5EhIimlQii9fJRRomP8bkk4aLo0u+oxVQSU9pgDRB5aOfit
+FxILphucqi2XLk7YCI0/c8Rg6nhnZ/C6AYrdau8BguM6PN2Uya/bDqz7//n2kcmWRE7uE7pI/h8H
+Y0+a6NexmM8adzG1SLblZ5MQAlJg5VvG41EDHr3ymkvcvNjS2OmQ2KSqD8jC5OcqdY1cuZQcGPKn
++HH5J9Ci/UqfpV49y6odQV/EJyi94Fls2bFfeA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1560,4 +1560,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2cb8be4f-0855-4244-a2d0-d7b1c19461ce" Target="#_57d8cb22-2ca2-40e4-ac7f-dae13e784ded"><Timestamp>2021-09-13 22:44:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_50c41e5a-4588-4ad6-b9e2-0a572d2a6849" Target="#_417da0c6-45fd-4c3e-8917-661c1fbd876e"><Timestamp>2021-09-13 22:45:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

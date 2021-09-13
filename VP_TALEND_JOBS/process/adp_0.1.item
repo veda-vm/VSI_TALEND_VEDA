@@ -1261,14 +1261,14 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="copyOfout2">
-      <column comment="" defaultValue="" key="false" length="10" name="Location" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="Location" nullable="true" originalLength="14" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="Transaction_Date" nullable="true" originalDbColumnName="Transaction Date" originalLength="-1" pattern="&quot;MM-dd-yyyy&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="Transaction_No" nullable="true" originalDbColumnName="Transaction No" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="14" name="Sku_Number" nullable="true" originalDbColumnName="Sku Number" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="Transaction_Qty" nullable="true" originalDbColumnName="Transaction Qty" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="Transaction_No" nullable="true" originalDbColumnName="Transaction No" originalLength="14" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="Sku_Number" nullable="true" originalDbColumnName="Sku Number" originalLength="-1" pattern="" precision="14" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="Transaction_Qty" nullable="true" originalDbColumnName="Transaction Qty" originalLength="14" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="16" name="POS" nullable="true" originalLength="-1" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="15" name="DSC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="register_no" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="12" name="register_no" nullable="true" originalLength="12" pattern="" precision="0" sourceType="SMALLINT" type="id_BigDecimal" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
@@ -1326,14 +1326,14 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_2">
-      <column comment="" defaultValue="" key="false" length="10" name="Location" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="Location" nullable="true" originalLength="14" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="Transaction_Date" nullable="true" originalDbColumnName="Transaction Date" originalLength="-1" pattern="&quot;MM-dd-yyyy&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="Transaction_No" nullable="true" originalDbColumnName="Transaction No" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="14" name="Sku_Number" nullable="true" originalDbColumnName="Sku Number" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="Transaction_Qty" nullable="true" originalDbColumnName="Transaction Qty" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="Transaction_No" nullable="true" originalDbColumnName="Transaction No" originalLength="14" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="Sku_Number" nullable="true" originalDbColumnName="Sku Number" originalLength="-1" pattern="" precision="14" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="Transaction_Qty" nullable="true" originalDbColumnName="Transaction Qty" originalLength="14" pattern="" precision="0" sourceType="INT" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="16" name="POS" nullable="true" originalLength="-1" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="15" name="DSC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="register_no" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="12" name="register_no" nullable="true" originalLength="12" pattern="" precision="0" sourceType="SMALLINT" type="id_BigDecimal" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFTPPut_1" offsetLabelX="0" offsetLabelY="0" source="tFTPPut_1" target="tFileDelete_1">
@@ -1475,13 +1475,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b4353f7f-52a0-4874-891f-73e10a403828"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fYxo+ZUsdIYSxYBBIBJ8y48r5bCSS5vo1kL1/JjGYVO6kCqf2cVkcNZsFhVRQYb2F1bJ6JKo+VT+
-HD22eaCTLQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d99059b7-b912-4c13-baf4-afd084c413bd"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DAtjPebCy/v9wrs8X1qbhLChxcOAvPHGevikY0eofZxj5WINt0smm/nD4FQV4lTafhGVidyLbDfK
-1aJoAZUgaA==</DigestValue></Reference></SignedInfo><SignatureValue>hs+7LfoMCPb+kiZzckaYYOYgGKi6uyxg80xU5mLoxE0BdLgPVJG/9sGN3w5T/8U+HGScXTZbKsLE
-fneQvU5wuGx89T0F+aBH7a0y79m6UUeHQupQ5vK8f/qrLQlnQtbPbbt69OOElDhP8YqYw+GIIjkE
-2PYILJ0p9Cnv9xxoR/LHPe+3OyZo6QbpkbvI/d70K//q8ffXjAd6E7+6dydUygcLOpkYAgiOtwEN
-KmzhBCyiokSs2Z4MsWBVfURh2XhmFTBXlK2RjAHQvwfuNGjTNkToMO2iBeG+JePM8ABrog7qqRoz
-oatNdV0Wc6cDv0Vz+n6I6Iv8UBsinDzKUWgh0Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_35957172-7b6a-4979-a4ca-f2abbf1c314e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lvLNo4KbQRoC3FVNjRyyPP8q7ORB/clq2rQd4QjNOBCOfUvFv7r6I6p3dkvkBZbPdufHsZ05JuiG
+X8XlvKTwfg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8467c86d-2876-4eb1-8d51-26dcc12cbf29"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>q0Gs0ru7n2z2qGLcYuw2DUX+nJKjEuHpaKM0GLeeBz8eSR3ACaZL3LFNIHp6Te5Xmh1lv29Nl5AA
+ZrLk/JTeIA==</DigestValue></Reference></SignedInfo><SignatureValue>eh+drWklB1jF/dErQXCPobEheg2TW4E0smZGLXZgHDBL42ui1gPWOjU1onhai0lGtnvfhLaF4D9+
+bAblsj54JlkhIeBqKujIJAwi78DDNFpEWzOZPPH0wBhtxcZEv6KiJC1U1hvQAl4myKOqiDFM4k+O
+rPCg+Pb++ImkmJiA7j7tVcvb38PKCQOWbNWKSSUs2nyvQ+pBUf3qD+5IT+VtdODJuEb9/MhmBba7
+2leabMBkMVTrdILZXkSVVew5LTXB6IApezTQM4aiR1k2jHnwSgCV4zKocFe9fPbmoTwGhe/wUIMq
+5vaneg5n45LSJFgVqJv1bjKDao/LV3u4gKeMKw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1503,4 +1503,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d99059b7-b912-4c13-baf4-afd084c413bd" Target="#_b4353f7f-52a0-4874-891f-73e10a403828"><Timestamp>2021-09-13 18:40:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8467c86d-2876-4eb1-8d51-26dcc12cbf29" Target="#_35957172-7b6a-4979-a4ca-f2abbf1c314e"><Timestamp>2021-09-13 19:08:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -128,6 +128,7 @@
   </parameters>
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;//wva-sql-etl/SFTP/FTP_FILES/WMS_EDI_FILE/VSDHLeCommerce_20210914.csv&quot;"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="true"/>
@@ -475,6 +476,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -663,6 +665,7 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="480" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -918,7 +921,7 @@
     <elementParameter field="PASSWORD" name="PASSPHRASE" show="false" value="0RMsyjmybrE="/>
     <elementParameter field="FILE" name="KEYSTORE_FILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="KEYSTORE_PASS" show="false" value="0RMsyjmybrE="/>
-    <elementParameter field="DIRECTORY" name="LOCALDIR" value="&quot;//wva-sql-etl/SFTP/FTP_FILES/WMS_EDI_FILE/&quot;"/>
+    <elementParameter field="DIRECTORY" name="LOCALDIR" value="&quot;/sqlftp/WMS_EDI_FILE/&quot;"/>
     <elementParameter field="TEXT" name="REMOTEDIR" value="&quot;/outgoing/&quot;"/>
     <elementParameter field="CHECK" name="MOVE_TO_THE_CURRENT_DIRECTORY" show="false" value="true"/>
     <elementParameter field="CLOSED_LIST" name="MODE" show="false" value="ascii"/>
@@ -1147,6 +1150,7 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="vsi_dhl" lineStyle="0" metaname="vsi_dhl" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
@@ -1315,12 +1319,14 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="vsi_dhl"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFTPFileExist_1" offsetLabelX="0" offsetLabelY="0" source="tFTPFileExist_1" target="tFTPGet_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFTPGet_1" offsetLabelX="0" offsetLabelY="0" source="tFTPGet_1" target="tFileInputDelimited_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFTPConnection_1" offsetLabelX="0" offsetLabelY="0" source="tFTPConnection_1" target="tFTPFileExist_1">
@@ -1346,13 +1352,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cc0c6345-064a-466e-9f5d-45dc6461fb24"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>un/nMrhZXDrPxZV+cO8BVWbZ8gEeDJmArHahr9QYiAhE3pckPr1VosyMqQJ0eEIzx8rAkwadwrVT
-JmDuVB5QOw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_41b89c23-91f6-408e-be8f-0b1e20ca7626"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>j7vEMKcmeGAykgEJvPebhzXcouDrjzvvRnaQjFR4p0YWaXD1u0SM2PXP+kg1uZVRe5hh1KI43BI0
-bXYiNWCkqg==</DigestValue></Reference></SignedInfo><SignatureValue>h0Q2BLvZt1vXl+tcbEkxkVkia+vCpzLLIJ+DJwaCZyQg9hjoxHIdHgrmKK6dTsHnvG97kD1kj55l
-kAPDVaqVLoLw3xWIMXyBu90NX50x182ZYFZTeDkz3tjuunuXnNaliY6dpys7+PVLt9tHeBalHVsm
-ZRxtP+29CLdu3qEnq8jkE9vwwghBURUmlN3Y4pm/p/VSnMxy0ayebwlGQq6+MbQ0bs81dc0p9hbh
-pijaagP1/Fao95G251r1s0uVVJ/fiqgu9/d4jzHFUg92R6gg76x7iXL2bCoUp+nq3M02+RcCQrND
-Cjxui4hat4hPLirizHdgim4/uoaI9onaKYcqjw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_49b86c09-2fea-4423-9c7f-6ebd6c38f279"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mio0wYdnMC6VKZM5Xa9Zu6PxEOwCCh5EC2KDyadKugQ2++4eIU0o88bwRN3/MtjXNJMA+EqUYLvB
+z5Igvgy8mw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_37fd32a4-a31c-48d2-bd90-e335b45a7151"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cG5rCY2QXrs7MxVPIj5Hf5KkCVhYEtpZb2MJyM/9lDoz2YY0O0nE0R1kIXf6QTdyQ+cjQPUeYB5R
+ItFBaEx6Qw==</DigestValue></Reference></SignedInfo><SignatureValue>becoTF3fpKocSGS/OuW8oLAVYL5w1hxJ6Ubd71+Nz+01JDF8qUJjZLYD5g9uqByprnNHJCOEfY7G
+0fIhMcpPFEGN5ZzL7rEy0UuVEvjxVvDJatpX9APld01lKeH2GRCDf2b4NwDaipcWkdYaW6cm2Jga
+KtHjxfpz9FAoKPb+OfyuFTyS/lOmCDByKf67I6udEVMr6WbgiKZwnRVv3U+MR4U5YCa5rEj58E0F
+neVYo9fJYKmgnccARCg+KkkqqwOm4ayq05jkQjXtLA1rLDwcZpDQl4PYjqfGyxeVRD45Czst1pEA
+VpQH5uICKe9E3tt57m8D4iiu5w7rVLfeHJ7xyg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1374,4 +1380,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_41b89c23-91f6-408e-be8f-0b1e20ca7626" Target="#_cc0c6345-064a-466e-9f5d-45dc6461fb24"><Timestamp>2021-09-14 14:14:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_37fd32a4-a31c-48d2-bd90-e335b45a7151" Target="#_49b86c09-2fea-4423-9c7f-6ebd6c38f279"><Timestamp>2021-09-15 21:30:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

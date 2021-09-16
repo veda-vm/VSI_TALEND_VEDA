@@ -869,6 +869,7 @@
   </node>
   <node componentName="tFTPFileExist" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPFileExist_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tFTPConnection_1"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;Secure.Data.StrategIQCommerce.com&quot;"/>
@@ -907,6 +908,7 @@
   </node>
   <node componentName="tFTPGet" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPGet_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TEXT" name="HOST" value="&quot;Secure.Data.StrategIQCommerce.com&quot;"/>
@@ -954,6 +956,7 @@
   </node>
   <node componentName="tFTPConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPConnection_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;Secure.Data.StrategIQCommerce.com&quot;"/>
     <elementParameter field="TEXT" name="PORT" value="2022"/>
     <elementParameter field="TEXT" name="FTPS_PORT" show="false" value="2022"/>
@@ -1464,6 +1467,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="vsi_dhl"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFTPFileExist_1" offsetLabelX="0" offsetLabelY="0" source="tFTPFileExist_1" target="tFTPGet_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFTPGet_1" offsetLabelX="0" offsetLabelY="0" source="tFTPGet_1" target="tFileInputDelimited_1">
@@ -1471,6 +1475,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFTPConnection_1" offsetLabelX="0" offsetLabelY="0" source="tFTPConnection_1" target="tFTPFileExist_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_2">
@@ -1502,13 +1507,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5a732b41-b5e9-4863-8a5c-b4739be48b8c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SnQ64SMcsUdBLAEeErS4RaGh7qlVS8ZOv2hYiuQvRp6RsN2grWpHzxE1xaIiS2r7qVut9Ha/bF9G
-OeENZhYv8Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ce099223-4702-4166-a4cc-bbdf9125b571"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OGlAYzu86IAA+O38sSdWDbPbU7DaQIIdpPTde9Ugj5zzHwbeHlpZcxL+1s9rt9NFhJZyo7RjSYTa
-DUf2J9FCew==</DigestValue></Reference></SignedInfo><SignatureValue>lEx0Eb+hqm+RK1JWESVqScT3QQcCqVPDEN4++faRulOG5cX+W22yvjIvcjbJuIqgjvBDVYNhWinr
-BqRSr4LJfaVYB/32Fhw7vr4P90TUqoW4v7ChDcexgcUHKanlUfTgW2D/uqyleGE5r66w/0WuFOCm
-1DqLlL3DuttDX7wwXEegsckyl7P0T5d0eI92P0NuQUmfC5mIVujOgwf+N1Iuvzzmn5/PFOxzV4o1
-m4c1Xbtn598uo+FK+/89gKU+ef9WTShMZ+imd3kqTstnocjAETTdMUhldNJziL0WY+OJ1zCMAg05
-WXELF/xroKXTW8BjTcvm4BpoCCv8TPB9L5A3CA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2eee12e8-3d3c-4d29-9eb7-cbee50544e00"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ov8xqF6uP1ahKbaFm1kBqE3Tp4xXMpQV5htp3hailA6foeMmmpRtTIycU8EqwtFXCxWdtirAzbm2
+tpbFFELGKQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7fb2e8b0-9d2e-4ef4-a610-1321ff69b870"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>piS59NZA6cWwiYyswEXGxNnZfyCvXclUHLdpc7C3lVe8Deb5cyZXbTRVxY1KZ0fdKDYvB2PrR/fL
+SLa/DcZhDQ==</DigestValue></Reference></SignedInfo><SignatureValue>cPVbLl9vkVhMoCno4dO84o3fGmDjsH2PdeWEIFmRUY3QWnwD0l15C/N4TJeY0rah2NIpk01GdBJP
+lGYep/n3zm3rrkkyPyu3ARhE5dpMPHWI+/bwTr9U1uG0EThX0SD1gWb1oyfPzPf1tGCUKBjohD7F
+ivlsFPnWRfTlzQr+68boM99epY1Zx3WDF+Mm669iScGiYlfpn9fIEi95T0yVjir1MV2PXMW3BF3r
+nEnAjpa7gF/pnEw662Gf5YAD3YWfuvvNNaxGjzNVAnygO0s42rha5M+XBoPzSXni7kixDxnD6/vn
+isqwNGvAf5xZjxvZm2y4qt/TK0ie31j/H5mbJA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1530,4 +1535,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ce099223-4702-4166-a4cc-bbdf9125b571" Target="#_5a732b41-b5e9-4863-8a5c-b4739be48b8c"><Timestamp>2021-09-16 16:56:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7fb2e8b0-9d2e-4ef4-a610-1321ff69b870" Target="#_2eee12e8-3d3c-4d29-9eb7-cbee50544e00"><Timestamp>2021-09-16 16:57:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="connection_host_name_jda" prompt="connection_host_name_jda?" promptNeeded="false" repositoryContextId="_rwjdEOkrEemdQ5Lo4nAolQ" type="id_String" value="10.3.2.140"/>
     <contextParameter comment="" name="connection_username_jda" prompt="connection_username_jda?" promptNeeded="false" repositoryContextId="_rwjdEOkrEemdQ5Lo4nAolQ" type="id_String" value="SQLETL"/>
@@ -479,12 +479,82 @@
       <column comment="" key="false" length="1" name="DISCOUNT_TYPE" nullable="false" originalDbColumnName="DISCOUNT TYPE" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="7" name="PCT_OR_AMOUNT_OFF" nullable="false" originalDbColumnName="PCT OR AMOUNT OFF" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="7" name="BREAK_POINT_THRESHOLD" nullable="false" originalDbColumnName="BREAK POINT_THRESHOLD" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="CREATE_USER" nullable="false" originalDbColumnName="CREATE USER" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="CREATE_USER" nullable="false" originalDbColumnName="CREATE USER" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="19" name="CREATE_DATE" nullable="false" originalDbColumnName="CREATE DATE" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="1" name="DISPLAY_FLAG" nullable="false" originalDbColumnName="DISPLAY FLAG" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="64">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="896" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_-TWDAB-4Eeyp3LeKJ0e0cw-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="CPNPRMPF" name="promo">
+      <column key="false" length="4" name="PROMO" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="100" name="PROMO_DESCRIPTION" nullable="true" originalDbColumnName="PROMO DESCRIPTION" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="PROMOTION_LEVEL" nullable="true" originalDbColumnName="PROMOTION LEVEL" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="DISCOUNT_TYPE" nullable="true" originalDbColumnName="DISCOUNT TYPE" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="7" name="PCT_OR_AMOUNT_OFF" nullable="true" originalDbColumnName="PCT OR AMOUNT OFF" pattern="" precision="2" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="7" name="BREAK_POINT_THRESHOLD" nullable="true" originalDbColumnName="BREAK POINT_THRESHOLD" pattern="" precision="2" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="10" name="CREATE_USER" nullable="true" originalDbColumnName="CREATE USER" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="50" name="CREATE_DATE" nullable="true" originalDbColumnName="CREATE DATE" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="DISPLAY_FLAG" nullable="true" originalDbColumnName="DISPLAY FLAG" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="promo" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row3.PROMO" name="PROMO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.PROMO_DESCRIPTION" name="PROMO_DESCRIPTION" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.PROMOTION_LEVEL" name="PROMOTION_LEVEL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.DISCOUNT_TYPE" name="DISCOUNT_TYPE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.PCT_OR_AMOUNT_OFF" name="PCT_OR_AMOUNT_OFF" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row3.BREAK_POINT_THRESHOLD" name="BREAK_POINT_THRESHOLD" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row3.CREATE_USER" name="CREATE_USER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.CREATE_DATE" name="CREATE_DATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.DISPLAY_FLAG" name="DISPLAY_FLAG" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="PROMO" type="id_String"/>
+        <mapperTableEntries name="PROMO_DESCRIPTION" type="id_String"/>
+        <mapperTableEntries name="PROMOTION_LEVEL" type="id_String"/>
+        <mapperTableEntries name="DISCOUNT_TYPE" type="id_String"/>
+        <mapperTableEntries name="PCT_OR_AMOUNT_OFF" type="id_BigDecimal"/>
+        <mapperTableEntries name="BREAK_POINT_THRESHOLD" type="id_BigDecimal"/>
+        <mapperTableEntries name="CREATE_USER" type="id_String"/>
+        <mapperTableEntries name="CREATE_DATE" type="id_String"/>
+        <mapperTableEntries name="DISPLAY_FLAG" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_3"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_UHBD4Ow0Eem8PNBRnmAJnA"/>
@@ -507,6 +577,8 @@
     <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="PROMO"/>
     <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
     <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:REPOSITORY_SCHEMA_TYPE" show="false" value="_UHBD4Ow0Eem8PNBRnmAJnA - CPNPRMPF"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -570,27 +642,63 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
-    <metadata connector="FLOW" name="tDBOutput_3">
-      <column comment="" key="false" length="4" name="PROMO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="100" name="PROMO_DESCRIPTION" nullable="false" originalDbColumnName="PROMO DESCRIPTION" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="PROMOTION_LEVEL" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="DISCOUNT_TYPE" nullable="false" originalDbColumnName="DISCOUNT TYPE" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="PCT_OR_AMOUNT_OFF" nullable="false" originalDbColumnName="PCT OR AMOUNT OFF" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="BREAK_POINT_THRESHOLD" nullable="false" originalDbColumnName="BREAK POINT_THRESHOLD" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="CREATE_USER" nullable="false" originalDbColumnName="CREATE USER" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="19" name="CREATE_DATE" nullable="false" originalDbColumnName="CREATE DATE" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="DISPLAY_FLAG" nullable="false" originalDbColumnName="DISPLAY FLAG" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" label="CPNPRMPF" name="tDBOutput_3">
+      <column key="false" length="4" name="PROMO" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="100" name="PROMO_DESCRIPTION" nullable="true" originalDbColumnName="PROMO DESCRIPTION" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="PROMOTION_LEVEL" nullable="true" originalDbColumnName="PROMOTION LEVEL" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="DISCOUNT_TYPE" nullable="true" originalDbColumnName="DISCOUNT TYPE" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="7" name="PCT_OR_AMOUNT_OFF" nullable="true" originalDbColumnName="PCT OR AMOUNT OFF" pattern="" precision="2" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="7" name="BREAK_POINT_THRESHOLD" nullable="true" originalDbColumnName="BREAK POINT_THRESHOLD" pattern="" precision="2" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="10" name="CREATE_USER" nullable="true" originalDbColumnName="CREATE USER" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="50" name="CREATE_DATE" nullable="true" originalDbColumnName="CREATE DATE" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="DISPLAY_FLAG" nullable="true" originalDbColumnName="DISPLAY FLAG" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="4" name="PROMO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="100" name="PROMO_DESCRIPTION" nullable="false" originalDbColumnName="PROMO DESCRIPTION" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="PROMOTION_LEVEL" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="DISCOUNT_TYPE" nullable="false" originalDbColumnName="DISCOUNT TYPE" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="PCT_OR_AMOUNT_OFF" nullable="false" originalDbColumnName="PCT OR AMOUNT OFF" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="BREAK_POINT_THRESHOLD" nullable="false" originalDbColumnName="BREAK POINT_THRESHOLD" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="CREATE_USER" nullable="false" originalDbColumnName="CREATE USER" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="19" name="CREATE_DATE" nullable="false" originalDbColumnName="CREATE DATE" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="DISPLAY_FLAG" nullable="false" originalDbColumnName="DISPLAY FLAG" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+    <metadata connector="REJECT" label="CPNPRMPF" name="REJECT">
+      <column key="false" length="4" name="PROMO" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="100" name="PROMO_DESCRIPTION" nullable="true" originalDbColumnName="PROMO DESCRIPTION" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="PROMOTION_LEVEL" nullable="true" originalDbColumnName="PROMOTION LEVEL" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="DISCOUNT_TYPE" nullable="true" originalDbColumnName="DISCOUNT TYPE" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="7" name="PCT_OR_AMOUNT_OFF" nullable="true" originalDbColumnName="PCT OR AMOUNT OFF" pattern="" precision="2" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="7" name="BREAK_POINT_THRESHOLD" nullable="true" originalDbColumnName="BREAK POINT_THRESHOLD" pattern="" precision="2" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="10" name="CREATE_USER" nullable="true" originalDbColumnName="CREATE USER" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="50" name="CREATE_DATE" nullable="true" originalDbColumnName="CREATE DATE" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="DISPLAY_FLAG" nullable="true" originalDbColumnName="DISPLAY FLAG" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -605,9 +713,13 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tDBOutput_3">
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
+  <connection connectorName="FLOW" label="promo" lineStyle="0" metaname="promo" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="promo"/>
   </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
@@ -630,13 +742,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_bf0cb3ac-9993-4663-9ce0-d6bfcd1c87cd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4p6ECvMc/8K1vqoUTmmo3Vtsl/aDSZHVUKOjqaHCXuhR+jfWiK4mYlwIJtbPMCvaIZXAUM9/1YrZ
-Srwyoe1/6g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a95136e0-7279-4bf5-be4e-d0bbd97ba7c9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>szxEEug2Zl917MUci2C2pvATXE00zYFAKyWN0gheE62jXgI71MEpFclZ5LiJpVDkmeBSGCVS65Pf
-2gKErt+y4Q==</DigestValue></Reference></SignedInfo><SignatureValue>N/DlIq+Dj5x2GzcAjdfJwDHwCexIfMRZdpbMWFpqI7nPlbpuhZZqW6zVcYfC8+y/cmhQ/WER8eqK
-mcnSq8QVZtvkarq1xhJ7byerVUNn6Kgy2UczVaTwxaY06JyKKD06yqnqV2BfOlUS1wVK5BT37/cu
-sH3YOUdgSkCkYpbE+YB7r+Ldmm/nxXOqtLhq5xycms6MXz9L8+R/SUUgeH1HlhbwLMArCHyeqsev
-oeRleL8LMCVQCqpNugQdzlBtgaiKs8O0u7WdYlCFjYIbkaYO3FALGyKLDjGrgAxBVKUOJe+XhgFn
-s1ZtOrd2vT3Eb15IXwmcswE6DLIyDB5hG7CXzQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_06c019fb-d732-4cfc-94cf-95e332f2babe"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>g8Wf+6FHgXgn0ekPWCBw1/TQR5t/+t/XIBiPlOjrFrQVroO1hTnw7R5jrAoYrtz6yhUSGmw0Irp0
+p6YDUy5Z8Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5ce50e22-07bd-491e-934f-14038f91847d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4GC4Mg7xK4Hon8wdycbBYvW//J3coA0kY7VoFP+shHALvCqLEwU4x4s+aM3/v0IyM9iSAFomHtdM
+s7gbr0846Q==</DigestValue></Reference></SignedInfo><SignatureValue>Y4GDHLXWI1zkXHhddi9VBJ3EUYdfMY0noBQF8aMbaPWrMAlZTOf4ftLSSrwFqHwYSsBR6A3fILmv
+7Wn0n5nKTPz1e3XGMYBGELpeREm3oW8MWyuLRykcMrh3QH82JCZ1A07Xr12LgHZm5ahZa7vaGkFa
+cdcfEKSjm/MHOdMWtGsUQKko6jUSo7EYaxuYE9XSN1H6FA5GEQCsVsbIHNnj9W/ZquiA1JcMBro1
+RaI1/vrXxOsrSlLcnlyF+yAWRM7nFUQr4k55N/wc113IfiQhMmrRsa1twtGKTVOHMqKOkqAfXOuB
+pCFp9N2fNXoQtDnTsgjLPGm24z1mWRADTkZN8g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -658,4 +770,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a95136e0-7279-4bf5-be4e-d0bbd97ba7c9" Target="#_bf0cb3ac-9993-4663-9ce0-d6bfcd1c87cd"><Timestamp>2021-09-27 21:24:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5ce50e22-07bd-491e-934f-14038f91847d" Target="#_06c019fb-d732-4cfc-94cf-95e332f2babe"><Timestamp>2021-09-27 21:30:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

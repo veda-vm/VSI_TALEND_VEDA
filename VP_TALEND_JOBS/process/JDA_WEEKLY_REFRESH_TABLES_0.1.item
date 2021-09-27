@@ -117,6 +117,7 @@
   </parameters>
   <node componentName="tAS400Input" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -132,7 +133,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select INUMBR as sku_no,&#13;&#10;ALWDQT as detail_units,&#13;&#10;ALWCHG as rebate_charge,&#13;&#10;20 || substring(ALWTRDT,1,2)||'-'|| substring(ALWTRDT,3,2)||'-'||substring(ALWTRDT,5,2) as transaction_date,&#13;&#10;ALWLOC as location&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10; from MM4R5LIB.ALW351PF where INUMBR = 1011717&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select INUMBR as sku_no,&#13;&#10;ALWDQT as detail_units,&#13;&#10;ALWCHG as rebate_charge,&#13;&#10;20 || substring(ALWTRDT,1,2)||'-'|| substring(ALWTRDT,3,2)||'-'||substring(ALWTRDT,5,2) as transaction_date,&#13;&#10;ALWLOC as location&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10; from MM4R5LIB.ALW351PF &quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="as400_id"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;prompt=false&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
@@ -160,6 +161,7 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_UHBD4Ow0Eem8PNBRnmAJnA"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -243,7 +245,6 @@
   </node>
   <node componentName="tAS400Input" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -259,7 +260,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select *&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10; from MM4R5LIB.AUTORDPFX&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select *&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10; from MM4R5LIB.AUTORDPFX where JDASKU = 1762301&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="as400_id"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;prompt=false&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
@@ -287,7 +288,6 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_UHBD4Ow0Eem8PNBRnmAJnA"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -371,11 +371,11 @@
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBOutput_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <subjob>
@@ -392,13 +392,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_21e160fd-ce54-469c-92ac-b23cbb93eb6d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WdDnFuJ2heNswaP+bPG4TMf3bGx+Q9L0Lp6AdofBvwAY8yY0FMawpSq4b83xvWDlEPLehdfbwufF
-fccKFs25wg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ee2a5d63-ca48-4e40-b026-e2bf938721e9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pgenM/a2JCXH2QWe4GRIcqH8Q5YldZ5jB70xL88PZvLfOlQhffXBJCJ1rvhvLs/FzKlsw8p8QoC/
-KJ2+OTtM2w==</DigestValue></Reference></SignedInfo><SignatureValue>orbmvaVk4GGZxpPfkoBsi/8az3ZCJHIS76F5wN2cbs5QYIq+UIPcHqycCYpS+2afOJuigo9b6y6q
-sDC3ephX0ZwayvxyP67ZA9xgByVwkg0YwPUqUkQe9P5VrzagLibKKj8o9drJVCVV3yoPyyjC9qof
-rUhMyUUqnGXl0BabF0qnTJPOZthdm86p8CtRLFVkLYGJWVs8CyZc6K6r7Vjt1fvA38nLY+QfA+vF
-7Yq620SzQlCRJvRY7wyI4Stw1RT5tLyEspMEx4XM/mrT+p6PBtiOP+/2E6Y0mwos09Ky9GzyoLSq
-BiYqVCuM317GPynIU5UEKd2olDmTMmqFHFoonw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6881ebff-0b1a-4a17-8b3e-10de5a7319aa"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KjKqfngyOiyMEgELwioTnD7c22cinUxb3EGw7YTNFrv7aOKTXMXFlC3Cela0OVOutLAyViOD7Bh1
+8tHeXWNZ5g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_50824f7f-eacc-4f6a-9c2a-8734085a5585"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Dqe5CNAnzH67BNgpjgnjIhbZaebWuqIlVBEvHYcXW4+KGAGDJp1EpqoKUZVSgttavMoWIkiq0Z95
+SuNMmXq+bg==</DigestValue></Reference></SignedInfo><SignatureValue>mEAn1aea7NHuV2l4ovBhLDc6KZDlI4H+8o7J/T3LbjKG7vLauU16NjB9D2owgazUwtEEbSRIqK7R
+rR3A6TXJF+aWs5sC6JII8F55Kl2UXTQhCHLxXJuVEoY2gt0advLMQ6cDgz7yBKIK4PQnHpHna/vj
+UdeB4FzIsMy55PVQciFiUBRRh4DGjfFzicZ4rTwRNHrPne9wCtXRRmwhqxoMUlYWwxqp+qoTdUTS
+JH3TmIZ9Tkb4iGwEnQpLuxWLy0j4SEWWBPvS9Mwq6jlxkblzo9/RM15rw3C/ed6+P98C1WDw2CEH
+nXJm+d8PHzdDQVWP5ZK+0V8ztWnHMcpGq41uug==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -420,4 +420,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ee2a5d63-ca48-4e40-b026-e2bf938721e9" Target="#_21e160fd-ce54-469c-92ac-b23cbb93eb6d"><Timestamp>2021-09-27 20:01:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_50824f7f-eacc-4f6a-9c2a-8734085a5585" Target="#_6881ebff-0b1a-4a17-8b3e-10de5a7319aa"><Timestamp>2021-09-27 20:05:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -1310,7 +1310,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT     CSTITM as item_number, CSTLVL as cost_change_code, CSTSTR as store_no, CSTVND as style_vendor, CSTSTY as style_no, CSTCCN as start_date_century_code, CSTTYP as event_type, CSTFLG as status_flag, CSTVEN as vendor, CSTCUR as currency_code, CSTEVT as cost_event_no, CSTAMT as new_cost, CSTUM as unit_of_measure, CSTACN as end_date_century_code, CSTADT as end_date, CSTREC as record_type, &#13;&#10;                      CSTPYN as dayend_processed, CSTCOV as apply_c_s_d_override, CSTLOV as apply_loc_override, CSTUPT as upc_type, CSTUPC as upc_number,&#13;&#10;    CASE WHEN length(ltrim(CSTCDT)) = 5 THEN &#13;&#10;'200' || substring(ltrim(CSTCDT),1,1) ||'-' || substring(ltrim(CSTCDT),2,2) || '-' || substring(ltrim(CSTCDT),4,2)&#13;&#10;else &#13;&#10;&#13;&#10;'20' || substring(ltrim(CSTCDT),1,2) ||'-' || substring(ltrim(CSTCDT),3,2) || '-' || substring(ltrim(CSTCDT),5,2) &#13;&#10;&#13;&#10; end as start_date&#13;&#10;FROM         MM4R5LIB.CSTPLN&#13;&#10;--where&#13;&#10;-- (&#13;&#10;--CASE WHEN length(ltrim(CSTCDT)) = 5 THEN &#13;&#10;--'200' || substring(ltrim(CSTCDT),1,1) ||'-' || substring(ltrim(CSTCDT),2,2) || '-' || substring(ltrim(CSTCDT),4,2)&#13;&#10;--else &#13;&#10;&#13;&#10;--'20' || substring(ltrim(CSTCDT),1,2) ||'-' || substring(ltrim(CSTCDT),3,2) || '-' || substring(ltrim(CSTCDT),5,2) &#13;&#10;&#13;&#10;-- end&#13;&#10;--) = CURRENT DATE -2 DAY&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT     CSTITM as item_number, CSTLVL as cost_change_code, CSTSTR as store_no, CSTVND as style_vendor, CSTSTY as style_number, CSTCCN as start_date_century_code, CSTTYP as event_type, CSTFLG as status_flag, CSTVEN as vendor, CSTCUR as currency_code, CSTEVT as cost_event_no, CSTAMT as new_cost, CSTUM as unit_of_measure, CSTACN as end_date_century_code, CSTADT as end_date, CSTREC as record_type, &#13;&#10;                      CSTPYN as dayend_processed, CSTCOV as apply_c_s_d_override, CSTLOV as apply_loc_override, CSTUPT as upc_type, CSTUPC as upc_number,&#13;&#10;    CASE WHEN length(ltrim(CSTCDT)) = 5 THEN &#13;&#10;'200' || substring(ltrim(CSTCDT),1,1) ||'-' || substring(ltrim(CSTCDT),2,2) || '-' || substring(ltrim(CSTCDT),4,2)&#13;&#10;else &#13;&#10;&#13;&#10;'20' || substring(ltrim(CSTCDT),1,2) ||'-' || substring(ltrim(CSTCDT),3,2) || '-' || substring(ltrim(CSTCDT),5,2) &#13;&#10;&#13;&#10; end as start_date&#13;&#10;FROM         MM4R5LIB.CSTPLN&#13;&#10;--where&#13;&#10;-- (&#13;&#10;--CASE WHEN length(ltrim(CSTCDT)) = 5 THEN &#13;&#10;--'200' || substring(ltrim(CSTCDT),1,1) ||'-' || substring(ltrim(CSTCDT),2,2) || '-' || substring(ltrim(CSTCDT),4,2)&#13;&#10;--else &#13;&#10;&#13;&#10;--'20' || substring(ltrim(CSTCDT),1,2) ||'-' || substring(ltrim(CSTCDT),3,2) || '-' || substring(ltrim(CSTCDT),5,2) &#13;&#10;&#13;&#10;-- end&#13;&#10;--) = CURRENT DATE -2 DAY&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="as400_id"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;prompt=false&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
@@ -1368,12 +1368,12 @@
       <column comment="" key="false" length="1" name="COST_CHANGE_CODE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="5" name="STORE_NO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="6" name="STYLE_VENDOR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="STYLE_NO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="STYLE_NUMBER" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="1" name="START_DATE_CENTURY_CODE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="2" name="EVENT_TYPE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="1" name="STATUS_FLAG" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="6" name="VENDOR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="3" name="CURRENCY_CODE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="CURRENCY_CODE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="6" name="COST_EVENT_NO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="15" name="NEW_COST" nullable="false" originalLength="-1" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="3" name="UNIT_OF_MEASURE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
@@ -1443,7 +1443,7 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STYLE_NO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STYLE_NUMBER"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -1545,7 +1545,7 @@
       <column comment="" key="false" length="1" name="COST_CHANGE_CODE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="5" name="STORE_NO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="6" name="STYLE_VENDOR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="STYLE_NO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="STYLE_NUMBER" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="1" name="START_DATE_CENTURY_CODE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="2" name="EVENT_TYPE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="1" name="STATUS_FLAG" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
@@ -1569,7 +1569,7 @@
       <column comment="" key="false" length="1" name="COST_CHANGE_CODE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="5" name="STORE_NO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="6" name="STYLE_VENDOR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="STYLE_NO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="STYLE_NUMBER" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="1" name="START_DATE_CENTURY_CODE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="2" name="EVENT_TYPE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="1" name="STATUS_FLAG" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
@@ -1752,13 +1752,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_25d2b574-9e65-402e-b4e5-65f9a7f2a914"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2Y0LMBNNipEaHUh8q46xcNUHygW46RzTY9Bd+N6Rbddi3RzMPxU+pB2UsRAZnInV60SuAYwpr/jN
-VOj+/qka8Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ec41b1f2-b3be-4f67-923b-cead5127438f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1obU6xDWp7aKcnXOasKlk2XUxmCePXl1yiyVmLgI7t2YLSDLOmCTGMXwD5T5AXlmapNXbCG0/abF
-C9yhcIMaaQ==</DigestValue></Reference></SignedInfo><SignatureValue>jsFEy+unrxfcObhdQvSobTXT0gbhcusZeNAyRVxcxc+aH8Fms01alM0on18rntSDwDLd90IdA8aB
-CHFwGYVVviEUKkNo9zsQfPJGGiLe2GFcN1xACILB+aXz+3DJra7ar5P7PLB7fEcM7NzbLYuJaFsE
-2n53D7chTN6NtQ95V2hA7SxUcCouGD0CBQPTiWmllkMQ3tpiBkODMuiuwgT4/CamSd6+MQW8iOr9
-C57M14T9siUlKsDmBde9mZlL06EkD19zb1Ycj+cnTPKgi3ADTcJEPDg0LJPDfZYoz9eQDEd+y2fL
-S9hpFbyiLRjKf8KYqwEG8fLUMJbwVNOV8ke++Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a9574a57-75df-41ee-bffa-6e38c48343ad"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>t/m2VXjQ36qrNMqw68a0R5AiL6+qZLTbBoMe7wOqtn2O3MoVIDrU1RDG/eofp2o7SzGWyEfKGoLC
+/T473r699w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c177e76c-5a43-48fa-b624-6e8c424da7ee"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>CkhKlc4Y09T/F7ZlK5iaDQEifL4DWhx5Jx0u2lU5kg2h+Df1dft02zzFwzlhAi9zQxct+cw4Ihix
+4PUzcGVp6w==</DigestValue></Reference></SignedInfo><SignatureValue>Jz+cSE4vwv/lFG3dqubFF4GDzz4TOQQd+9GWLVPT170owjx2Oan2lwXet+kxZA1qugMAFDM1trOJ
+oj4jJJcaJQhIXktclRZKdLs4CyoQKrYTctPXIi/hhPdQOIQeYjUK3QiLP1thsqsQ7IEoH5IswsVU
+pNDOXe1p+zFk//N/0KNXtGPt2Htftp+d6o0z97wcga6nLe+nJsqZvSQ7rPiO9cEecVszcuGc6Njz
+MC7E7lQV//0ymBmWN+FdnqvazNech6Br2nVO0BdYoJ/exrSULSkQ3yzDzHdMgIc2HKxAHzd0lNiI
+WBKzoaQdSh2exNrJAi9l/Ax4WuZwLZyP4zWOTw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1780,4 +1780,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ec41b1f2-b3be-4f67-923b-cead5127438f" Target="#_25d2b574-9e65-402e-b4e5-65f9a7f2a914"><Timestamp>2021-09-27 15:14:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c177e76c-5a43-48fa-b624-6e8c424da7ee" Target="#_a9574a57-75df-41ee-bffa-6e38c48343ad"><Timestamp>2021-09-27 17:22:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

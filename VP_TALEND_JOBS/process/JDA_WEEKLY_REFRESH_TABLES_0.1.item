@@ -446,7 +446,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT CPRMPRO# as PROMO,&#13;&#10;CPRMDESC as \&quot;PROMO DESCRIPTION\&quot;,&#13;&#10;CPRMLVL as  \&quot;PROMO LEVEL\&quot;,&#13;&#10;CCPRMTYP as \&quot;DISCOUNT TYPE\&quot;,&#13;&#10;CCPRMOFF as \&quot;PCT OR AMOUNT OFF\&quot;,&#13;&#10;CCPRMBRK as \&quot;BREAK POINT_THRESHOLD\&quot;,&#13;&#10;PRMUSR as \&quot;CREATE USER\&quot;,&#10; to_char(PRMDAT) as \&quot;CREATE DATE\&quot;,&#13;&#10;CCPRMDSP as \&quot;DISPLAY FLAG\&quot;&#10;FROM CPNPRMPF&#13;&#10;where CPRMPRO# = 1100&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT CPRMPRO# as PROMO,&#13;&#10;CPRMDESC as \&quot;PROMO DESCRIPTION\&quot;,&#13;&#10;CPRMLVL as  \&quot;PROMOTION LEVEL\&quot;,&#13;&#10;CCPRMTYP as \&quot;DISCOUNT TYPE\&quot;,&#13;&#10;CCPRMOFF as \&quot;PCT OR AMOUNT OFF\&quot;,&#13;&#10;CCPRMBRK as \&quot;BREAK POINT_THRESHOLD\&quot;,&#13;&#10;PRMUSR as \&quot;CREATE USER\&quot;,&#10; to_char(PRMDAT) as \&quot;CREATE DATE\&quot;,&#13;&#10;CCPRMDSP as \&quot;DISPLAY FLAG\&quot;&#10;FROM CPNPRMPF&#13;&#10;where CPRMPRO# = 1100&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="as400_id"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;prompt=false&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
@@ -475,7 +475,7 @@
     <metadata connector="FLOW" name="tDBInput_3">
       <column comment="" key="false" length="4" name="PROMO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="PROMO_DESCRIPTION" nullable="false" originalDbColumnName="PROMO DESCRIPTION" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="PROMO_LEVEL" nullable="false" originalDbColumnName="PROMO LEVEL" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PROMOTION_LEVEL" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="DISCOUNT_TYPE" nullable="false" originalDbColumnName="DISCOUNT TYPE" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="7" name="PCT_OR_AMOUNT_OFF" nullable="false" originalDbColumnName="PCT OR AMOUNT OFF" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="7" name="BREAK_POINT_THRESHOLD" nullable="false" originalDbColumnName="BREAK POINT_THRESHOLD" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
@@ -529,7 +529,7 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PROMO_LEVEL"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PROMOTION_LEVEL"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -573,7 +573,7 @@
     <metadata connector="FLOW" name="tDBOutput_3">
       <column comment="" key="false" length="4" name="PROMO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="PROMO_DESCRIPTION" nullable="false" originalDbColumnName="PROMO DESCRIPTION" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="PROMO_LEVEL" nullable="false" originalDbColumnName="PROMO LEVEL" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PROMOTION_LEVEL" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="DISCOUNT_TYPE" nullable="false" originalDbColumnName="DISCOUNT TYPE" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="7" name="PCT_OR_AMOUNT_OFF" nullable="false" originalDbColumnName="PCT OR AMOUNT OFF" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="7" name="BREAK_POINT_THRESHOLD" nullable="false" originalDbColumnName="BREAK POINT_THRESHOLD" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
@@ -584,7 +584,7 @@
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="4" name="PROMO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="PROMO_DESCRIPTION" nullable="false" originalDbColumnName="PROMO DESCRIPTION" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="PROMO_LEVEL" nullable="false" originalDbColumnName="PROMO LEVEL" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PROMOTION_LEVEL" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="DISCOUNT_TYPE" nullable="false" originalDbColumnName="DISCOUNT TYPE" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="7" name="PCT_OR_AMOUNT_OFF" nullable="false" originalDbColumnName="PCT OR AMOUNT OFF" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="7" name="BREAK_POINT_THRESHOLD" nullable="false" originalDbColumnName="BREAK POINT_THRESHOLD" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
@@ -630,13 +630,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_535f6bf8-fc65-4a44-8b05-f334af24c174"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0nFgV1xBSS2ucWPJKCcNGKkU0jrH2Ombp6si3J0KYgMmDI/LzvJMO2HDfADYHJrNVSEPgrvkxrKd
-zVveRnUT9A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_acf82c61-84c1-491e-8900-d7a1cd763580"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lDnlzGCZrpL/CnlnlEUJ5425vWIQDlDks2UCDMl2rzmfTsozuzuCT+SK6lXP2WcwfNJLFW6uX4qp
-7cYdaiil2A==</DigestValue></Reference></SignedInfo><SignatureValue>MF74+rvzTHicXXmtXMpQV4aNBJLefUelXZwDxWVT9RYsfrsg0vURJTrUZpWYo6p6NLyotsVZgw0W
-taxUHN9hJpqnBuTOycXswa/5QpHkiXb0nUAp+IsSp3PmEAjMvXOlhQM4LQVGSQu27j7QMGnBOcmc
-dvhzbqyQ0DXAu26JLq+I4u65xzi2DefbD3UjZXq0Dorm93VbCYOQM4fvKftxK6FpawNe6KPAjKaR
-Vyy6ZU+k/oWfXMxD6m5KF4ecXsAm4xvmu/1WbeTHtt7c47WGyOAT9GQ9xwZn8KphUrxQq4x6DDNZ
-YzhgeAkdyMX0QQ2CXhLJUyf+q3mW1h7E/S9+Qg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_bf0cb3ac-9993-4663-9ce0-d6bfcd1c87cd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4p6ECvMc/8K1vqoUTmmo3Vtsl/aDSZHVUKOjqaHCXuhR+jfWiK4mYlwIJtbPMCvaIZXAUM9/1YrZ
+Srwyoe1/6g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a95136e0-7279-4bf5-be4e-d0bbd97ba7c9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>szxEEug2Zl917MUci2C2pvATXE00zYFAKyWN0gheE62jXgI71MEpFclZ5LiJpVDkmeBSGCVS65Pf
+2gKErt+y4Q==</DigestValue></Reference></SignedInfo><SignatureValue>N/DlIq+Dj5x2GzcAjdfJwDHwCexIfMRZdpbMWFpqI7nPlbpuhZZqW6zVcYfC8+y/cmhQ/WER8eqK
+mcnSq8QVZtvkarq1xhJ7byerVUNn6Kgy2UczVaTwxaY06JyKKD06yqnqV2BfOlUS1wVK5BT37/cu
+sH3YOUdgSkCkYpbE+YB7r+Ldmm/nxXOqtLhq5xycms6MXz9L8+R/SUUgeH1HlhbwLMArCHyeqsev
+oeRleL8LMCVQCqpNugQdzlBtgaiKs8O0u7WdYlCFjYIbkaYO3FALGyKLDjGrgAxBVKUOJe+XhgFn
+s1ZtOrd2vT3Eb15IXwmcswE6DLIyDB5hG7CXzQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -658,4 +658,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_acf82c61-84c1-491e-8900-d7a1cd763580" Target="#_535f6bf8-fc65-4a44-8b05-f334af24c174"><Timestamp>2021-09-27 21:22:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a95136e0-7279-4bf5-be4e-d0bbd97ba7c9" Target="#_bf0cb3ac-9993-4663-9ce0-d6bfcd1c87cd"><Timestamp>2021-09-27 21:24:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

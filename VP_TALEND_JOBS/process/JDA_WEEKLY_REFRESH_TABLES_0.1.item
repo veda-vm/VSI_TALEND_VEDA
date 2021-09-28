@@ -433,6 +433,7 @@
   </node>
   <node componentName="tAS400Input" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="jt400-9.8.jar"/>
@@ -446,7 +447,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT CPRMPRO# as PROMO,&#13;&#10;CPRMDESC as \&quot;PROMO DESCRIPTION\&quot;,&#13;&#10;CPRMLVL as  \&quot;PROMOTION LEVEL\&quot;,&#13;&#10;CCPRMTYP as \&quot;DISCOUNT TYPE\&quot;,&#13;&#10;CCPRMOFF as \&quot;PCT OR AMOUNT OFF\&quot;,&#13;&#10;CCPRMBRK as \&quot;BREAK POINT_THRESHOLD\&quot;,&#13;&#10;PRMUSR as \&quot;CREATE USER\&quot;,&#10; to_char(PRMDAT) as \&quot;CREATE DATE\&quot;,&#13;&#10;CCPRMDSP as \&quot;DISPLAY FLAG\&quot;&#10;FROM CPNPRMPF&#13;&#10;where CPRMPRO# = 1100&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT CPRMPRO# as PROMO,&#13;&#10;CPRMDESC as \&quot;PROMO DESCRIPTION\&quot;,&#13;&#10;CPRMLVL as  \&quot;PROMOTION LEVEL\&quot;,&#13;&#10;CCPRMTYP as \&quot;DISCOUNT TYPE\&quot;,&#13;&#10;CCPRMOFF as \&quot;PCT OR AMOUNT OFF\&quot;,&#13;&#10;CCPRMBRK as \&quot;BREAK POINT_THRESHOLD\&quot;,&#13;&#10;PRMUSR as \&quot;CREATE USER\&quot;,&#10; to_char(PRMDAT) as \&quot;CREATE DATE\&quot;,&#13;&#10;CCPRMDSP as \&quot;DISPLAY FLAG\&quot;&#10;FROM CPNPRMPF&#13;&#10;&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="as400_id"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;prompt=false&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
@@ -486,6 +487,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="896" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -556,6 +558,7 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_UHBD4Ow0Eem8PNBRnmAJnA"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -703,6 +706,639 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tAS400Input" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_4"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="jt400-9.8.jar"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.3.2.140&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;VSIMMSSHR&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="AS400"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;SQLETL&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="s7dLGwPXWJb8qTExcSpPaA=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;ACTSKUX&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#13;&#10;CCCAMPGN as CAMPAIGN,&#13;&#10;CCSTATUS as STATUS,&#13;&#10;CCPROMO# as PROMO,&#13;&#10;CCCHNLI as \&quot;ALLOW WEB\&quot;,&#13;&#10;CCCHNLC as \&quot;ALLOW CATALOG\&quot;,&#13;&#10;CCCHNLS as \&quot;ALLOW RETAIL\&quot;,&#13;&#10;to_char(CCBEGDTE) as \&quot;ACTIVATION DATE\&quot;,&#13;&#10;to_char(CCENDDTE) as \&quot;EXPIRATION DATE\&quot;,&#13;&#10;CCEXPTIM as \&quot;EXP TIME\&quot;,&#13;&#10;CCDSCNME as \&quot;DESCRIPTION NAME\&quot;,&#13;&#10;CCTYPE as \&quot;CAMPAIGN TYPE\&quot;,&#13;&#10;CCDLVM as \&quot;METHOD OF DELIVERY\&quot;,&#13;&#10;CCTARGET as \&quot;TARGET CUSTOMER\&quot;,&#13;&#10;CCCUCHNL as \&quot;CUSTOMER CHANNEL\&quot;,&#13;&#10;CCAUDSIZ as \&quot;TARGETED AUDIENCE SIZE\&quot;,&#13;&#10;CCCTLSIZ as \&quot;CONTROL AUDIENCE SIZE\&quot;,&#13;&#10;CCVNDSPR as \&quot;VENDOR SPONSORED\&quot;,&#13;&#10;CCVNDR# as \&quot;VENDOR NUMBER\&quot;,&#13;&#10;CCDSOURC as DSOURCE,&#13;&#10;CCUSEMAX as \&quot;INTENDED USE COUNT\&quot;,&#13;&#10;CCDSCONE as \&quot;INTERNAL DESCRIPTION_1\&quot;,&#13;&#10;CCDSCTWO as \&quot;INTERNAL DESCRIPTION_2\&quot;,&#13;&#10;CMPUSR as \&quot;CREATE USER\&quot;,&#13;&#10;to_char(CMPDAT) as \&quot;CREATE DATE\&quot;,&#13;&#10;CCPTYP as \&quot;PROGRAM TYPE\&quot;,&#13;&#10;CCVANITY as \&quot;VANITY CODE\&quot;,&#13;&#10;CMAUSR as \&quot;APPROVE USER\&quot;,&#13;&#10;to_char(CMADAT) as \&quot;APPROVE DATE\&quot;&#10;FROM CPNCMPPF&#13;&#10;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="as400_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;prompt=false&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="CAMPAIGN"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STATUS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PROMO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ALLOW_WEB"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ALLOW_CATALOG"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ALLOW_RETAIL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ACTIVATION_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EXPIRATION_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EXP_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DESCRIPTION_NAME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CAMPAIGN_TYPE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="METHOD_OF_DELIVERY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_CUSTOMER"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CUSTOMER_CHANNEL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TARGETED_AUDIENCE_SIZE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CONTROL_AUDIENCE_SIZE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VENDOR_SPONSORED"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VENDOR_NUMBER"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DSOURCE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="INTENDED_USE_COUNT"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="INTERNAL_DESCRIPTION_1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="INTERNAL_DESCRIPTION_2"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CREATE_USER"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CREATE_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PROGRAM_TYPE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VANITY_CODE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="APPROVE_USER"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="APPROVE_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <metadata connector="FLOW" name="tDBInput_4">
+      <column comment="" defaultValue="" key="false" length="8" name="CAMPAIGN" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="STATUS" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PROMO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ALLOW_WEB" nullable="false" originalDbColumnName="ALLOW WEB" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ALLOW_CATALOG" nullable="false" originalDbColumnName="ALLOW CATALOG" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ALLOW_RETAIL" nullable="false" originalDbColumnName="ALLOW RETAIL" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="ACTIVATION_DATE" nullable="false" originalDbColumnName="ACTIVATION DATE" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="EXPIRATION_DATE" nullable="false" originalDbColumnName="EXPIRATION DATE" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="EXP_TIME" nullable="false" originalDbColumnName="EXP TIME" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="80" name="DESCRIPTION_NAME" nullable="false" originalDbColumnName="DESCRIPTION NAME" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="CAMPAIGN_TYPE" nullable="false" originalDbColumnName="CAMPAIGN TYPE" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="METHOD_OF_DELIVERY" nullable="false" originalDbColumnName="METHOD OF DELIVERY" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="TARGET_CUSTOMER" nullable="false" originalDbColumnName="TARGET CUSTOMER" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="CUSTOMER_CHANNEL" nullable="false" originalDbColumnName="CUSTOMER CHANNEL" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="7" name="TARGETED_AUDIENCE_SIZE" nullable="false" originalDbColumnName="TARGETED AUDIENCE SIZE" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="CONTROL_AUDIENCE_SIZE" nullable="false" originalDbColumnName="CONTROL AUDIENCE SIZE" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="VENDOR_SPONSORED" nullable="false" originalDbColumnName="VENDOR SPONSORED" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="VENDOR_NUMBER" nullable="false" originalDbColumnName="VENDOR NUMBER" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="DSOURCE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="INTENDED_USE_COUNT" nullable="false" originalDbColumnName="INTENDED USE COUNT" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="250" name="INTERNAL_DESCRIPTION_1" nullable="false" originalDbColumnName="INTERNAL DESCRIPTION_1" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="250" name="INTERNAL_DESCRIPTION_2" nullable="false" originalDbColumnName="INTERNAL DESCRIPTION_2" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="CREATE_USER" nullable="false" originalDbColumnName="CREATE USER" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="CREATE_DATE" nullable="false" originalDbColumnName="CREATE DATE" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="PROGRAM_TYPE" nullable="false" originalDbColumnName="PROGRAM TYPE" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="VANITY_CODE" nullable="false" originalDbColumnName="VANITY CODE" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="APPROVE_USER" nullable="false" originalDbColumnName="APPROVE USER" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="APPROVE_DATE" nullable="false" originalDbColumnName="APPROVE DATE" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="224" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_-TWDAB-4Eeyp3LeKJ0e0cw-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="CPNCMPPF" name="cpncmppf">
+      <column key="false" length="8" name="CAMPAIGN" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="STATUS" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="4" name="PROMO" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="ALLOW_WEB" nullable="true" originalDbColumnName="ALLOW WEB" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="ALLOW_CATALOG" nullable="true" originalDbColumnName="ALLOW CATALOG" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="ALLOW_RETAIL" nullable="true" originalDbColumnName="ALLOW RETAIL" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="50" name="ACTIVATION_DATE" nullable="true" originalDbColumnName="ACTIVATION DATE" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="50" name="EXPIRATION_DATE" nullable="true" originalDbColumnName="EXPIRATION DATE" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="4" name="EXP_TIME" nullable="true" originalDbColumnName="EXP TIME" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="800" name="DESCRIPTION_NAME" nullable="true" originalDbColumnName="DESCRIPTION NAME" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="2" name="CAMPAIGN_TYPE" nullable="true" originalDbColumnName="CAMPAIGN TYPE" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="2" name="METHOD_OF_DELIVERY" nullable="true" originalDbColumnName="METHOD OF DELIVERY" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="TARGET_CUSTOMER" nullable="true" originalDbColumnName="TARGET CUSTOMER" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="CUSTOMER_CHANNEL" nullable="true" originalDbColumnName="CUSTOMER CHANNEL" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="7" name="TARGETED_AUDIENCE_SIZE" nullable="true" originalDbColumnName="TARGETED AUDIENCE SIZE" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="6" name="CONTROL_AUDIENCE_SIZE" nullable="true" originalDbColumnName="CONTROL AUDIENCE SIZE" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="VENDOR_SPONSORED" nullable="true" originalDbColumnName="VENDOR SPONSORED" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="6" name="VENDOR_NUMBER" nullable="true" originalDbColumnName="VENDOR NUMBER" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="DSOURCE" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="6" name="INTENDED_USE_COUNT" nullable="true" originalDbColumnName="INTENDED USE COUNT" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="250" name="INTERNAL_DESCRIPTION_1" nullable="true" originalDbColumnName="INTERNAL DESCRIPTION_1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="250" name="INTERNAL_DESCRIPTION_2" nullable="true" originalDbColumnName="INTERNAL DESCRIPTION_2" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="10" name="CREATE_USER" nullable="true" originalDbColumnName="CREATE USER" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="50" name="CREATE_DATE" nullable="true" originalDbColumnName="CREATE DATE" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="3" name="PROGRAM_TYPE" nullable="true" originalDbColumnName="PROGRAM TYPE" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="VANITY_CODE" nullable="true" originalDbColumnName="VANITY CODE" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="10" name="APPROVE_USER" nullable="true" originalDbColumnName="APPROVE USER" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="50" name="APPROVE_DATE" nullable="true" originalDbColumnName="APPROVE DATE" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="cpncmppf" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row4.CAMPAIGN" name="CAMPAIGN" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row4.STATUS" name="STATUS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.PROMO" name="PROMO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.ALLOW_WEB" name="ALLOW_WEB" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.ALLOW_CATALOG" name="ALLOW_CATALOG" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.ALLOW_RETAIL" name="ALLOW_RETAIL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.ACTIVATION_DATE" name="ACTIVATION_DATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.EXPIRATION_DATE" name="EXPIRATION_DATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.EXP_TIME" name="EXP_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.DESCRIPTION_NAME" name="DESCRIPTION_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.CAMPAIGN_TYPE" name="CAMPAIGN_TYPE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.METHOD_OF_DELIVERY" name="METHOD_OF_DELIVERY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.TARGET_CUSTOMER" name="TARGET_CUSTOMER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.CUSTOMER_CHANNEL" name="CUSTOMER_CHANNEL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.TARGETED_AUDIENCE_SIZE" name="TARGETED_AUDIENCE_SIZE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row4.CONTROL_AUDIENCE_SIZE" name="CONTROL_AUDIENCE_SIZE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row4.VENDOR_SPONSORED" name="VENDOR_SPONSORED" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.VENDOR_NUMBER" name="VENDOR_NUMBER" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row4.DSOURCE" name="DSOURCE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.INTENDED_USE_COUNT" name="INTENDED_USE_COUNT" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row4.INTERNAL_DESCRIPTION_1" name="INTERNAL_DESCRIPTION_1" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.INTERNAL_DESCRIPTION_2" name="INTERNAL_DESCRIPTION_2" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.CREATE_USER" name="CREATE_USER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.CREATE_DATE" name="CREATE_DATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.PROGRAM_TYPE" name="PROGRAM_TYPE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.VANITY_CODE" name="VANITY_CODE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.APPROVE_USER" name="APPROVE_USER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.APPROVE_DATE" name="APPROVE_DATE" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row4" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="CAMPAIGN" type="id_Float"/>
+        <mapperTableEntries name="STATUS" type="id_String"/>
+        <mapperTableEntries name="PROMO" type="id_String"/>
+        <mapperTableEntries name="ALLOW_WEB" type="id_String"/>
+        <mapperTableEntries name="ALLOW_CATALOG" type="id_String"/>
+        <mapperTableEntries name="ALLOW_RETAIL" type="id_String"/>
+        <mapperTableEntries name="ACTIVATION_DATE" type="id_String"/>
+        <mapperTableEntries name="EXPIRATION_DATE" type="id_String"/>
+        <mapperTableEntries name="EXP_TIME" type="id_String"/>
+        <mapperTableEntries name="DESCRIPTION_NAME" type="id_String"/>
+        <mapperTableEntries name="CAMPAIGN_TYPE" type="id_String"/>
+        <mapperTableEntries name="METHOD_OF_DELIVERY" type="id_String"/>
+        <mapperTableEntries name="TARGET_CUSTOMER" type="id_String"/>
+        <mapperTableEntries name="CUSTOMER_CHANNEL" type="id_String"/>
+        <mapperTableEntries name="TARGETED_AUDIENCE_SIZE" type="id_BigDecimal"/>
+        <mapperTableEntries name="CONTROL_AUDIENCE_SIZE" type="id_BigDecimal"/>
+        <mapperTableEntries name="VENDOR_SPONSORED" type="id_String"/>
+        <mapperTableEntries name="VENDOR_NUMBER" type="id_BigDecimal"/>
+        <mapperTableEntries name="DSOURCE" type="id_String"/>
+        <mapperTableEntries name="INTENDED_USE_COUNT" type="id_BigDecimal"/>
+        <mapperTableEntries name="INTERNAL_DESCRIPTION_1" type="id_String"/>
+        <mapperTableEntries name="INTERNAL_DESCRIPTION_2" type="id_String"/>
+        <mapperTableEntries name="CREATE_USER" type="id_String"/>
+        <mapperTableEntries name="CREATE_DATE" type="id_String"/>
+        <mapperTableEntries name="PROGRAM_TYPE" type="id_String"/>
+        <mapperTableEntries name="VANITY_CODE" type="id_String"/>
+        <mapperTableEntries name="APPROVE_USER" type="id_String"/>
+        <mapperTableEntries name="APPROVE_DATE" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_4"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_UHBD4Ow0Eem8PNBRnmAJnA"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;wva-sql-etl&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;TenTenData&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;Talend_user&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="wNrdna7thw0sjVadYcU9kQ=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;CPNCMPPF&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
+    <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
+    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" show="false" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="CAMPAIGN"/>
+    <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
+    <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:REPOSITORY_SCHEMA_TYPE" show="false" value="_UHBD4Ow0Eem8PNBRnmAJnA - CPNCMPPF"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="CAMPAIGN"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STATUS"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PROMO"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ALLOW_WEB"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ALLOW_CATALOG"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ALLOW_RETAIL"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ACTIVATION_DATE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EXPIRATION_DATE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EXP_TIME"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DESCRIPTION_NAME"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CAMPAIGN_TYPE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="METHOD_OF_DELIVERY"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_CUSTOMER"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CUSTOMER_CHANNEL"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TARGETED_AUDIENCE_SIZE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CONTROL_AUDIENCE_SIZE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VENDOR_SPONSORED"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VENDOR_NUMBER"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DSOURCE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="INTENDED_USE_COUNT"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="INTERNAL_DESCRIPTION_1"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="INTERNAL_DESCRIPTION_2"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CREATE_USER"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CREATE_DATE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PROGRAM_TYPE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VANITY_CODE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="APPROVE_USER"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="APPROVE_DATE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <metadata connector="FLOW" label="CPNCMPPF" name="tDBOutput_4">
+      <column key="false" length="8" name="CAMPAIGN" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="STATUS" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="4" name="PROMO" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="ALLOW_WEB" nullable="true" originalDbColumnName="ALLOW WEB" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="ALLOW_CATALOG" nullable="true" originalDbColumnName="ALLOW CATALOG" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="ALLOW_RETAIL" nullable="true" originalDbColumnName="ALLOW RETAIL" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="50" name="ACTIVATION_DATE" nullable="true" originalDbColumnName="ACTIVATION DATE" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="50" name="EXPIRATION_DATE" nullable="true" originalDbColumnName="EXPIRATION DATE" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="4" name="EXP_TIME" nullable="true" originalDbColumnName="EXP TIME" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="800" name="DESCRIPTION_NAME" nullable="true" originalDbColumnName="DESCRIPTION NAME" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="2" name="CAMPAIGN_TYPE" nullable="true" originalDbColumnName="CAMPAIGN TYPE" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="2" name="METHOD_OF_DELIVERY" nullable="true" originalDbColumnName="METHOD OF DELIVERY" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="TARGET_CUSTOMER" nullable="true" originalDbColumnName="TARGET CUSTOMER" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="CUSTOMER_CHANNEL" nullable="true" originalDbColumnName="CUSTOMER CHANNEL" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="7" name="TARGETED_AUDIENCE_SIZE" nullable="true" originalDbColumnName="TARGETED AUDIENCE SIZE" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="6" name="CONTROL_AUDIENCE_SIZE" nullable="true" originalDbColumnName="CONTROL AUDIENCE SIZE" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="VENDOR_SPONSORED" nullable="true" originalDbColumnName="VENDOR SPONSORED" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="6" name="VENDOR_NUMBER" nullable="true" originalDbColumnName="VENDOR NUMBER" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="DSOURCE" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="6" name="INTENDED_USE_COUNT" nullable="true" originalDbColumnName="INTENDED USE COUNT" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="250" name="INTERNAL_DESCRIPTION_1" nullable="true" originalDbColumnName="INTERNAL DESCRIPTION_1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="250" name="INTERNAL_DESCRIPTION_2" nullable="true" originalDbColumnName="INTERNAL DESCRIPTION_2" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="10" name="CREATE_USER" nullable="true" originalDbColumnName="CREATE USER" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="50" name="CREATE_DATE" nullable="true" originalDbColumnName="CREATE DATE" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="3" name="PROGRAM_TYPE" nullable="true" originalDbColumnName="PROGRAM TYPE" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="VANITY_CODE" nullable="true" originalDbColumnName="VANITY CODE" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="10" name="APPROVE_USER" nullable="true" originalDbColumnName="APPROVE USER" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="50" name="APPROVE_DATE" nullable="true" originalDbColumnName="APPROVE DATE" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+    <metadata connector="REJECT" label="CPNCMPPF" name="REJECT">
+      <column key="false" length="8" name="CAMPAIGN" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="STATUS" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="4" name="PROMO" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="ALLOW_WEB" nullable="true" originalDbColumnName="ALLOW WEB" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="ALLOW_CATALOG" nullable="true" originalDbColumnName="ALLOW CATALOG" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="ALLOW_RETAIL" nullable="true" originalDbColumnName="ALLOW RETAIL" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="50" name="ACTIVATION_DATE" nullable="true" originalDbColumnName="ACTIVATION DATE" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="50" name="EXPIRATION_DATE" nullable="true" originalDbColumnName="EXPIRATION DATE" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="4" name="EXP_TIME" nullable="true" originalDbColumnName="EXP TIME" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="800" name="DESCRIPTION_NAME" nullable="true" originalDbColumnName="DESCRIPTION NAME" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="2" name="CAMPAIGN_TYPE" nullable="true" originalDbColumnName="CAMPAIGN TYPE" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="2" name="METHOD_OF_DELIVERY" nullable="true" originalDbColumnName="METHOD OF DELIVERY" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="TARGET_CUSTOMER" nullable="true" originalDbColumnName="TARGET CUSTOMER" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="CUSTOMER_CHANNEL" nullable="true" originalDbColumnName="CUSTOMER CHANNEL" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="7" name="TARGETED_AUDIENCE_SIZE" nullable="true" originalDbColumnName="TARGETED AUDIENCE SIZE" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="6" name="CONTROL_AUDIENCE_SIZE" nullable="true" originalDbColumnName="CONTROL AUDIENCE SIZE" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="VENDOR_SPONSORED" nullable="true" originalDbColumnName="VENDOR SPONSORED" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="6" name="VENDOR_NUMBER" nullable="true" originalDbColumnName="VENDOR NUMBER" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="DSOURCE" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="6" name="INTENDED_USE_COUNT" nullable="true" originalDbColumnName="INTENDED USE COUNT" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="250" name="INTERNAL_DESCRIPTION_1" nullable="true" originalDbColumnName="INTERNAL DESCRIPTION_1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="250" name="INTERNAL_DESCRIPTION_2" nullable="true" originalDbColumnName="INTERNAL DESCRIPTION_2" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="10" name="CREATE_USER" nullable="true" originalDbColumnName="CREATE USER" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="50" name="CREATE_DATE" nullable="true" originalDbColumnName="CREATE DATE" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="3" name="PROGRAM_TYPE" nullable="true" originalDbColumnName="PROGRAM TYPE" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="VANITY_CODE" nullable="true" originalDbColumnName="VANITY CODE" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="10" name="APPROVE_USER" nullable="true" originalDbColumnName="APPROVE USER" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="50" name="APPROVE_DATE" nullable="true" originalDbColumnName="APPROVE DATE" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
@@ -715,11 +1351,21 @@
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <connection connectorName="FLOW" label="promo" lineStyle="0" metaname="promo" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="promo"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tMap_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+  </connection>
+  <connection connectorName="FLOW" label="cpncmppf" lineStyle="0" metaname="cpncmppf" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tDBOutput_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="cpncmppf"/>
   </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
@@ -742,13 +1388,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_06c019fb-d732-4cfc-94cf-95e332f2babe"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>g8Wf+6FHgXgn0ekPWCBw1/TQR5t/+t/XIBiPlOjrFrQVroO1hTnw7R5jrAoYrtz6yhUSGmw0Irp0
-p6YDUy5Z8Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5ce50e22-07bd-491e-934f-14038f91847d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4GC4Mg7xK4Hon8wdycbBYvW//J3coA0kY7VoFP+shHALvCqLEwU4x4s+aM3/v0IyM9iSAFomHtdM
-s7gbr0846Q==</DigestValue></Reference></SignedInfo><SignatureValue>Y4GDHLXWI1zkXHhddi9VBJ3EUYdfMY0noBQF8aMbaPWrMAlZTOf4ftLSSrwFqHwYSsBR6A3fILmv
-7Wn0n5nKTPz1e3XGMYBGELpeREm3oW8MWyuLRykcMrh3QH82JCZ1A07Xr12LgHZm5ahZa7vaGkFa
-cdcfEKSjm/MHOdMWtGsUQKko6jUSo7EYaxuYE9XSN1H6FA5GEQCsVsbIHNnj9W/ZquiA1JcMBro1
-RaI1/vrXxOsrSlLcnlyF+yAWRM7nFUQr4k55N/wc113IfiQhMmrRsa1twtGKTVOHMqKOkqAfXOuB
-pCFp9N2fNXoQtDnTsgjLPGm24z1mWRADTkZN8g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_4"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_bedfaa07-ba63-43bc-b4f5-78914f8f9f6c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5VQxnIexHdk+mAkUbOg0NO1ifDtcb9lq/3GUY6CSpz8lmQjKRV9SKznRRF2QcjAxdu7WM1j3CQH1
+hjNjpMCp0w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ca5009fa-d723-4341-8140-32c5d3cbe4f7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rg+Uc0opLFuBxhLANWLzhhk1XefTf8z+ZQF+BPbo82eCGeOBiPnjbGqEYGYlb0tHtNVL5zjVlD+O
+buA45CXNxg==</DigestValue></Reference></SignedInfo><SignatureValue>VU56NJVLOsCp5nE2Xz5hSZORc2OP5KX7pTm+zGOmB/4zP0HqDRS2YJU5iIGtRgdKfJ69Go5K3XmU
+5qbZz5/H+zv+GSPqmwMhKmEpcpdA5Pg7tJk+DewO9/BUFKmgM/U39bV16qUNuZHrQdhsYS+cjz4B
+BJTAozWci9B3GAg30eJnpBa7XUdZbKejX41T+BwrA93SWAEyeuKSdUQQtRBgKnkItwFDc7Qjc5f+
+3DG2HaU6WWEP5a9hCva5WAxZH/y4ZaBQhO7iER6TrSShCy90tGuHfv6STpcjqpaqIOlJBCUQm77A
+mgMr2dMGrVZcoMm/KXQR26/A9AegH3haFibfAA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -770,4 +1421,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5ce50e22-07bd-491e-934f-14038f91847d" Target="#_06c019fb-d732-4cfc-94cf-95e332f2babe"><Timestamp>2021-09-27 21:30:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ca5009fa-d723-4341-8140-32c5d3cbe4f7" Target="#_bedfaa07-ba63-43bc-b4f5-78914f8f9f6c"><Timestamp>2021-09-28 16:57:22</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -237,7 +237,7 @@
       <column comment="" key="false" length="1" name="CROFFLNE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="CROVRRDE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="RDMUSR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="23" name="RDMDAT" nullable="false" originalLength="23" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="RDMDAT" nullable="false" originalLength="23" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="64">
@@ -315,7 +315,7 @@
       <column key="false" length="10" name="CREATE_USER" nullable="true" originalDbColumnName="CREATE USER" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="23" name="CREATE_DATE" nullable="true" originalDbColumnName="CREATE DATE" pattern="" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true">
+      <column key="false" length="23" name="CREATE_DATE" nullable="true" originalDbColumnName="CREATE DATE" pattern="" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
@@ -343,7 +343,7 @@
         <mapperTableEntries expression="row1.CROFFLNE   " name="COMM_DOWN" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.CROVRRDE " name="MNGR_OVERRIDE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.RDMUSR " name="CREATE_USER" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.RDMDAT " name="CREATE_DATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.RDMDAT " name="CREATE_DATE" nullable="true" type="id_Date"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="CRCOUPON" type="id_String"/>
@@ -366,7 +366,7 @@
         <mapperTableEntries name="CROFFLNE" type="id_String"/>
         <mapperTableEntries name="CROVRRDE" type="id_String"/>
         <mapperTableEntries name="RDMUSR" type="id_String"/>
-        <mapperTableEntries name="RDMDAT" type="id_String"/>
+        <mapperTableEntries name="RDMDAT" type="id_Date"/>
       </inputTables>
     </nodeData>
   </node>
@@ -578,7 +578,7 @@
       <column key="false" length="10" name="CREATE_USER" nullable="true" originalDbColumnName="CREATE USER" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="23" name="CREATE_DATE" nullable="true" originalDbColumnName="CREATE DATE" pattern="" precision="3" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column key="false" length="23" name="CREATE_DATE" nullable="true" originalDbColumnName="CREATE DATE" pattern="" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
@@ -643,7 +643,7 @@
       <column key="false" length="10" name="CREATE_USER" nullable="true" originalDbColumnName="CREATE USER" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="23" name="CREATE_DATE" nullable="true" originalDbColumnName="CREATE DATE" pattern="" precision="3" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column key="false" length="23" name="CREATE_DATE" nullable="true" originalDbColumnName="CREATE DATE" pattern="" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -671,13 +671,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e7bedf63-bbf8-4e8d-a407-76537fee3798"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>l+jAMRpqFOaHed9Grgir5+GHQS5XC/agW04NVwRTgXInVpQQYnr+M7GmNs31W8R88Ny+Gw5rJ6AW
-/hYwhZsjnw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a17fca03-53ee-4e39-8cd1-34bd70c988a6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>N0cWvBCLSOgtYVrgK5GJ4gTmEiB69jh1szql+Teb08hsW0mEU5gc4voq0gxhtYxbIgcM4srAeHoF
-MfB2h163qw==</DigestValue></Reference></SignedInfo><SignatureValue>MJ0Xrr8Vuf5fpjnpDDowwNfFDvf2iYjxI3r5jCBnlOwot58S9W9lSjU+QxbjNIVHVdmiZ+7l6d0o
-clq4Dwp6uhIBQEFY0ABDdTotZ7EeTs5dov0mK7FlqC0x/qBaovHXcxqTPE04cZq8w5MZhSw3LhQ2
-jdGtYLUMmMUAPsZ8eKxMu/IMDPXRfcwYH84N8OxfZW/cEOkKActKXfe24wjxQKNr9RNWGorgz5XQ
-QJNcza3UX793gBaZntVMRXDdl6NoItXAKN4k/ccEOoaeOdcj/+TkNdUs6rv3/gsd93pY012cj4AL
-TSb0r6MhA8jpLV4ZnVtFXAyMH4I4pDwkmzdpNw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_14977588-ee5c-4444-9eb3-b857b9b99acf"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>eChaTkG51Az5vPM+Qn+UcQTOMIgaOEfRlG3v8tmvkp2aDYZ/zw8XjZCS4FkQPVd6jmC1Ht5u+wx4
+qeLy3AsOcw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2e9fe455-b9df-469d-8813-6da3184de36f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2W6f6KXY21clU14kzn7IOxwfNPU9mI8nW7Jj3tJBfAYcCdnn3BgTSA0UnUqvtZs0Z7m9r7Llvxal
+7C4vX3zmKw==</DigestValue></Reference></SignedInfo><SignatureValue>aUqxCy8mfHLYGFTB6K2e4n8F1R64PTk5DqLCph4pC20O7KQK1FX6vp8qnfDUU9QLpwc8LjLaLTMX
+B4GAarBSk49PQaNBbrLGM497QuUxWT/9NEBTBrCx25R/YUJmQLWxzohr9SqTXx5+rWz83xBA2+iH
+3ZxVd89PJUDFpSkTV4MipPgI60OFROeKTv2gX6y7Isa7T0NJW+8sIXnA2aFuPSfij1fO3AWa6twa
+/woqvZsIm31/3owdUg3WI2F4DGxp4CW98XoNGb8TMo+LJDemjyARQmclcUv0yAuFDrdmwHDt1sWp
+Ry1duHxq82tZJ5FuoBhNuwC0IS7DV+dHDp9l6w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -699,4 +699,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a17fca03-53ee-4e39-8cd1-34bd70c988a6" Target="#_e7bedf63-bbf8-4e8d-a407-76537fee3798"><Timestamp>2021-09-28 20:17:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2e9fe455-b9df-469d-8813-6da3184de36f" Target="#_14977588-ee5c-4444-9eb3-b857b9b99acf"><Timestamp>2021-09-28 20:21:29</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

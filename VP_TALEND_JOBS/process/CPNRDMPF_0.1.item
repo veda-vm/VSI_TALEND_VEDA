@@ -257,7 +257,7 @@
       <column key="false" length="8" name="COUPON" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="8" name="MARKETING_CAMPAIGN" nullable="true" originalDbColumnName="MARKETING CAMPAIGN" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column key="false" length="8" name="MARKETING_CAMPAIGN" nullable="true" originalDbColumnName="MARKETING CAMPAIGN" pattern="" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column key="false" length="5" name="REDEEMED_AT" nullable="true" originalDbColumnName="REDEEMED AT" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
@@ -323,7 +323,7 @@
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="cpnrdmpf" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.CRCOUPON " name="COUPON" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.CRCAMPGN " name="MARKETING_CAMPAIGN" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.CRCAMPGN " name="MARKETING_CAMPAIGN" nullable="true" type="id_Float"/>
         <mapperTableEntries expression=" row1.CRSTORE_ " name="REDEEMED_AT" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="row1.CRREGSTR " name="REGISTER_NUMBER" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="row1.CRTRANS_ " name="TRANSACTION_NMBR" nullable="true" type="id_String"/>
@@ -519,7 +519,7 @@
       <column key="false" length="8" name="COUPON" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="8" name="MARKETING_CAMPAIGN" nullable="true" originalDbColumnName="MARKETING CAMPAIGN" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column key="false" length="8" name="MARKETING_CAMPAIGN" nullable="true" originalDbColumnName="MARKETING CAMPAIGN" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column key="false" length="5" name="REDEEMED_AT" nullable="true" originalDbColumnName="REDEEMED AT" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
@@ -584,7 +584,7 @@
       <column key="false" length="8" name="COUPON" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="8" name="MARKETING_CAMPAIGN" nullable="true" originalDbColumnName="MARKETING CAMPAIGN" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column key="false" length="8" name="MARKETING_CAMPAIGN" nullable="true" originalDbColumnName="MARKETING CAMPAIGN" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column key="false" length="5" name="REDEEMED_AT" nullable="true" originalDbColumnName="REDEEMED AT" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
@@ -669,13 +669,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ddcde1ed-fbf3-47f1-8b0f-2c5d750e3ae0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>CwTRngppRX3NmbAKqT5LQAVeJQj6EsumQnap5iEZOgX5/lvdqddWgaehrvSjwYdoR6JwXjz1eSXq
-I07xEvTPlA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b63263c4-c723-4bcb-ae8a-ece8705756ca"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>U8xqT78LpjZiaNf2WkPW/VxgIfOWBckCKtjYxTXFwFPjOQrFnPTLr3S91S4mRjdLva34n1T9gbrc
-/RqtUEi13g==</DigestValue></Reference></SignedInfo><SignatureValue>AetRxZqLS2duReCxhDq4Yxl8bqwhadO1nRN0B06UW5KRV890KjO/YsTOHhSnULYC30SV1ZA00f9t
-4QxJnabzXR5gwN5mJopf1+PNIpIXQK877N6/vpZ3pq7am9qanapg64F/LExudem6GCYZbKsDX9Vm
-UfTLF4ZHQOnzCUhNwt8jDUZM8XyAvKodPugZxtt0XgJwLXDJmKfslmCh8d2dzDGTjGLov/zZKQxi
-yPSxhtoHze8GRqH0wupQPzrYPx/6vMzVl0UROgnQpsgzDsVY/kJnY5A3AjFkqFFwLyFAlQVwx2Fb
-hr9+1TxNVR6eZr+loh5IHpNP8kuU6jZrfCZv+A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7fa7b740-35f8-4d54-96e0-9113a594f26d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>iMSap7BFc4dVX1Eya0ZolYn5N+oyd0Ae9VLv2rDtySqZM5ywFpj1SitF7rYBltIw/M+0Ss3rne6f
+iCdwXwnM9g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a53f54fb-e7ad-4c83-ad30-fb2eff4451d6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ddx2iQIAXsc9M8Oall+fqRVEMU14BOQzDCerkVb7SIIfyxMsUNZfj7tM+Sw2QrZQQBr16xW/P2++
+NXXwmOuFDw==</DigestValue></Reference></SignedInfo><SignatureValue>jvbkWl3uLJrHy46wDnTD8caS/Nu+RVJRNqjdGRQTg0BD01RywJRXpTS+mMFfEYiaPxekxLtFjp+0
+GjUOX6uScBvSqM5Z0jC7DJWGZCSWLrtOSB+/e7MT8fXC18EQiZw/DrsULNNCB1W6a3J0gRqDb8sf
+HmJ6QfJYPlmfH4TBtZCbUPfUt+g87oKkTa4bTf+Zk3zPEmKSM63ncZWPDUFeYq1vPACq7xLHU9mH
+M+94Q1qbXNFhIAvOC7Xcso2xRFSsZKsouDRKtQeMxtwEBcVk9bGN5dvSpuneOkrMcWmJNiMiGtxF
+k+wu5zpxbO+PIv+xcIkEq0L+fOg+39hN6L6rwg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -697,4 +697,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b63263c4-c723-4bcb-ae8a-ece8705756ca" Target="#_ddcde1ed-fbf3-47f1-8b0f-2c5d750e3ae0"><Timestamp>2021-09-28 20:09:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a53f54fb-e7ad-4c83-ad30-fb2eff4451d6" Target="#_7fa7b740-35f8-4d54-96e0-9113a594f26d"><Timestamp>2021-09-28 20:10:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

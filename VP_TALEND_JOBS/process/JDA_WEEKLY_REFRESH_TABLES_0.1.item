@@ -831,7 +831,7 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="CPNCMPPF" name="cpncmppf">
-      <column key="false" length="8" name="CAMPAIGN" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column key="false" length="8" name="CAMPAIGN" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column key="false" length="1" name="STATUS" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
@@ -920,7 +920,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="cpncmppf" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row4.CAMPAIGN" name="CAMPAIGN" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row4.CAMPAIGN" name="CAMPAIGN" nullable="true" type="id_Float"/>
         <mapperTableEntries expression="row4.STATUS" name="STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row4.PROMO" name="PROMO" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row4.ALLOW_WEB" name="ALLOW_WEB" nullable="true" type="id_String"/>
@@ -1004,8 +1004,6 @@
     <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="CAMPAIGN"/>
     <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
     <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:REPOSITORY_SCHEMA_TYPE" show="false" value="_UHBD4Ow0Eem8PNBRnmAJnA - CPNCMPPF"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1165,7 +1163,7 @@
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
     <metadata connector="FLOW" label="CPNCMPPF" name="tDBOutput_4">
-      <column key="false" length="8" name="CAMPAIGN" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column key="false" length="8" name="CAMPAIGN" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column key="false" length="1" name="STATUS" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
@@ -1251,7 +1249,7 @@
       </column>
     </metadata>
     <metadata connector="REJECT" label="CPNCMPPF" name="REJECT">
-      <column key="false" length="8" name="CAMPAIGN" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column key="false" length="8" name="CAMPAIGN" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column key="false" length="1" name="STATUS" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
@@ -1393,13 +1391,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_bedfaa07-ba63-43bc-b4f5-78914f8f9f6c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5VQxnIexHdk+mAkUbOg0NO1ifDtcb9lq/3GUY6CSpz8lmQjKRV9SKznRRF2QcjAxdu7WM1j3CQH1
-hjNjpMCp0w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ca5009fa-d723-4341-8140-32c5d3cbe4f7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rg+Uc0opLFuBxhLANWLzhhk1XefTf8z+ZQF+BPbo82eCGeOBiPnjbGqEYGYlb0tHtNVL5zjVlD+O
-buA45CXNxg==</DigestValue></Reference></SignedInfo><SignatureValue>VU56NJVLOsCp5nE2Xz5hSZORc2OP5KX7pTm+zGOmB/4zP0HqDRS2YJU5iIGtRgdKfJ69Go5K3XmU
-5qbZz5/H+zv+GSPqmwMhKmEpcpdA5Pg7tJk+DewO9/BUFKmgM/U39bV16qUNuZHrQdhsYS+cjz4B
-BJTAozWci9B3GAg30eJnpBa7XUdZbKejX41T+BwrA93SWAEyeuKSdUQQtRBgKnkItwFDc7Qjc5f+
-3DG2HaU6WWEP5a9hCva5WAxZH/y4ZaBQhO7iER6TrSShCy90tGuHfv6STpcjqpaqIOlJBCUQm77A
-mgMr2dMGrVZcoMm/KXQR26/A9AegH3haFibfAA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_48196565-2739-4609-9e83-099061ac781e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>l/iqivuHCJ8VdiFskx65U6kxDq4iFrJjfuQkCjlhDBNM1Nj7oejsgn2349qNMgk7jS8dgWkL6JuB
+YJefPT0NdA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_15c19e79-cecf-4f46-9635-dbd19a6955c4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1FUYkv5AskmeO5HrnOD602sdLNwrI5Dq8Ig9nMpMO/YsWjDjkMvwmOhIRviGW3f+hzeqgQwaCl0t
+SZUXsd1BnA==</DigestValue></Reference></SignedInfo><SignatureValue>aEbAJwWoDQbDSpzfpKJ+X/oxSk7z95Je2eOxinjNl/HjVgMT7LFck0D1up0Tj2G4hfVgEcWdMors
+fzCzubUIU5hegds1iS7IEKGIdThgRqQlBBnbmT8L2NSjLRFsw0WjMoa35JGynhgw2fTdF9h+C4xc
+diAi4X7ailOp1hrCuQ9wAxvK25gVHXY+IBgmU4I2tJEIOz4FbN8imaMnIfUPo73TI47lprGtRk6R
+oT71gWSXPcFkkpQiJck7UeegH5URZSUXy0CQRb9LateYUZWpTr6vT9JLtl8K+//bogyfVOQsZSFi
+J3+AAX9RAK461+M39jgaAOFcTJXQeWFGg/1NnA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1421,4 +1419,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ca5009fa-d723-4341-8140-32c5d3cbe4f7" Target="#_bedfaa07-ba63-43bc-b4f5-78914f8f9f6c"><Timestamp>2021-09-28 16:57:22</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_15c19e79-cecf-4f46-9635-dbd19a6955c4" Target="#_48196565-2739-4609-9e83-099061ac781e"><Timestamp>2021-09-28 16:58:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

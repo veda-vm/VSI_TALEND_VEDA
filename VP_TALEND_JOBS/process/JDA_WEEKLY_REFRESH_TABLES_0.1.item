@@ -150,6 +150,7 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="LOCATION"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_1">
       <column comment="" defaultValue="" key="false" length="9" name="SKU_NO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="9" name="DETAIL_UNITS" nullable="false" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
@@ -224,6 +225,7 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
       <column comment="" defaultValue="" key="false" length="9" name="SKU_NO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="9" name="DETAIL_UNITS" nullable="false" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
@@ -288,6 +290,7 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="OGZIP"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_2">
       <column comment="" key="false" length="19" name="EXPORDDTE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="60" name="DESCR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
@@ -398,6 +401,7 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_2">
       <column comment="" key="false" length="19" name="EXPORDDTE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="60" name="DESCR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
@@ -453,7 +457,7 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="PROMO_DESCRIPTION"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PROMO_LEVEL"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PROMOTION_LEVEL"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="DISCOUNT_TYPE"/>
       <elementValue elementRef="TRIM" value="false"/>
@@ -468,6 +472,7 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="DISPLAY_FLAG"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_3">
       <column comment="" key="false" length="4" name="PROMO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="PROMO_DESCRIPTION" nullable="false" originalDbColumnName="PROMO DESCRIPTION" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
@@ -524,7 +529,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="promo" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row3.PROMO" name="PROMO" nullable="true" type="id_String"/>
@@ -638,6 +643,7 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="CPNPRMPF" name="tDBOutput_3">
       <column key="false" length="4" name="PROMO" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
@@ -778,6 +784,7 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="APPROVE_DATE"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_4">
       <column comment="" defaultValue="" key="false" length="8" name="CAMPAIGN" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="STATUS" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
@@ -910,7 +917,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="cpncmppf" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row4.CAMPAIGN" name="CAMPAIGN" nullable="true" type="id_Float"/>
@@ -1155,6 +1162,7 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="CPNCMPPF" name="tDBOutput_4">
       <column key="false" length="8" name="CAMPAIGN" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
@@ -1391,13 +1399,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_05a327d6-a9ed-46e2-9313-bdc03e0354f3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>X497b3tWs/lqhGC21ebppcLkRJEp52GV2+j2TD64jg/VCJT0GAIIFZ8/cnkMal9cN3qME18ZHBU7
-W06Sh+adKg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_bc99e98d-b7e3-4cee-9155-10676b1b2020"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ArhsM2+WN0xToc2NsMyK5xr4FRj3xB9n3uaNcen50VN1JrLhYIWWW50vvuuwyOs5lGNYcrna3gXi
-7qTAF9Wmzw==</DigestValue></Reference></SignedInfo><SignatureValue>JdUdicRpwJo424hMzs7HmQgkWRKQ2uF0Mq1n4hwshpk3zkMXPDmC/BwovvdN7H20UmuHnWRYaEI7
-LPCDRN3eLNRJyHtFDzgT7D51GH3jOC+uLst2KCmrbDMTToaTWWflv1z80WXXmLkXbxPkBZTfL0IR
-F5gV7JWS6Ad5qa4P1rFT3BAppCI6obe5cf2UfgaXUPchnPhBm+qhSRem5c4dGX5zDaC3rAnbo6QT
-7vbJXuuAiJ9Wc2Vk5DYQJexfdvcjt4TExGMNg9T3pY1fz3OryqaLD9Vb/6itEFJzWkBjhQ6klNuh
-6r10P+Q4M5sfwwh7H+SJgedPhxqEqjchqkdaqg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_bc3c97c1-bd43-4806-aa41-d3104cb65b71"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YsIMz5i1fFskMKTzDW/4G4FqqqOLifWslkXWbA/S40SvVAIdCAtjFyMDLzW3mppeVdI3kJK+S9z4
+NAX3U8Wp3w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d580f19a-d633-4baa-adbd-00d342e74a1d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>EHyadB+EYF0z/17lPnOIIdI6V1VDzoDcojAcnO5yQpoR/FxJkT241v4o5wtRrDtMPVh8J0mYFGs4
+4z7oZnq4fA==</DigestValue></Reference></SignedInfo><SignatureValue>RJ/xpMMk04DeMqLl5Bc+T2Whh/LaC3qX8WomRbSR2xYGAyQv3PaAxXWgz9Rg4llLPZjpqbrJnTVL
+y3xkpOqmSl12Z3SSPhClfgGSJCYKRCifUkHfxpQ0RCLZ4DnR8d7z37EroqmB4LWdNFiDZkLCYcxN
+NQB6HPRKgMZtNtQ5ejFRjGmVjtg5DG8Zunqav8dr5q7j8c19cgec+upiqgU2VzXJ7c1ThoVCvVYi
+f/2jNBmii70riv6vADg1yC1N+q3gT8rW4tXAbjrsfBxqhdxKLyP3GKEmJFF5iOVk5t4rlnG2xWd8
+NSQS44OEEY9s/rQHRtCzAj4c8V3WwS0GGUR3Rw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1419,4 +1427,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_bc99e98d-b7e3-4cee-9155-10676b1b2020" Target="#_05a327d6-a9ed-46e2-9313-bdc03e0354f3"><Timestamp>2021-09-28 17:29:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d580f19a-d633-4baa-adbd-00d342e74a1d" Target="#_bc3c97c1-bd43-4806-aa41-d3104cb65b71"><Timestamp>2021-09-28 17:31:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

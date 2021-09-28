@@ -111,7 +111,6 @@
   </parameters>
   <node componentName="tMSSqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -166,7 +165,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT    CMCOUPON,&#13;&#10;CMCAMPGN,&#13;&#10;CMISSEML,&#13;&#10;CMISSCUS,&#13;&#10;CMSTAT,&#13;&#10;CMCHNL,&#13;&#10;substring(TO_CHAR(CMSDAT),1,19) as CMSDAT,&#13;&#10;CMUSED#,&#13;&#10;MSTUSR,&#13;&#10;substring(TO_CHAR(MSTDAT),1,19) as MSTDAT&#13;&#10;FROM         VSIMMSSHR.CPNMSTPF&#13;&#10;&#13;&#10;where MSTDAT between  (CURRENT_DATE - 7  DAY) and  (CURRENT_DATE - 1  DAY)&#13;&#10;and CMCOUPON = '256FEMFP'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT    CMCOUPON,&#13;&#10;CMCAMPGN,&#13;&#10;CMISSEML,&#13;&#10;CMISSCUS,&#13;&#10;CMSTAT,&#13;&#10;CMCHNL,&#13;&#10;substring(TO_CHAR(CMSDAT),1,19) as CMSDAT,&#13;&#10;CMUSED#,&#13;&#10;MSTUSR,&#13;&#10;substring(TO_CHAR(MSTDAT),1,19) as MSTDAT&#13;&#10;FROM         VSIMMSSHR.CPNMSTPF&#13;&#10;&#13;&#10;where MSTDAT between  (CURRENT_DATE - 7  DAY) and  (CURRENT_DATE - 1  DAY)&#13;&#10;&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="as400_id"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;prompt=false&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
@@ -442,7 +441,6 @@
     </metadata>
   </node>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_1" offsetLabelX="0" offsetLabelY="0" source="tDBRow_1" target="tDBInput_1">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
@@ -465,13 +463,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2b790169-c983-4e8b-9433-762996626b44"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FUwZVDwf0YEwVGo3SKP1o1V1fXz01jxfhecherQ7tht3uuls2VUNHfJozsY6y8ChYdzD7ayYb2F6
-LzUKLgMZXg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e7890ae2-1442-4b51-a709-cd92ffad25ee"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DIGT4Sw8udOtgmHJ8Pq5BcPASX4hdbGEVqz2l+T0ZsAkg0M1oEoN4BSXBSokmMCVmSMlBANPS/T/
-DhyZoFXpcQ==</DigestValue></Reference></SignedInfo><SignatureValue>j9ciKQj3Sr4BlbPNIUL2jqsBktmO6ZOL0+QBAplpCMO/bAoiLxirDUQOnRtvOYFYKZVX4dAM/MUc
-evI5kIggX2dYpRPrM6hgfF2b4h9dSPtRFanZmK9ErevXHFRwD4NeuFvxtbSMU7oH7WcvdrYJIla+
-cya63mPR+8jJSpQt/qiOJ0IQjgDN3WxVGOJ5R8m2dSa+xINbpqfzNsael8os3F9LU+me3vS5XtZE
-usX4nmCiJxmy3ZPiWy3HBCe8xGj795Fsjyh6EEiupDANe+KIZ4YNcvW5KMzJlRsu+BMRxYmRdZFU
-YCcFw260o80L0EckmlukbQnvIajogUpCB8B1OQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b1356626-09ab-4238-84ed-88fb04560cc6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0Nmu1UXUUSZgyAsQSLznqpNzjEzwtRKR9MbSYS1s6ByWpRlS43WZVUgSwu9zP33oW461l1uu2rVF
+15EmvjwlCA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ae9140e4-168d-4683-859d-96c7037a48cc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QBQfnBkvZRDZaFnAZgvjGGDm4GTGNtgEfn/D2q1SKDjxnU+HN1Wo3yeVemEmCTK8WAhzXbxdo/vh
+lZ8K3aKXEg==</DigestValue></Reference></SignedInfo><SignatureValue>ULIRcSihEcT0JHBAUH9x9knJxpz2XH4wI9oX5BiiwguT21pj4FRCPBbA/5jHb00OcuEzizguQR2i
+XBwNN2NM7AKJ1NFdb2BeC4ytI6nKWRh9Y159OJCU8EWDyyqKBD2No7oPF5tbwPD6pg+6dr1o7bzK
+ZwfDFmy6GLIlGHSXfk2NNw9h/yCMgePXZZ7pyIv3ppI15yKGfNH2Lx3V62fRUTxaEU/uZUPSpv1F
+x7xqQVYtCnwhoMoSzRZ2b4h87jGAvt23tYQWlUOT1LAtfW+JDErq3F7y4Ris75mwg3aYbyrvKdDu
+OHSZ9mMf2w4quLXTiHjnnw+/soDVk9kZq6SwyQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -493,4 +491,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e7890ae2-1442-4b51-a709-cd92ffad25ee" Target="#_2b790169-c983-4e8b-9433-762996626b44"><Timestamp>2021-09-28 21:52:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ae9140e4-168d-4683-859d-96c7037a48cc" Target="#_b1356626-09ab-4238-84ed-88fb04560cc6"><Timestamp>2021-09-28 21:53:49</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -113,16 +113,14 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_nPfW4H8vEeqBgcT7XpSDjA"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;wva-crm7db-p01&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.240.14.40&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;CRM&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;Talend_CRM&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="CvF3sYUD4eDWuWnJp+QWSmKx5JC3XyE1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;30001&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;cm_vs_01&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;VSBISqluser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="sGIRFkbgWjMWbj4XdR9WE3IvJBz46J45"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;address&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -478,22 +476,20 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_nPfW4H8vEeqBgcT7XpSDjA"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;wva-crm7db-p01&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.240.14.40&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;CRM&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;Talend_CRM&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="CvF3sYUD4eDWuWnJp+QWSmKx5JC3XyE1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;30001&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;cm_vs_01&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;VSBISqluser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="sGIRFkbgWjMWbj4XdR9WE3IvJBz46J45"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;address&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select p.*,pa.archive_date,pd.phone_opt_in_flag,pd.phone_opt_in_date,pd.text_opt_in_flag,pd.text_opt_in_date&#13;&#10;from phone p&#13;&#10;inner join phone_division pd&#13;&#10;on p.customer_id=pd.customer_id&#13;&#10;and  p.phone_id=pd.phone_id&#13;&#10;inner join  customer_division cd&#13;&#10;on  cd.customer_id=p.customer_id&#13;&#10;and cd.primary_phone_id=p.phone_id&#13;&#10;left outer join [crm].[dbo].[phone_archive] pa&#13;&#10;on p.customer_id = pa.customer_id and p.phone_id = pa.phone_id&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select p.*,pa.archive_date,pd.phone_opt_in_flag,pd.phone_opt_in_date,pd.text_opt_in_flag,pd.text_opt_in_date&#13;&#10;from phone p&#13;&#10;inner join phone_division pd&#13;&#10;on p.customer_id=pd.customer_id&#13;&#10;and  p.phone_id=pd.phone_id&#13;&#10;inner join  customer_division cd&#13;&#10;on  cd.customer_id=p.customer_id&#13;&#10;and cd.primary_phone_id=p.phone_id&#13;&#10;left outer join [phone_archive] pa&#13;&#10;on p.customer_id = pa.customer_id and p.phone_id = pa.phone_id&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -783,22 +779,20 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_nPfW4H8vEeqBgcT7XpSDjA"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;wva-crm7db-p01&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.240.14.40&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;CRM&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;Talend_CRM&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="CvF3sYUD4eDWuWnJp+QWSmKx5JC3XyE1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;30001&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;cm_vs_01&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;VSBISqluser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="sGIRFkbgWjMWbj4XdR9WE3IvJBz46J45"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;address&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot; select e.*,ed.email_opt_in_flag,ed.email_opt_in_date,ea.archive_date&#13;&#10;  FROM [crm].[dbo].[email] e&#13;&#10;  left outer join [crm].[dbo].[email_division] ed&#13;&#10;  on e.customer_id = ed.customer_id and e.email_id = ed.email_id&#13;&#10;  left outer join [crm].[dbo].[email_archive] ea&#13;&#10;  on e.customer_id = ea.customer_id and e.email_id = ea.email_id&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot; select e.*,ed.email_opt_in_flag,ed.email_opt_in_date,ea.archive_date&#13;&#10;  FROM [email] e&#13;&#10;  left outer join [email_division] ed&#13;&#10;  on e.customer_id = ed.customer_id and e.email_id = ed.email_id&#13;&#10;  left outer join [email_archive] ea&#13;&#10;  on e.customer_id = ea.customer_id and e.email_id = ea.email_id&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1081,13 +1075,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ac82f5e9-3b2d-4441-b73b-19ceadc6d5d4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>//UcBL1F/+9pbdjxBabEaexfdb5W5yCup0ESDYBsKdc+MwB2YKVwoHkTtWWF2VbWMS90xyrUy9vA
-aRVQjv3kWA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d5e7539e-8a45-4fd1-888e-538957250a86"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BzuBqIET3ghaID1RL3tljpjV7Opmq0ABUydOANdtFisWdDWc/vVhHWc7P5q1LCPedLowygn4kNqQ
-9pAYTl7EGA==</DigestValue></Reference></SignedInfo><SignatureValue>IWdZvB+gKqdW7C7ZZ6neCzr2WKAw3JD2gTibao1iLQs/Oc/aBiuORWV+l371ikvevuUfo9DMc2bx
-TvHxcUUUZ1pdhjOtgH+zL0+zZ6mIF0KOSVbqhHY4uY44ogmkpuSumZIU5ryCkZrzaLJw8RGcmkqf
-8JA3/1zUMsaB7+FI1rEOFsEu2QHYba5S7n9vZpaqN5xB5tnk2dDUNi+z5AOkz1ppqRUtmapUXqMu
-DGNfH7PzbStQdFzWqaviwwYSyuZRpbLbCc+MDUMdwG1/qPiOozGWBUQoGlOR7C0hriAS7eYL/gWL
-TxS8It+AqjGEoFVi8y6bJxkM5TlzbndHGBDbEQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_96b01de1-591c-4ff9-9e5d-cd749c8025e9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gBOTummsG7WuWpSMp6fDyIZACWyOv7nghTZXjrfd0iGNkoSUQUViWEqqbuOiWhJqmwmRgDJC5ZaP
+fmaDWyljog==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6b5029a6-34a4-4df3-9f9e-ab0e9d928ca5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fBZGD7rimPN9snIX/QqeB4aiALf8rPUA/sGtT7r+bdxLr/cgwIohC6X/IN+iFk/Oy+uU8JGGa7Lz
+8oBtTK6abA==</DigestValue></Reference></SignedInfo><SignatureValue>YdyP9yHljxfXofMGlDmb0RLwcUef6ategMUnkrcrTsRHwwfh6TORTV8EgmEcOrjxMZQBgMFMMft1
+Zt2ENxddroZHg1dnVLunUqY8fl0yqmJ0Ckz6unCPFtAxf/IgS0Geh7ENV4gkVfKQNekvH+31Gs5w
+8msJkb2e79NP/vqNQ0pmk/rEhwD5jrcWuSoofwQIgyjboBHet3JdBREaK9LPEO7OZvIPKA4Zhpmb
+AXsUHKfCqlMdEmU8GmutaYZMVMcreASwD0vzGb6rbPw7lha2x+Bc8mgDP9gOA+csYufw0Hm4k3P9
+xFYMjxfqSfDuNcugrARXzgNfwlxBxmOt8IxSjw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1109,4 +1103,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d5e7539e-8a45-4fd1-888e-538957250a86" Target="#_ac82f5e9-3b2d-4441-b73b-19ceadc6d5d4"><Timestamp>2021-09-03 19:16:53</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6b5029a6-34a4-4df3-9f9e-ab0e9d928ca5" Target="#_96b01de1-591c-4ff9-9e5d-cd749c8025e9"><Timestamp>2021-10-06 15:13:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -113,22 +113,20 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_nPfW4H8vEeqBgcT7XpSDjA"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;wva-crm7db-p01&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.240.14.40&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;CRM&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;Talend_CRM&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="CvF3sYUD4eDWuWnJp+QWSmKx5JC3XyE1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;30001&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;cm_vs_01&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;VSBISqluser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="sGIRFkbgWjMWbj4XdR9WE3IvJBz46J45"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT *&#13;&#10;&#13;&#10; from [crm].[dbo].[address] &#13;&#10;  where cast(posted_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;or cast(date_last_modified as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT *&#13;&#10;&#13;&#10; from [address] &#13;&#10;  where cast(posted_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;or cast(date_last_modified as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -458,22 +456,20 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_nPfW4H8vEeqBgcT7XpSDjA"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;wva-crm7db-p01&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.240.14.40&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;CRM&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;Talend_CRM&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="CvF3sYUD4eDWuWnJp+QWSmKx5JC3XyE1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;30001&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;cm_vs_01&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;VSBISqluser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="sGIRFkbgWjMWbj4XdR9WE3IvJBz46J45"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT *&#13;&#10;from [crm].[dbo].[customer_division]&#13;&#10;where division_id = 2&#13;&#10; and (cast(create_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121) &#13;&#10;or cast(modify_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121))&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT *&#13;&#10;from [customer_division]&#13;&#10;where division_id = 2&#13;&#10; and (cast(create_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121) &#13;&#10;or cast(modify_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121))&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -731,22 +727,20 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_nPfW4H8vEeqBgcT7XpSDjA"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;wva-crm7db-p01&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.240.14.40&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;CRM&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;Talend_CRM&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="CvF3sYUD4eDWuWnJp+QWSmKx5JC3XyE1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;30001&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;cm_vs_01&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;VSBISqluser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="sGIRFkbgWjMWbj4XdR9WE3IvJBz46J45"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT *&#13;&#10;from [crm].[dbo].[address_division] &#13;&#10;  where cast(posted_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;or cast(modify_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT *&#13;&#10;from [address_division] &#13;&#10;  where cast(posted_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;or cast(modify_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -964,22 +958,20 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_4"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_nPfW4H8vEeqBgcT7XpSDjA"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;wva-crm7db-p01&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.240.14.40&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;CRM&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;Talend_CRM&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="CvF3sYUD4eDWuWnJp+QWSmKx5JC3XyE1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;30001&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;cm_vs_01&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;VSBISqluser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="sGIRFkbgWjMWbj4XdR9WE3IvJBz46J45"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT  * from [crm].[dbo].customer_plan_history &#13;&#10;&#13;&#10;   where cast(create_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT  * from customer_plan_history &#13;&#10;&#13;&#10;   where cast(create_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1145,22 +1137,20 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_nPfW4H8vEeqBgcT7XpSDjA"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;wva-crm7db-p01&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.240.14.40&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;CRM&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;Talend_CRM&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="CvF3sYUD4eDWuWnJp+QWSmKx5JC3XyE1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;30001&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;cm_vs_01&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;VSBISqluser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="sGIRFkbgWjMWbj4XdR9WE3IvJBz46J45"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;/****** Script for SelectTopNRows command from SSMS  ******/&#13;&#10;SELECT  *&#13;&#10;  FROM [crm].[dbo].[customer_promotion_history]&#13;&#10;  where cast(last_transaction_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;/****** Script for SelectTopNRows command from SSMS  ******/&#13;&#10;SELECT  *&#13;&#10;  FROM [customer_promotion_history]&#13;&#10;  where cast(last_transaction_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1302,22 +1292,20 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_6"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_nPfW4H8vEeqBgcT7XpSDjA"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;wva-crm7db-p01&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.240.14.40&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;CRM&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;Talend_CRM&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="CvF3sYUD4eDWuWnJp+QWSmKx5JC3XyE1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;30001&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;cm_vs_01&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;VSBISqluser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="sGIRFkbgWjMWbj4XdR9WE3IvJBz46J45"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;/****** Script for SelectTopNRows command from SSMS  ******/&#13;&#10;SELECT  *&#13;&#10;  FROM [crm].[dbo].[email]&#13;&#10;  where cast(posted_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;or cast(modify_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;/****** Script for SelectTopNRows command from SSMS  ******/&#13;&#10;SELECT  *&#13;&#10;  FROM [email]&#13;&#10;  where cast(posted_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;or cast(modify_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1539,22 +1527,20 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_7"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_nPfW4H8vEeqBgcT7XpSDjA"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;wva-crm7db-p01&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.240.14.40&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;CRM&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;Talend_CRM&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="CvF3sYUD4eDWuWnJp+QWSmKx5JC3XyE1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;30001&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;cm_vs_01&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;VSBISqluser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="sGIRFkbgWjMWbj4XdR9WE3IvJBz46J45"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;/****** Script for SelectTopNRows command from SSMS  ******/&#13;&#10;SELECT  *&#13;&#10;  FROM [crm].[dbo].[email_archive]&#13;&#10;  where cast(posted_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;or cast(modify_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;/****** Script for SelectTopNRows command from SSMS  ******/&#13;&#10;SELECT  *&#13;&#10;  FROM [email_archive]&#13;&#10;  where cast(posted_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;or cast(modify_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -5287,16 +5273,14 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_19"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_nPfW4H8vEeqBgcT7XpSDjA"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;wva-crm7db-p01&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.240.14.40&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;CRM&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;Talend_CRM&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="CvF3sYUD4eDWuWnJp+QWSmKx5JC3XyE1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;30001&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;cm_vs_01&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;VSBISqluser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="sGIRFkbgWjMWbj4XdR9WE3IvJBz46J45"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;customer_loyalty_plan&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -5659,13 +5643,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f5fabe3c-fb31-4afc-a514-b301bfe89373"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UAdAFl/DeNXiELRWndrJoM+jo5oGqiL94oZKE0y8DUowb6wB0Uhf9nZh7UEpZkOfgRo2cMP1/TWD
-9sriYSLpIw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6a939026-cb8a-46cf-9dfc-64c717fe9997"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>v3hH1NHDg/0FsBD44uelYcrkdFsDR5YHhVBBAAPof/RRUf8DQWddyTrl2k9nZI5HD4nrIH9MHKdt
-XdI31Foueg==</DigestValue></Reference></SignedInfo><SignatureValue>Y4jxDGCI4Q4Qt1AHmCQLxI7kKQhYrZm4r829xp4EXLrDf26jiRm88KMJ7zyVo+eJlDzmOPUZjfCH
-4R2MgdeFy9DnLrhjlx2NLK4xMKQUh9NmxWs5huk7x4+2VJYa07dApm8Yw6isQ4QB/pwIVVBW89ig
-EJWk3OUA+ki7aNiJBUp0oy6oqZz5YJcfcIMMjWDKbW7/uJvk+zB/uuW0O1oKJVIzNpxPLQawnprJ
-i/Zk5BTqL2GO0XW7URsC8NtpPnJQGYQMiupEWuns997m6fWq9qk9xlCeXPoeYrtqwMqb7bj4NzrU
-03XtPY7VR0fWP1Dcg27CCbTX/uj1baEAqphSPw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8acd6716-1c60-43a7-b9b3-bc6fd04d35ab"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>EKq0JaPUZZXoD41E/AXr/4M2xSLReboLRF/8yRriqvzOcUzzjqIX2EjyBZw6aH9+U2iD1qB4wD5o
+QzwU1OAY6Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_82dc037c-7024-4a11-b480-8dab70725ae1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>i0JZUSHWv2RU7zZMPNEaPOYb/rXDmsIuNlqOY+v05F1PPenbTOjr59g7astbgr/jnzd2JsCYzROp
+f93WbDusqQ==</DigestValue></Reference></SignedInfo><SignatureValue>jObVLiwbjtCFKQ2qrSVDjUMhm8dgAIOuCE17ee7sU3F6krmF5CpjxkfEl7yo1rQ6kdhBaOImvMjW
+CTDprY1nQq5b/a7OLDKI8J/0dXwG63mGlXvZO0aZ/1y/YOMWAa/7xgkm2wuNaugRK8l2Rat7+lwR
+KwzmaNGETz2wSflbks4cx2eWj2pv80p+RwRLrk+g1Ct/WIRZv2W14U7NS20ktyB40uF0e7uKkdTp
+mybzWS9VsLvNpWUVgxVlDAUOD0MEzR9A/E6G3iJB/hVgJc2Tc/ibatfjCjPJbloqjO4C2rZbEFXV
+B0j6iwavXRgdeScBYv30BYH3IPAfKM1eK0FvHQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -5687,4 +5671,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6a939026-cb8a-46cf-9dfc-64c717fe9997" Target="#_f5fabe3c-fb31-4afc-a514-b301bfe89373"><Timestamp>2021-07-15 20:23:49</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_82dc037c-7024-4a11-b480-8dab70725ae1" Target="#_8acd6716-1c60-43a7-b9b3-bc6fd04d35ab"><Timestamp>2021-10-06 19:46:01</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -126,7 +126,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;/****** Script for SelectTopNRows command from SSMS  ******/&#13;&#10;SELECT  [customer_id]&#13;&#10;,[sales_channel_code]&#13;&#10;      ,[first_purchase_amt]&#13;&#10;      ,[first_purchase_date]&#13;&#10;      ,[first_purchase_store_no]&#13;&#10;      ,[last_purchase_amt]&#13;&#10;      ,[last_purchase_date]&#13;&#10;      ,[last_purchase_store_no]&#13;&#10;      ,[highest_purchase_amt]&#13;&#10;      ,[highest_purchase_date]&#13;&#10;      ,[highest_purchase_store_no]&#13;&#10;      ,[lowest_purchase_amt]&#13;&#10;      ,[lowest_purchase_date]&#13;&#10;      ,[lowest_purchase_store_no]&#13;&#10;      ,[total_visits]&#13;&#10;&#9;&#13;&#10;  FROM [crm].[dbo].[customer_accum_div_chan_lftm]&#13;&#10;  where division_id = 2&#13;&#10;  &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;/****** Script for SelectTopNRows command from SSMS  ******/&#13;&#10;SELECT  [customer_id]&#13;&#10;,[sales_channel_code]&#13;&#10;      ,[first_purchase_amt]&#13;&#10;      ,[first_purchase_date]&#13;&#10;      ,[first_purchase_store_no]&#13;&#10;      ,[last_purchase_amt]&#13;&#10;      ,[last_purchase_date]&#13;&#10;      ,[last_purchase_store_no]&#13;&#10;      ,[highest_purchase_amt]&#13;&#10;      ,[highest_purchase_date]&#13;&#10;      ,[highest_purchase_store_no]&#13;&#10;      ,[lowest_purchase_amt]&#13;&#10;      ,[lowest_purchase_date]&#13;&#10;      ,[lowest_purchase_store_no]&#13;&#10;      ,[total_visits]&#13;&#10;&#9;&#13;&#10;  FROM [customer_accum_div_chan_lftm]&#13;&#10;  where division_id = 2&#13;&#10;  &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -334,7 +334,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * FROM [crm].[dbo].[customer_division]&#13;&#10;where division_id = 2&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * FROM [customer_division]&#13;&#10;where division_id = 2&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -606,7 +606,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * FROM [crm].[dbo].[transaction_header]&#13;&#10;where cast(posted_date as date) &gt; '2016-12-27' &#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * FROM [transaction_header]&#13;&#10;where cast(posted_date as date) &gt; '2016-12-27' &#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -938,7 +938,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#13;&#10; a.[transaction_id]&#13;&#10;      ,[transaction_line_no]&#13;&#10;      ,[sale_or_return_indicator]&#13;&#10;      ,a.[sales_associate_no]&#13;&#10;      ,[style_id]&#13;&#10;      ,[color_code]&#13;&#10;      ,[size_description]&#13;&#10;      ,[quantity]&#13;&#10;      ,[net_retail]&#13;&#10;      ,[cost]&#13;&#10;      ,[markdown_percent]&#13;&#10;      ,[comments]&#13;&#10;      ,[promotion_flag]&#13;&#10;      ,[class_code]&#13;&#10;      ,[net_retail_central]&#13;&#10;      ,[cost_central]&#13;&#10;      ,[markdown_amount]&#13;&#10;      ,[markdown_amount_central]&#13;&#10;&#9;  ,cast(b.transaction_date as date) as transaction_date&#13;&#10;,b.posted_date&#13;&#10;&#9;&#13;&#10;  FROM [crm].[dbo].[transaction_detail] a&#13;&#10;  left join [crm].[dbo].[transaction_header] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;--where cast(b.posted_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)\&quot;&#13;&#10;where cast(posted_date as date) &gt;  '2016-12-27'&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#13;&#10; a.[transaction_id]&#13;&#10;      ,[transaction_line_no]&#13;&#10;      ,[sale_or_return_indicator]&#13;&#10;      ,a.[sales_associate_no]&#13;&#10;      ,[style_id]&#13;&#10;      ,[color_code]&#13;&#10;      ,[size_description]&#13;&#10;      ,[quantity]&#13;&#10;      ,[net_retail]&#13;&#10;      ,[cost]&#13;&#10;      ,[markdown_percent]&#13;&#10;      ,[comments]&#13;&#10;      ,[promotion_flag]&#13;&#10;      ,[class_code]&#13;&#10;      ,[net_retail_central]&#13;&#10;      ,[cost_central]&#13;&#10;      ,[markdown_amount]&#13;&#10;      ,[markdown_amount_central]&#13;&#10;&#9;  ,cast(b.transaction_date as date) as transaction_date&#13;&#10;,b.posted_date&#13;&#10;&#9;&#13;&#10;  FROM [transaction_detail] a&#13;&#10;  left join [transaction_header] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;--where cast(b.posted_date as date) &gt;= CONVERT(CHAR(10), DATEADD(WEEK, -4, GETDATE()), 121)\&quot;&#13;&#10;where cast(posted_date as date) &gt;  '2016-12-27'&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1178,7 +1178,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT a.[transaction_id]&#13;&#10;      ,[tender_line_no]&#13;&#10;      ,[sales_module_tender_type]&#13;&#10;      ,a.[tender_type]&#13;&#10;      ,[tender_identifier]&#13;&#10;      ,[tender_amount]&#13;&#10;      ,[tender_amount_central]&#13;&#10;      ,[alternate_key_code]&#13;&#10;      ,[tender_identifier_hash]&#13;&#10;&#9;  ,b.transaction_date&#13;&#10;,b.posted_date&#13;&#10;  FROM [crm].[dbo].[transaction_tender] a&#13;&#10;    left join [crm].[dbo].[transaction_header] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;where cast(b.posted_date as date) &gt;= '2016-12-27'&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT a.[transaction_id]&#13;&#10;      ,[tender_line_no]&#13;&#10;      ,[sales_module_tender_type]&#13;&#10;      ,a.[tender_type]&#13;&#10;      ,[tender_identifier]&#13;&#10;      ,[tender_amount]&#13;&#10;      ,[tender_amount_central]&#13;&#10;      ,[alternate_key_code]&#13;&#10;      ,[tender_identifier_hash]&#13;&#10;&#9;  ,b.transaction_date&#13;&#10;,b.posted_date&#13;&#10;  FROM [transaction_tender] a&#13;&#10;    left join [transaction_header] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;where cast(b.posted_date as date) &gt;= '2016-12-27'&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1346,7 +1346,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;SELECT  a.[transaction_id]&#13;&#10;      ,a.[transaction_line_no]&#13;&#10;      ,a.[line_sequence]&#13;&#10;      ,a.[coupon_code],b.transaction_date,b.posted_date&#13;&#10;  FROM [crm].[dbo].[transaction_coupon] a&#13;&#10;  join [crm].[dbo].[transaction_header] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;   where cast(b.posted_date as date) &gt;= '2019-12-29'&#13;&#10;&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;SELECT  a.[transaction_id]&#13;&#10;      ,a.[transaction_line_no]&#13;&#10;      ,a.[line_sequence]&#13;&#10;      ,a.[coupon_code],b.transaction_date,b.posted_date&#13;&#10;  FROM [transaction_coupon] a&#13;&#10;  join [transaction_header] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;   where cast(b.posted_date as date) &gt;= '2019-12-29'&#13;&#10;&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1526,13 +1526,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_48b868c1-413a-4e2e-846d-b558f3f5cf37"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PIeO4+37i93/3Wv7wkfGb+JYre6vJHUy2sU4hrO3fh5Vtn/8ciybyBuvYlnYFfyi8LcHQIVaNvEs
-iTp7ntgfOw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_901710a1-eae4-4e5a-9cca-b1145db191d2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rSLQj2NG+uRxO9Q5xMBhomYLxnCwOAeDEwf65+PllVCJemZtXYVyVE2Xl0h4RKrqbV0pS1ALBCNY
-4WlFY6a3pQ==</DigestValue></Reference></SignedInfo><SignatureValue>IxQ6AbMA/asqpiayK6awhISCf/Wdb6teUoo16hC20MnydCleYVf6zBOFCVkDNXtMsRR2EDqFCEav
-5WwNz95DzXK6maHFM5pVowkmuHbUC5PIm4AsGCkTBBdEbRfi8tFVPKBJkZBXhX6z5aJZerOB9h3N
-x6Olq2PToWZ7OmhaSrhGyYBvbrGlgxOrw8YvFhrpUaPrIuOiCqOQmE+VtrqkZDzveeJLh7kUC7o2
-xHv6iRPPiNd1WjGvxOx0MzM07IEOJUh0agmbdrVQCSZ32u4c1Q/KkI1v4x6pBzEWgV+3qkTMzvd8
-myEbla6l0EaTVT4FZVwyqBhqHkIZSM96z3KFHg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e76a7753-2658-4153-9cd8-6c893aaf1fb4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>S8tOqCz1u2u8Lix3cP0aox/mkR7r20FQBWSv9gSbjgLQsx3+E1qyYoTVTmOIEgdt9OLoR0SEXEtN
+WC7GzoJ8Ag==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6b22c794-1b18-425b-8962-07388e39b049"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TrGOLwFIjDJnjLvN140wOaGvkSyn98N/c4IrxRZSR1X9wmGtGUNsKEvUGp7cgnnuDcEzNb5mIZch
++Uv6Lhy7/w==</DigestValue></Reference></SignedInfo><SignatureValue>Md/lLZmPW3UcQOS6Vu6nC9jovZS2dHaT2tv82uruOP9GFK9GkggTb3Ot9t+r/3vl2OU6vv7xsIhV
+PtS7wnyGxVMMBkfZeCqpKBLwzIUlKcglf2guT1jc6bjFz/KxWoweOB5tCJqNpDfaI9YvAp/PZ9PZ
+ScqqAtogFzl1JQtWH2s245YnwYJwMrYzCbU9/JHqgx7qcojiR0e1ZC/c8JCU0ZgtJsUICVSeVkLk
+qZCnYtLgImAkXvdeZJTmviLnhI8R78wm6wsG9JZUUqrQWbpIFVKwZeREHopBsvv7lZyXrnYVxjWr
+T5uCCZsmgMrfMzymn6NsbQbQztzvW4txrqzxcA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1554,4 +1554,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_901710a1-eae4-4e5a-9cca-b1145db191d2" Target="#_48b868c1-413a-4e2e-846d-b558f3f5cf37"><Timestamp>2021-10-08 17:11:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6b22c794-1b18-425b-8962-07388e39b049" Target="#_e76a7753-2658-4153-9cd8-6c893aaf1fb4"><Timestamp>2021-10-10 21:30:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

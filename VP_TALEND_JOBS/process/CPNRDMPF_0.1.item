@@ -165,7 +165,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT     CRCOUPON, CRCAMPGN, \&quot;CRSTORE#\&quot;, CRREGSTR, \&quot;CRTRANS#\&quot;, to_char(CRTRNDTE) as CRTRNDTE, CRCHANEL, CRISSEML, CRISSCUS, CRRDMEML, CRRDMCUS, \&quot;CRTOTAL$\&quot;, &#13;&#10;                      CRDISAMT, CRNETAMT, \&quot;CRDISC$$\&quot;, CRDESC1, CRDESC2, CROFFLNE, CROVRRDE, RDMUSR, to_char(RDMDAT) as RDMDAT&#13;&#10;FROM         VSIMMSSHR.CPNRDMPF&#13;&#10;where RDMDAT = (CURRENT_DATE - 1 DAY)&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT     CRCOUPON, CRCAMPGN, \&quot;CRSTORE#\&quot;, CRREGSTR, \&quot;CRTRANS#\&quot;, CRTRNDTE , CRCHANEL, CRISSEML, CRISSCUS, CRRDMEML, CRRDMCUS, \&quot;CRTOTAL$\&quot;, &#13;&#10;                      CRDISAMT, CRNETAMT, \&quot;CRDISC$$\&quot;, CRDESC1, CRDESC2, CROFFLNE, CROVRRDE, RDMUSR,   RDMDAT&#13;&#10;FROM         VSIMMSSHR.CPNRDMPF&#13;&#10;where RDMDAT = (CURRENT_DATE - 1 DAY)&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="as400_id"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;prompt=false&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
@@ -652,6 +652,7 @@
   </node>
   <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="TO" value="&quot;Vaishali.patil@vitaminshoppe.com&quot;"/>
     <elementParameter field="TEXT" name="FROM" value="&quot;From_Mail@vitaminshoppe.com&quot;"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
@@ -688,6 +689,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tSendMail_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
   <connection connectorName="FLOW" label="cpnrdmpf" lineStyle="0" metaname="cpnrdmpf" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
@@ -709,13 +711,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_25b95463-e757-4b1f-93ce-34ca56fbd130"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hux5Gpg/aHKNbOZMq4lXjbeXK8xH1MTmkwP38jH2pWZAov1nZOr/ZNSpuzrB4XC9rx0h9sRIMTtj
-tCbHfR1vhg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_55bff545-f839-47dc-bbf6-ece53d585fc6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VEcTyvWlzApb36yGDxlQe8urEHVgk+mPJzjtDdwChu3iEnegShNoMCqqmLXN4xZ5kIggNS3JflIg
-BQyQweSrhw==</DigestValue></Reference></SignedInfo><SignatureValue>fZoFvjalDcxqipEaDZpbrt0F6xpaEzEBYuFWBp8Y5Rs2U6w0M47zrqPfvRb6ZIComFq5PyQzD5Vl
-thYFTBLIUg041o47A/fxJKPxRwIoXGk6Oxu9PozWXHmpyGrc6L2GbS/XnN1glwbUVFbZCc3InKgn
-YF/2pKQH5lFiRMJX+8JVIn1Zr/VBDclLPZAGMgGIhebUAvbohphO4dZhAkkyJFGp9PAGJKC357VY
-DTX0PX4t1zIUe+i91PWrz3UcndwcAR1drSCOZlGPV3jCKCumwKQGrOmVWgkloazZ/co/bwMPJi9l
-nbs/Uvy5c0IIsUDLgVhtvHlO5yFzn1YhJd1Wdw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_76c6b09f-70e7-491e-9d8d-46c244e28ed5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XHoWzReNqr7YnmtxkCDDTGOQe2UUCi/OifX2FPh3YVxGtH6VgZYYTJ4a9grYQDL28kV0kP5ywcZ6
+lbAYXW3Qiw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_34eb7e4e-986e-438f-8a1b-3b61032c95a0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KI3eIVTm0XteSSpKU9wjftgBUpTAp7GMH0cCIQ3OeioDel4aBBC/CaUPCmDly5h8Sg4FmUyqC2s/
+Z9SdAG0dUg==</DigestValue></Reference></SignedInfo><SignatureValue>AaKX8qV5y2qODjJOc5xYz5gG9JB+U20WSdO7uMSuuYFISlkjRtqBV07wwXVCzQifcOmEsV0cKJq8
+3SfN8auUq83GKtM+15REy0zMEeiV4On+QqnnV0BypVkzMfXEHbiDp0/GzxRnD6nQxNvCp/zqTFHl
+/GmS4Bxzzx7zRABe3+dsx/RSMtAOUFviYhm3QNchxAY4M1XQCRq9f75rxWdpuVBObNJmMp0T5KPS
+rC2VaD5dXlN79cAUMJ8YORhPPE2Zt2MUNJ8/FHBnfp7gq7NhDRU2eCsIeIYRuInE5tR7SiyapL0Q
+vxDFg/BPo/9v8FnXBywhHLHySEUwedc9TmLf2Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -737,4 +739,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_55bff545-f839-47dc-bbf6-ece53d585fc6" Target="#_25b95463-e757-4b1f-93ce-34ca56fbd130"><Timestamp>2021-09-28 20:35:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_34eb7e4e-986e-438f-8a1b-3b61032c95a0" Target="#_76c6b09f-70e7-491e-9d8d-46c244e28ed5"><Timestamp>2021-10-25 15:32:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

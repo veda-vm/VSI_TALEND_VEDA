@@ -1720,14 +1720,14 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBRow_2">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
-  </connection>
   <connection connectorName="MAIN" label="row2" lineStyle="0" metaname="MAIN" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBOutput_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBRow_2">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_2" offsetLabelX="0" offsetLabelY="0" source="tDBRow_2" target="tDBRow_3">
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
@@ -1741,14 +1741,14 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tFixedFlowInput_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk6"/>
+  </connection>
   <connection connectorName="MAIN" label="row4" lineStyle="0" metaname="MAIN" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tSetGlobalVar_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tFixedFlowInput_1">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk6"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileDelete_1" offsetLabelX="0" offsetLabelY="0" source="tFileDelete_1" target="tSendMail_1">
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
@@ -1764,14 +1764,14 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfcopyOfout2"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tDBInput_3">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk13"/>
+  </connection>
   <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tFileOutputDelimited_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tDBInput_3">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk13"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_3" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_3" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1904,13 +1904,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8945d86a-29a3-4e1b-bcdd-310bb46e9873"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZM7Rt3ePOYclNiVrwyfvYXuRhJed18vpiF447TLsRXdxenuumgiaAFRhllWBhIQD6O0ijPP5VyP0
-yv9d+ALQnw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6b236681-d1d0-49cb-95a0-c361be1bddc6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>c6Dv6tq6QMlYtaxYzwfdVgZcDwCh7wU9SZ9yVm5KHxRxRDhRIL64CaVKx0yhObrdV5Vtfb+snyqb
-TdmXch4Xbg==</DigestValue></Reference></SignedInfo><SignatureValue>Ex+gsKZ20e+9h1n1MfWteuBw3rTaA5MkyDiO8eISBvazIXVwGH/SKh2hmInrcLTn3Wx2Qe5w5vKT
-RgvDWCMqNRJIGCGZ+O0U9BnkkK/gV9vo+FguYtfCJt51mACij64KFRGiqs0ct+ElAwFJrv7cfI6L
-0YVF6m5PDUcFvmnEGaJ9xN7IYK3B80Y6p7Im03LHwYEQHUpPH8y+5s4xdjzCDqKeCThcuye+X2qY
-hay3HOVhvpkvsJJEmMCbx2oiZmcjnw5ZE3uAe1Ts0JwR/7zpDegMB3MhkPcJyTvRSk8EqBjGkV5b
-ZoMTB4JiuIutRAGAvzvH1xbX8zX0TJkGuYwFDw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fecf5984-260c-4c8b-b9c0-2a6e05731782"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JexH4CKEoqQhVsYr/r4ef8f+wqV1wkVYInxtsqTWrDIJJkM3lSr6a8CpiQVrsuNFuV0IspKcbtsD
+nAXA9VwDPw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2898abb2-9fe0-4d09-aa8e-3988a4b232ec"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KK1mhsUUkzL+wTkW4/Ki6inMEtvlrdzmAMEK4+/A7ktamQduP3oaK1d12vQ7B/7NtDrsgr9Tf1or
+7BriwTFcRQ==</DigestValue></Reference></SignedInfo><SignatureValue>ohx/EkM0MDvfTev7g3GiVBpgd3GDXOqGjccqiWx4E19birzwLKPqDYZmqajFSvzycy27e29DODnZ
+ifeinhkuMUDc+F83GRSlkis9aeoP2mHGsmABz7JXSkSz793gysTBOWGCwVnUWjZjVWFqpO5Q2xga
+GpMkD7swxxsFk2UJQwVwMoOWwrPUxybakYHDraSJVlzZgoSuYgGGJ+S667xz8CYY8mJsR8f5r8rf
+YFcxJ3BUHo9BWAXtrrpE4OEaEy9ohHd72pmutdy5cQ2uTeMu/9l0NdIGYcEGCzSooyGa2GemruRO
+QM1culyJVLPAt5RHRnkP+chyXyZZ4DY5nGQEmQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1932,4 +1932,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6b236681-d1d0-49cb-95a0-c361be1bddc6" Target="#_8945d86a-29a3-4e1b-bcdd-310bb46e9873"><Timestamp>2021-11-07 20:00:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2898abb2-9fe0-4d09-aa8e-3988a4b232ec" Target="#_fecf5984-260c-4c8b-b9c0-2a6e05731782"><Timestamp>2021-11-07 20:02:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

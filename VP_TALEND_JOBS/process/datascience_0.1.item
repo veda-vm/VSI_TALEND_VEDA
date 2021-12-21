@@ -639,7 +639,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;/****** Script for SelectTopNRows command from SSMS  ******/&#13;&#10;SELECT distinct &#13;&#10;      '20'+substring(cast([DATBAK] as varchar),1,2)+'-'+substring(cast([DATBAK] as varchar),3,2)+'-'+substring(cast([DATBAK] as varchar),5,2) as DATE&#13;&#10;&#9;  ,'20'+cast(DATCYR as varchar) as MERCHANDSING_YEAR&#13;&#10;&#9;  ,NULL as MERCHANDISING_QUARTER&#13;&#10;      ,[DATPER] as MERCHANDISING_PERIOD&#13;&#10;      ,[DATWKP] as MERCHANDISING_WEEK_OF_PERIOD&#13;&#10;      ,[DATWKY] as MERCHANDISING_WEEK_OF_YEAR&#13;&#10;&#9;  ,0 as MERCHANDISING_PERIOD_DAY&#13;&#10;&#9;  ,0 as MERCHANDISING_QUARTER_DAY&#13;&#10;     &#13;&#10;      ,[DATCDY] as MERCHANDISING_DAY_OF_YEAR&#13;&#10;      ,[DATDAY] as MERCHANDISING_DAY_OF_WEEK&#13;&#10;&#9;  ,NULL as COMP_DATE&#13;&#10;&#9;  ,'20'+cast(DATCYR as varchar) as COMP_MERCHANDISING_YEAR&#13;&#10;&#9;  ,NULL as COMP_MERCHANDISING_QUARTER&#13;&#10;&#9;  ,[DATPER] as COMP_MERCHANDISING_PERIOD&#13;&#10;&#9;  ,[DATWKP] as COMP_MERCHANDISING_WEEK_OF_PERIOD&#13;&#10;&#9;  ,[DATWKY] as COMP_MERCHANDISING_WEEK_OF_YEAR&#13;&#10;     ,0 as COMP_MERCHANDISING_PERIOD_DAY&#13;&#10;&#9; ,0 as COMP_MERCHANDISING_QUARTER_DAY&#13;&#10;&#9; ,[DATCDY] as COMP_MERCHANDISING_DAY_OF_YEAR&#13;&#10;&#9; ,[DATDAY]as COMP_MERCHANDISING_DAY_OF_WEEK&#13;&#10;  FROM [TenTenData].[dbo].[INVCAL_2021]&#13;&#10;  where DATBAK &gt;= 211226&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;/****** Script for SelectTopNRows command from SSMS  ******/&#13;&#10;SELECT distinct &#13;&#10;      '20'+substring(cast([DATBAK] as varchar),1,2)+'-'+substring(cast([DATBAK] as varchar),3,2)+'-'+substring(cast([DATBAK] as varchar),5,2) as DATE&#13;&#10;&#9;  ,'20'+cast(DATCYR as varchar) as MERCHANDSING_YEAR&#13;&#10;&#9;  ,NULL as MERCHANDISING_QUARTER&#13;&#10;      ,[DATPER] as MERCHANDISING_PERIOD&#13;&#10;      ,[DATWKP] as MERCHANDISING_WEEK_OF_PERIOD&#13;&#10;      ,[DATWKY] as MERCHANDISING_WEEK_OF_YEAR&#13;&#10;&#9;  ,0 as MERCHANDISING_PERIOD_DAY&#13;&#10;&#9;  ,0 as MERCHANDISING_QUARTER_DAY&#13;&#10;     &#13;&#10;      ,[DATCDY] as MERCHANDISING_DAY_OF_YEAR&#13;&#10;      ,[DATDAY] as MERCHANDISING_DAY_OF_WEEK&#13;&#10;&#9;  ,NULL as COMP_DATE&#13;&#10;&#9;  ,'20'+cast(DATCYR as varchar) as COMP_MERCHANDISING_YEAR&#13;&#10;&#9;  ,NULL as COMP_MERCHANDISING_QUARTER&#13;&#10;&#9;  ,[DATPER] as COMP_MERCHANDISING_PERIOD&#13;&#10;&#9;  ,[DATWKP] as COMP_MERCHANDISING_WEEK_OF_PERIOD&#13;&#10;&#9;  ,[DATWKY] as COMP_MERCHANDISING_WEEK_OF_YEAR&#13;&#10;     ,0 as COMP_MERCHANDISING_PERIOD_DAY&#13;&#10;&#9; ,0 as COMP_MERCHANDISING_QUARTER_DAY&#13;&#10;&#9; ,[DATCDY] as COMP_MERCHANDISING_DAY_OF_YEAR&#13;&#10;&#9; ,[DATDAY]as COMP_MERCHANDISING_DAY_OF_WEEK&#13;&#10;  FROM [TenTenData].[dbo].[INVCAL_2021]&#13;&#10;  where DATBAK between 211226 and 221231&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -795,7 +795,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="cal" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row3.DATE" name="DATE" nullable="true" type="id_String"/>
@@ -989,13 +989,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5860de74-539e-463b-b1fd-2b5dc6aa3e06"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JhvIg1eWpjEpTc1k/G1mAHlSOoPUmbjGnpYktpq0aOMxcGsU0UM9s3TWEilqtogZPku6a38LLDfv
-/M7cLvBSGg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8fc339ad-5f29-4391-921c-7bf57f39acbb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lR3mwkrttJixEJihOyAouEvF0pMZ0y0rY8dMohRgY8dQbSb+4s/Fola1TR0hoQkA93GY6bjSgHxR
-Jy0dpydgQQ==</DigestValue></Reference></SignedInfo><SignatureValue>CjYKts4DDUNtaDQz+TfsJ7ikwn3SzjukGQg5DWyNQhJhPYTPnFLJsup8a+lzE9W0nQAptx1p+h0k
-ylSqmQBjnNZ4XS5H0h58yAnnjsubcHI79IlGe9v/ghZvCNlnQ7NpTmTZhteGd+tHQYUjV6RArJBL
-V5e9mlbIQLovYXwTvxKGiW27HmHknFXJ12o4XRN4JSh5uc8h2stJofxLdwqr0cQo7bP5UKBMZ4Fm
-kJUPEIOU9Om/DzAOKj08HAr+GCBSpkVmYF9wT6aAiYp7QiXVO9p4z+QeZxfYNZ3MuS5AsIId4NW0
-+YUl4pNA5i3zNtKBSmlza8IlE3zaVJau5c4wBw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f6e8bf4c-dc77-42dd-b039-32f309c4278b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>faeKD2SBHFqBe6L/vmClGX7Q0zB6z92JltQLPmJda11JopYpyoFdUg9MjpUKUaka/ZJHbx7B/8vY
+zL3c6lgALA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0d0640f9-8e80-457f-a9d0-0b00185bb76a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7TG4LuDj7NRsNdleU/f/13XOGuPAnlBpqJGyFcWFp2np+aNR7BbYSEro53PQqL3I5aO3MNmKISv7
+qm6xVNg4Mg==</DigestValue></Reference></SignedInfo><SignatureValue>pFnqFzKyNrO8vA4q/z41KdbDuy8GVKu7Uxv9LeJL/7f6c/B0szI5NBNopL/qcVNNc6tN6WcSjwpA
+glHkv2HyqetpzXzVpzEWl8v6PqaqFEjxo1jyy2RR7Ff/5eJo7pUxQ3xhfNl++XpMW/RqfHq6qEo4
+PG5+SnxYF3QCIs9cBbaFmfYYzFqDqR+vSYm8GeApuV2FHdfIIr/5FOz2n3TTEe0U/9daWII3eDGH
+rc3l51o+Pue7ydSFnqWrue7gjV/DDW+KbG4kg0F4YrZJ/A8rGL0Xv1gwuxslhliSZoxBN0UGV++Q
+tALtuIEUi6Fh3APL9B7H7s/ZOc6ScEomHQkhZg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1017,4 +1017,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8fc339ad-5f29-4391-921c-7bf57f39acbb" Target="#_5860de74-539e-463b-b1fd-2b5dc6aa3e06"><Timestamp>2021-12-21 16:41:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0d0640f9-8e80-457f-a9d0-0b00185bb76a" Target="#_f6e8bf4c-dc77-42dd-b039-32f309c4278b"><Timestamp>2021-12-21 16:49:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

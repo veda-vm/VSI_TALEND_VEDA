@@ -163,6 +163,33 @@
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_27">
+      <column comment="" defaultValue="" key="false" length="1" name="DATCEN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="DATBAK" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="DATPER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="DATWKP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="DATWKY" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="DATCYR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="DATCDY" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="DATDAY" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="35" name="DATLIT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="DATCCN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="672" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_vk3mcDPNEeqnoeBFMXe_Yg-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="invcal">
       <column comment="" defaultValue="" key="false" length="-1" name="DATCEN" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="DATCEN"/>
       </column>
@@ -196,6 +223,34 @@
         <additionalField key="AVRO_TECHNICAL_KEY" value="DATCCN"/>
       </column>
     </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="invcal" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row8.DATCEN" name="DATCEN" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row8.DATBAK" name="DATBAK" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row8.DATPER" name="DATPER" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row8.DATWKP" name="DATWKP" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row8.DATWKY" name="DATWKY" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row8.DATCYR" name="DATCYR" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row8.DATCDY" name="DATCDY" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row8.DATDAY" name="DATDAY" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row8.DATLIT" name="DATLIT" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row8.DATCCN" name="DATCCN" nullable="true" type="id_BigDecimal"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row8" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="DATCEN" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="DATBAK" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="DATPER" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="DATWKP" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="DATWKY" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="DATCYR" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="DATCDY" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="DATDAY" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="DATLIT" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DATCCN" nullable="true" type="id_BigDecimal"/>
+      </inputTables>
+    </nodeData>
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="832" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_26"/>
@@ -1455,9 +1510,13 @@
       </column>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row27" lineStyle="0" metaname="tDBInput_27" offsetLabelX="0" offsetLabelY="0" source="tDBInput_27" target="tDBOutput_26">
+  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tDBInput_27" offsetLabelX="0" offsetLabelY="0" source="tDBInput_27" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row27"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
+  </connection>
+  <connection connectorName="FLOW" label="invcal" lineStyle="0" metaname="invcal" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tDBOutput_26">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="invcal"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tDBOutput_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1539,13 +1598,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c1d49fb1-dc5b-431c-8337-359bdf43a6f9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oCABCTW80r6D9E9+2yuIo8yxatyknfHCWoyWxPeC5ICAgiN41N4vzl9AMaOc9vVN7lKsBDZq4D+w
-aBMjyG3hSA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c9836197-a17f-4702-a191-377a412d0fdf"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Hj7uKU8IXXVo0DHmwdTsW0QnD1uW/AyjRvAVrEfjoaT+HRA5RVAXcgzK4YMuS3bZ75PXy6nWuljf
-die8IrlTzw==</DigestValue></Reference></SignedInfo><SignatureValue>Dwu8MSCkBncc8yeYoOEYlDYZkggA1K0yMrPIMeI6WgJApNfXT0d08Nr+4CYrcl/nicmiJF65w7pB
-5pseg3TrpzVx9R043H5yIqvfiBVU6ji2v7Gv38YlvQs7F0dMHdR+s0Jrc5bvSV9hmZEnCj8y3vlU
-JX5+fde0SWl2kds2XwglXNqZL/Ywz7ymxZ62NeMqnfarQD7pfPSKVn6qFDVpkl37S7ZHR8ggpUC0
-qjUQC6H9nrtYXK20TTzRvm1kzaGxJXltBera4IJqLRyjEGjQMYfXOT05QPCRLbNyALS1hrz2EE/r
-zfrhgNfDnmhEkL5Yy0kpvIK3SvqPxtryjXRLdA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4e3b899a-9685-4b22-b3ce-e823c8c79c65"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2g3/N/iINNbVOSByUEIoy83/tGMHLdE9irBg4xgu1xVYxk/ZT4yqinjn1VWQ//8iYvzcW2AIAEEt
+zfJbh7/q8Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_88695419-c74e-4994-9610-cc6f3a937cd7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qQ0F7xkx2snfGh/mw4CEl2kWyblE9sv6po6z5HtbhxTtYXbSClbCzG/eJyaEnEiCoCbNeve1LBnO
+2gum3+7TPg==</DigestValue></Reference></SignedInfo><SignatureValue>R8ljATqUzV7aQfWbLn4VGZ/jr4hQQfyV6vKGPaWrMIKWilg0sRsT4hGMGFcFEU9aqX76zNgJPmHk
+LLeNABqm+k6pEfKPgQs952GF3mwcH5t8Ko9o7vg0IjEYRZOPV/m5NxK42JcCIIV37NwRP815+op/
+oQE9d1HWXWm+wW34RMaeu2xVR+BHgB5LF+0eQECCpjjq6cdOpqizwiu4YdQwerJWnK9R7QgiAqqR
+jK74vwK8VHgjQqQbxvuinHrDFqhe1hsUJsb/EZ7T+R9+qphAVITF6SlR+NIdHrWS5yXJQruUFyZc
+uuHo22sKsa5oqiM+PRdQ/U1bukUY9KrkRU+n9Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1567,4 +1626,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c9836197-a17f-4702-a191-377a412d0fdf" Target="#_c1d49fb1-dc5b-431c-8337-359bdf43a6f9"><Timestamp>2022-01-17 21:10:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_88695419-c74e-4994-9610-cc6f3a937cd7" Target="#_4e3b899a-9685-4b22-b3ce-e823c8c79c65"><Timestamp>2022-01-17 21:13:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

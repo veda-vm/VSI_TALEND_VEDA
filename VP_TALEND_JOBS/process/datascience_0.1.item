@@ -1567,17 +1567,17 @@
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_8">
-      <column comment="" key="false" length="10" name="Date" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="Date" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Period" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Sessions" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="BounceRate" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="NewUsers" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="perchent__NewSessions" nullable="true" originalDbColumnName="perchent_ NewSessions" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="AvgSessionDuration" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="PagesSession" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Transactions" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="EcommerceConversionRate" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Revenue" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Sessions" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="BounceRate" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="NewUsers" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="perchent__NewSessions" nullable="true" originalDbColumnName="perchent_ NewSessions" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="AvgSessionDuration" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="PagesSession" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Transactions" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="EcommerceConversionRate" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Revenue" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_BigDecimal" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="704" posY="512">
@@ -1650,15 +1650,15 @@
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row9" sizeState="INTERMEDIATE">
         <mapperTableEntries name="Date" nullable="true" type="id_Date"/>
         <mapperTableEntries name="Period" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Sessions" nullable="true" type="id_String"/>
-        <mapperTableEntries name="BounceRate" nullable="true" type="id_String"/>
-        <mapperTableEntries name="NewUsers" nullable="true" type="id_String"/>
-        <mapperTableEntries name="perchent__NewSessions" nullable="true" type="id_String"/>
-        <mapperTableEntries name="AvgSessionDuration" nullable="true" type="id_String"/>
-        <mapperTableEntries name="PagesSession" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Transactions" nullable="true" type="id_String"/>
-        <mapperTableEntries name="EcommerceConversionRate" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Revenue" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sessions" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="BounceRate" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="NewUsers" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="perchent__NewSessions" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="AvgSessionDuration" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="PagesSession" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="Transactions" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="EcommerceConversionRate" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="Revenue" nullable="true" type="id_BigDecimal"/>
       </inputTables>
     </nodeData>
   </node>
@@ -1839,13 +1839,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_945ea70b-c0bd-4385-89be-aef9739f541f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UgENUItcJ49BPLv8ikm5XDtTl7mKRd25amdSm2OZC4WExc/Ddx42Di6RvN0OF/WXjuT3w20FbhAr
-eFwGZ0p0iQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d7493f39-4850-4799-8476-b13aa1a42494"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZH2dyXA42Yi9Q6DftqBbsKQX80Te9spXVWnNOejV4XcD9sf1H1FkM2DkWsM/o7G7nriVZy2qBpcn
-u/W+GniP8A==</DigestValue></Reference></SignedInfo><SignatureValue>F00tlBN3oa40ikmbC4uSyzTfGLUsZqWSq7iYgnw+wYr8beO9AqBGZ7QlLk8CoskozvYGu4lIajxy
-3hpXkMch97yyQDF5wLPJqYBQcCE2/ptaXn5VSr0UuM8qL6pWGKSJYydFYlx5j9YQRNjfJmPchshw
-ykyfLE2EdF/SniIHmDS33abzNRrDDNmMELcKmPqjjf/EDgJLqjaRbLCQNi7SIjuU44HHuiAGXP7t
-woznuyRqXFbNLptIzoVfShVBHah1E2z7LcPuwu2pDw8uxWKzo/4T8XpXkTil3LiM6LcCTsiesv1B
-T5B6Uiuxp85LoamAPE9BWuHtFZ6bq9o6dy9OxQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cb0f6bd6-ae07-4d3c-9fe6-80403c20b512"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jbK2QoXYRO7wTrB2ee5+tWIylYfxV+qDBo3lf+O3s8QlhtyYX32H/8a4/+v9jt/H6mX3WtrDDRVy
+h4IZFo7k9w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2e821b7e-48f2-4203-b150-230154ab2693"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WkKdsyGg8MdncfMcttdY1K8EvWZeukLvgfQH6b9PYpBbHAMn57wUU6AVbMvcXplFEA8jqYYcgMau
+Rg+g6EktHA==</DigestValue></Reference></SignedInfo><SignatureValue>VV5BQrD/c5YNC5fUbrh7fIgdPcrEub4IUk1fSiVddOqiqwFGHZjKOq1z+ltXaCtY8hqQYUWDZSXU
+F2JTqib1WTds5CCB9UOd3LhwN2E6D6uigaBad9V/I1vSgLtEBml6vxHerM9oQMFCTo9+QCQ20biB
+jRkYL9fv6z08Zsdwa59KUMJSeswOPEMkYN14qLNe7rK7XZ2vqCwvUKEfAx0G1rensZiipAhUc9x3
+Y3wRlT2kQlEmrR/D0v9W0PENmpLgJsZ+BQBif/XoHThFPw7XxZy5lfFP0aXB58v1U9ZUa3TknQuB
+VPn+YbbU91WbGP/1LocUtdlYeuf/7VKdkCwNOQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1867,4 +1867,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d7493f39-4850-4799-8476-b13aa1a42494" Target="#_945ea70b-c0bd-4385-89be-aef9739f541f"><Timestamp>2022-01-18 19:24:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2e821b7e-48f2-4203-b150-230154ab2693" Target="#_cb0f6bd6-ae07-4d3c-9fe6-80403c20b512"><Timestamp>2022-01-18 19:26:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -28,7 +28,7 @@
     <talend.pigudf.groupid>org.example.vp_talend_jobs.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.vp_talend_jobs.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
-    <talend.job.jvmargs>-Xms1024M -Xmx4096M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+    <talend.job.jvmargs>-Xms1024M -Xmx4096M </talend.job.jvmargs>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.context>Default</talend.job.context>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
@@ -46,6 +46,11 @@
       <groupId>net.minidev</groupId>
       <artifactId>accessors-smart</artifactId>
       <version>1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>activation</artifactId>
+      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -208,6 +213,11 @@
       <version>2.8.2</version>
     </dependency>
     <dependency>
+      <groupId>com.jcraft</groupId>
+      <artifactId>jsch</artifactId>
+      <version>0.1.55</version>
+    </dependency>
+    <dependency>
       <groupId>com.cedarsoftware</groupId>
       <artifactId>json-io</artifactId>
       <version>4.9.9-TALEND</version>
@@ -236,6 +246,11 @@
       <groupId>org.talend.daikon</groupId>
       <artifactId>logging-event-layout</artifactId>
       <version>0.31.8</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>mail-1.4</artifactId>
+      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.osgi</groupId>
@@ -470,6 +485,9 @@
     </profile>
     <profile>
       <id>include-running-log4j</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <properties>
         <log4j.running.dir>${current.resources.dir}/</log4j.running.dir>
       </properties>

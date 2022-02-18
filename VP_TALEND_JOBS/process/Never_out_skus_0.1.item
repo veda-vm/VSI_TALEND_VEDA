@@ -155,7 +155,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFTPFileExist_1"/>
   </node>
-  <node componentName="tFTPGet" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="96">
+  <node componentName="tFTPGet" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPGet_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -171,7 +171,7 @@
     <elementParameter field="PASSWORD" name="PASSPHRASE" show="false" value="wiXuUBxiyoc5L4zXsOuoEQ=="/>
     <elementParameter field="FILE" name="KEYSTORE_FILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="KEYSTORE_PASS" show="false" value="k0OOTVG4MsZpHb1iYbZyRw=="/>
-    <elementParameter field="DIRECTORY" name="LOCALDIR" value="&quot;//wva-sql-etl/SFTP/FTP_FILES/NEVER_OUT_SKUS/&quot;"/>
+    <elementParameter field="DIRECTORY" name="LOCALDIR" value="&quot;/sqlftp/Instacart/&quot;"/>
     <elementParameter field="TEXT" name="REMOTEDIR" value="&quot;/data/output/&quot;"/>
     <elementParameter field="CHECK" name="MOVE_TO_THE_CURRENT_DIRECTORY" show="false" value="true"/>
     <elementParameter field="CLOSED_LIST" name="MODE" show="false" value="ascii"/>
@@ -180,8 +180,8 @@
     <elementParameter field="CLOSED_LIST" name="SFTPOVERWRITE" value="overwrite"/>
     <elementParameter field="CHECK" name="PERL5_REGEX" value="false"/>
     <elementParameter field="TABLE" name="FILES">
-      <elementValue elementRef="FILEMASK" value=""/>
       <elementValue elementRef="FILEMASK" value="&quot;rpt.1587.vitamin_shoppe.tlogs.v2.&quot;+TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, TalendDate.addDate(TalendDate.getCurrentDate(), -1, &quot;dd&quot;))+&quot;*.csv&quot;"/>
+      <elementValue elementRef="FILEMASK" value="&quot;rpt.1588.vitamin_shoppe.in_store_transactions.v2.&quot;+TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, TalendDate.addDate(TalendDate.getCurrentDate(), -1, &quot;dd&quot;))+&quot;*.csv&quot;"/>
     </elementParameter>
     <elementParameter field="CLOSED_LIST" name="CONNECT_MODE" show="false" value="PASSIVE"/>
     <elementParameter field="CLOSED_LIST" name="SECURITY_MODE" show="false" value="IMPLICIT"/>
@@ -215,18 +215,17 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="COLLAPSED" show="false" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPGet_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_34b029c0-e95b-411c-9b2a-c298a10d34e3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>O89EuPOLxarwZ0x4DLkt0YHHjx1u7rfl+1GCvvexyLQ4t8360kf+sDeahDHsfg9C6zRgGJ1fvCn7
-owcHKMQibw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ff57cc0a-14ae-4aa4-b82d-5ef7822510c2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>IU35GP0aqa2fxFjuQs/sXtIshkffRRosWettVQfE3ImuWsnr3A/6ox1OdswMFODYw+0PnpKlMUuy
-jz6JpfGKGQ==</DigestValue></Reference></SignedInfo><SignatureValue>UD/38WfZ/Uwb6aoRjrudDh0AndgAHwefScZAyevqY5bln4nELIvaflROfU76AHlBXahKAWhYq5Gn
-VXc/C3gQGnphEaGhsUSGtQ69smM3CQmRLhmNNdImFehldvvgJoXon1P+hBrcYZA85umzyykML6NO
-h8jLWS7i+09EstagcMNO8oEHS7fMT+Ucx/H0j6sNPOwAMy1nx82wgnmjzpBQhHX+jfkl40dEdfdW
-JNUYAM+7LmOYhStx6QMzOVOXaSm45HpokZ1EwxJTvr1Kp1gCY9aAFgXE4dUgjaZraEkoTY0mukpM
-tQgbDg99JBLLfXzCnx+rmR+cSWHBtWnTELTm3Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4f61058f-9840-4cbc-914e-7728d65efec6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/K2Q5PBaCysT4+n6YzXMnFXBrtH+VnKJZSow4izLJ0RCAH2OjXR5nOSZ9hqnmMyGvYRSycpjCQGi
+PF51JnOcjQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9fe58336-8c72-4022-96cc-3e0639fad607"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cUhYDqoXvLqGQx/C9dn3lwpZZL1c5IGSMDTVauRbkU/EYYIBKWZIoiL9iFOTx76n2bo8jDFKdWaf
+3su7ayWA/w==</DigestValue></Reference></SignedInfo><SignatureValue>RovZRM8s0U30lr5x2ygzFx9e1zVg/YlMNhFwewertHQ9cBlmELNausowlbYCYPaUlYN1HYFIyhYg
+LYKeDw+0EQdPZ75XIsp6WI80AKnveyJylAzBp9nfciCATfwff+mWgp4BXCkcFsdGxTXCeHZLZOne
+VGYQi71XomMdD2IWyl8abnGiW9f6DdaBK4DQshDPG4qcy0AAPDBodYI+owBzZZPlXnTBW3m0+Ess
+0RT40TZXOFoDAhJE29+8XpvbK6x4tR/KW2c9AB5UxIQWNAqdrwrqO+lAREASiNTmPeHbePJ0KaOQ
+ADcI0uuWH2Vc7MSt1kTtPO8oIoQ45qRWzUZGfQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -248,4 +247,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ff57cc0a-14ae-4aa4-b82d-5ef7822510c2" Target="#_34b029c0-e95b-411c-9b2a-c298a10d34e3"><Timestamp>2022-02-18 21:07:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9fe58336-8c72-4022-96cc-3e0639fad607" Target="#_4f61058f-9840-4cbc-914e-7728d65efec6"><Timestamp>2022-02-18 21:11:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

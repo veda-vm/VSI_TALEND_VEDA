@@ -111,7 +111,6 @@
   </parameters>
   <node componentName="tMSSqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -129,7 +128,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;truncate table [TenTenData].[dbo].store_sa_dashboard;&#13;&#10;&#13;&#10;Truncate table    [TenTenData].[dbo].[ADP_VSCOM_Sales];&#13;&#10;&#13;&#10;delete&#13;&#10;  FROM [TenTenData].[dbo].[ADP_VSCOM_Sales]&#13;&#10; where [Home Store_final] not in (select distinct store_no from [TenTenData].[dbo].store_sa_dashboard where store_no &lt;= 1502 and closed_date is null)&#13;&#10;&#13;&#10;&#13;&#10;Truncate table   [TenTenData].[dbo].[Traffic_Transactions]&#13;&#10;--where transaction_date &gt;= convert(char(10),getdate()-1,121)&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;truncate table [TenTenData].[dbo].store_sa_dashboard;&#13;&#10;&#13;&#10;Truncate table    [TenTenData].[dbo].[ADP_VSCOM_Sales];&#13;&#10;&#13;&#10;delete&#13;&#10;  FROM [TenTenData].[dbo].[ADP_VSCOM_Sales]&#13;&#10; where [Home Store_final] not in (select distinct store_no from [TenTenData].[dbo].store_sa_dashboard where store_no &lt;= 3000 and closed_date is null)&#13;&#10;&#13;&#10;&#13;&#10;Truncate table   [TenTenData].[dbo].[Traffic_Transactions]&#13;&#10;--where transaction_date &gt;= convert(char(10),getdate()-1,121)&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -396,7 +395,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -416,7 +414,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;/****** Script for SelectTopNRows command from SSMS  ******/&#13;&#10;SELECT  [av_transaction_id]&#13;&#10;      ,[transaction_date]&#13;&#10;      ,[sku_id]&#13;&#10;      ,[new_customer_no]&#13;&#10;      ,[Attribute2] &#13;&#10;     &#13;&#10;      ,[transaction_total]&#13;&#10;     &#13;&#10;      ,[Home Store_final]&#13;&#10;      ,[register_no]&#13;&#10;,NULL as Zip&#13;&#10;&#9;  ,'ADP' as Flag&#13;&#10;--select sum(transaction_total)&#13;&#10;  FROM [FIND].[dbo].[web_sales_new_logic]&#13;&#10; -- where transaction_date &gt;= '2020-04-13' &#13;&#10;    where originating_store is not null&#13;&#10;&#9;&#13;&#10;  and [Home Store_final] in (select distinct store_no from [FIND].[dbo].store_sa where store_no &lt;= 1502 and closed_date is null)&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;/****** Script for SelectTopNRows command from SSMS  ******/&#13;&#10;SELECT  [av_transaction_id]&#13;&#10;      ,[transaction_date]&#13;&#10;      ,[sku_id]&#13;&#10;      ,[new_customer_no]&#13;&#10;      ,[Attribute2] &#13;&#10;     &#13;&#10;      ,[transaction_total]&#13;&#10;     &#13;&#10;      ,[Home Store_final]&#13;&#10;      ,[register_no]&#13;&#10;,NULL as Zip&#13;&#10;&#9;  ,'ADP' as Flag&#13;&#10;--select sum(transaction_total)&#13;&#10;  FROM [FIND].[dbo].[web_sales_new_logic]&#13;&#10; -- where transaction_date &gt;= '2020-04-13' &#13;&#10;    where originating_store is not null&#13;&#10;&#9;&#13;&#10;  and [Home Store_final] in (select distinct store_no from [FIND].[dbo].store_sa where store_no &lt;= 3000 and closed_date is null)&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -483,7 +481,6 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_UHBD4Ow0Eem8PNBRnmAJnA"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -643,7 +640,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_4"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -690,7 +686,6 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="50" offsetLabelY="0" posX="288" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_4"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_UHBD4Ow0Eem8PNBRnmAJnA"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -768,7 +763,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -875,7 +869,6 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -1017,7 +1010,6 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_UHBD4Ow0Eem8PNBRnmAJnA"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -1320,7 +1312,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_5"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -1407,7 +1398,6 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="800" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_5"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -1479,7 +1469,6 @@
   </node>
   <node componentName="tSnowflakeRow" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="512" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_4"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -1596,7 +1585,6 @@
   </node>
   <node componentName="tSnowflakeRow" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="960" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_5"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -1659,7 +1647,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_6"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -1706,7 +1693,6 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_6"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -1749,7 +1735,6 @@
     </metadata>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_1" offsetLabelX="0" offsetLabelY="0" source="tDBRow_1" target="tDBInput_1">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBOutput_2">
@@ -1757,61 +1742,48 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_2" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_2" target="tDBInput_3">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk12"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tDBOutput_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_3" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_3" target="tDBInput_4">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk3"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tDBOutput_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_4" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_4" target="tDBRow_4">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk6"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBInput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBInput_2">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="FLOW" label="store_sa" lineStyle="0" metaname="store_sa" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="store_sa"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tDBInput_5" offsetLabelX="0" offsetLabelY="0" source="tDBInput_5" target="tDBOutput_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_5" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_5" target="tDBRow_5">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk8"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_4" offsetLabelX="0" offsetLabelY="0" source="tDBRow_4" target="tDBInput_5">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk7"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_5" offsetLabelX="0" offsetLabelY="0" source="tDBRow_5" target="tDBInput_6">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk9"/>
   </connection>
   <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tDBInput_6" offsetLabelX="0" offsetLabelY="0" source="tDBInput_6" target="tDBOutput_6">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
   </connection>
   <subjob>
@@ -1859,13 +1831,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_36007f66-2066-4078-bd67-a19a730a790d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pqNfjzmiJHW0o6XmRUeThNqJO5Hv3CSgbPRQ6Q7z4POjLcTDQzxrMcCe/6yuc0rWQE6MP5iA+LnF
-dwVAtM6Gdw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2429ee43-07df-4fcd-b18d-fc580bc66037"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ftR8SS5nn6AYz879W2Xl73gtku2goSd4E0kyciflZmNo0eRPQAmAUKn7QdkwABJgEZHlc4RxmrrA
-h2r/sGvSYA==</DigestValue></Reference></SignedInfo><SignatureValue>lEpCAK2SUKl1YA4PooSH4+RDVqLWFg3hMXZrY9shSOe7cJ+py53WpQqDND0LjuSlHzaI2j7RNQxX
-b7TZ5VK4d/o+EllM5oxpvcFSjVD2fwPw7gYGnz9KqZl34QY3YRERtRrzXLGON2Kyfhg0rr1M6KXy
-KG4uuhFybiTWeDyz9Dz5BqGuqnt3/Wxq+Epw/REIBmvIPZy5nf7Hte15oi4fy9DhX0AWfKN3pr3y
-SqQ/SfZT/U0+si/pNNIph1I89zYtNqAijponTLEJAwl8cn3lui5pMAc7R0TaUPfIwXL/x87uK6xB
-qPJIIMeVwxWlSnUVkin9qVqOk+l5lvWXC2x70w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cf262d7d-41f9-48fd-8d76-1205ce528745"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>siTIAxIoa81tymLzyVgII92Grb+6JUeYY7cYnQJdmOGqeOnf12981MIVVl7mT4UMpzKFPCqaMVI6
+gia6olM7rQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_030bbc5d-eed6-4285-af0e-4bb80b644673"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sZsDiP/5MoYqmyK5m7NuAFa64mEAyfogIajLhIuYfYlEAgjhRXyyiz+OGaErWlM/+kOjj4Owsp8s
+w3WhmaXC0w==</DigestValue></Reference></SignedInfo><SignatureValue>HEYPl0x0n4ho7wLs6Iiyj5b2zMF0LGLc59nf/8/ZSWEn1MVnGnSYioNkojyo7Dn/aLZCl/Wd5FAV
+dHKPZgmso0mJHvZedv0//Yck+hkxgB4uXUbepOKHql2jZOq+nN8KNoPEhmLIAcjmVNc3OdXm2Vsr
+2rOjB0mIL13FjTD+qWwy9oEvA4wgXidmttdlI10iRRmZEqLzuFSsSCvP9Z+Mvvit9jw1djCvDzNt
+b98U7aCbf/Ag70BspbI5fAepEqLb8bV38ioM8AFHi4GYdphOTBLiOz2iBaUn1EL9BUC3Ei5RhIxu
+x9Xf8fDdRYz1oU4EZ0QxguiilMjAJ7ppERbzyA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1887,4 +1859,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2429ee43-07df-4fcd-b18d-fc580bc66037" Target="#_36007f66-2066-4078-bd67-a19a730a790d"><Timestamp>2022-02-16 17:17:01</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_030bbc5d-eed6-4285-af0e-4bb80b644673" Target="#_cf262d7d-41f9-48fd-8d76-1205ce528745"><Timestamp>2022-02-23 18:15:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

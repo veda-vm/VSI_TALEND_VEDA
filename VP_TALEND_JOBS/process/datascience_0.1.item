@@ -1366,7 +1366,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_7"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -1384,7 +1383,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;/****** Script for SelectTopNRows command from SSMS  ******/&#13;&#10;SELECT  [subchannel]&#13;&#10;      ,cast([date] as date) as date&#13;&#10;      ,cast([amount] as float) as [amount]&#13;&#10;      ,[channel]&#13;&#10;      ,[actual_demand_type]&#13;&#10;&#9; &#13;&#10;  FROM [TenTenData].[dbo].[DPF Flash Demand Uploads 2022 restate]&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT  cast([Date] as date) as TRANSACTION_DATE&#13;&#10; ,[ amount ] as AMOUNT&#13;&#10;&#13;&#10;    &#13;&#10;     &#13;&#10;      ,'Amazon FBA' as CHANNEL&#13;&#10;&#9;  ,'Marketplaces DTC' as SUBCHANNEL&#13;&#10;      ,'DTC Demand' as ACTUAL_DEMAND_TYPE&#13;&#10;  FROM [TenTenData].[dbo].[FY2022 Demand Data FBA]&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1394,29 +1393,28 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="subchannel"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TRANSACTION_DATE"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AMOUNT"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="amount"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CHANNEL"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="channel"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUBCHANNEL"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="actual_demand_type"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ACTUAL_DEMAND_TYPE"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_7">
-      <column comment="" key="false" length="50" name="subchannel" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="date" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="15" name="amount" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="channel" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="actual_demand_type" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="TRANSACTION_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="7" name="AMOUNT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="CHANNEL" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="16" name="SUBCHANNEL" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="ACTUAL_DEMAND_TYPE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="224" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -1450,24 +1448,23 @@
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="finance_report" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row7.date " name="TRANSACTION_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row7.amount " name="AMOUNT" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="row7.subchannel" name="SUBCHANNEL" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row7.channel " name="CHANNEL" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row7.actual_demand_type " name="ACTUAL_DEMAND_TYPE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row7.TRANSACTION_DATE" name="TRANSACTION_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row7.AMOUNT" name="AMOUNT" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row7.SUBCHANNEL" name="SUBCHANNEL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row7.CHANNEL" name="CHANNEL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row7.ACTUAL_DEMAND_TYPE" name="ACTUAL_DEMAND_TYPE" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row7" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="subchannel" nullable="true" type="id_String"/>
-        <mapperTableEntries name="date" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="amount" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="channel" nullable="true" type="id_String"/>
-        <mapperTableEntries name="actual_demand_type" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TRANSACTION_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="AMOUNT" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="CHANNEL" type="id_String"/>
+        <mapperTableEntries name="SUBCHANNEL" type="id_String"/>
+        <mapperTableEntries name="ACTUAL_DEMAND_TYPE" type="id_String"/>
       </inputTables>
     </nodeData>
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="416" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_7"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -3806,7 +3803,6 @@
   </connection>
   <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tDBInput_7" offsetLabelX="0" offsetLabelY="0" source="tDBInput_7" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
   </connection>
   <connection connectorName="FLOW" label="finance_report" lineStyle="0" metaname="finance_report" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_7">
@@ -3816,7 +3812,6 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="finance_report"/>
   </connection>
   <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tDBInput_8" offsetLabelX="0" offsetLabelY="0" source="tDBInput_8" target="tMap_3">
@@ -4002,13 +3997,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1f0c5515-1a43-4ba3-87bd-cae397925a18"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tnW9nHsU9SySxl4bPf0MUJc/P68349SDurc6mjH48vvIzRKE+pGa8BXV4MQJmTgvDwrR58jBFEyV
-Wb9i2qSyyg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e208afd5-ec5e-4caf-8ff9-48774b2a0720"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>caTUHHqjLgkPwGJ1iBzA7AzIB2VM3Nz+AuDapBwIRzIYB2gZ0Z7qN6MDMsFtiYeQW3AcS25VbLSj
-/Bm1sJRgjw==</DigestValue></Reference></SignedInfo><SignatureValue>JpwvKBlAlrce3Z1u7bBgYw9G0Xr+11dICsHIDYiqaKyysrv4duGBVecmLz71CC5w5MQvmdkL6umD
-wrplCC8RKLIiFRzCe53ta/KkTyn6aM/5b8TweE99Mk2S5z2jfcXlbJAR17OcQpkKIrxUQcRucGdR
-A83nqa9B3dt02wUlbqGz1Y6lLxPt0kwALBBA9+LNOZvcflWHDRNvaBYlW22PFbLWDFVkAHKTJC2K
-uVrilR0cmuCFbp5um28x52G9SrP4GL/WbUK+Nay9Zm6NvOEMQ//DuBC1pU+FK0ZkAvE9/jRPVo0u
-9Vqw55HZ6WJGrXR1mXXZyy+qViEyrsnzupGxLg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_36f74c9a-ca52-4295-8b5f-7a31a211bdf7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GrShujnAwGfxFIT3j5tY/28une+56MJt605DLDlXs9Sm2g4VGmOqIHaoe3VHDp3Vo1YfnseY0UNf
+Sy5xuIbVuw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_72fd2f55-4cda-4f06-97e7-5218f84bced3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NY+nO73U0ZjOy5Gh+wcOTeSSTv9C2O+ygP6A3D4ib5RWTCYN3ecP44bViCVtm7lnahakrhnHGQub
+aekCJRLfUQ==</DigestValue></Reference></SignedInfo><SignatureValue>lW73ZozrbJJjyDwO3NiCkq5Ls2xOYR52iJ5CiFTAJbNO2kihGsHGkVDiPJe7wT69Vf2IlQVp/ule
+L3HzqfGCcL2LKuvWbVZb6ZZRIhAZyPnTCUrPh8+sdElq/ieSgpAZ26LyUumqV5hTl5Tmj3/cRQkK
+rbsH+9cOAD0L71GMMAUCNgoybJCBNG3OGNIWn6VVJMTdQv0DzyPuUlsax7g+ndrf6cO74rXc3ITs
+dGznabFLMFOSib13UZRi/AeGYavc98ggoeaIa6//rCD/ZxLUyR5xuL1z58UfULHOqj98PJUB7CBx
+zN5TvkiAVC/yuYNjGpWEnlXw0dQYfbtzvYRPlA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -4030,4 +4025,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e208afd5-ec5e-4caf-8ff9-48774b2a0720" Target="#_1f0c5515-1a43-4ba3-87bd-cae397925a18"><Timestamp>2022-02-24 14:27:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_72fd2f55-4cda-4f06-97e7-5218f84bced3" Target="#_36f74c9a-ca52-4295-8b5f-7a31a211bdf7"><Timestamp>2022-02-24 19:21:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

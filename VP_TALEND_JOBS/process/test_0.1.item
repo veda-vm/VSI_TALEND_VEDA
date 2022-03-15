@@ -8006,11 +8006,11 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="PERIOD"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SESSIONS_FORECAST"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SESSIONS_PLAN"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TRANSACTIONS_FORECAST"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TRANSACTIONS_PLAN"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DEMAND_FORECAST"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DEMAND_PLAN"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -8023,14 +8023,14 @@
       <column comment="" defaultValue="" key="false" length="-1" name="PERIOD" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="PERIOD"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="SESSIONS_FORECAST" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SESSIONS_FORECAST"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="SESSIONS_PLAN" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SESSIONS_PLAN"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="TRANSACTIONS_FORECAST" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TRANSACTIONS_FORECAST"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="TRANSACTIONS_PLAN" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TRANSACTIONS_PLAN"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="DEMAND_FORECAST" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="DEMAND_FORECAST"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="DEMAND_PLAN" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DEMAND_PLAN"/>
       </column>
     </metadata>
   </node>
@@ -8330,13 +8330,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_df4b059b-12f2-4a76-b1e7-126a94edc0ae"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>IHXVk9UE4BCOf7vSwoIRW0XlhaVszqirtWKJ+yxB5DFZAF15eQtSAbDxv6X84+uMeHRHi5FrUd7F
-a/MIVCa9VQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_80efcbd5-8a87-4d3e-bacd-3af64b7e970a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TNaRDAqEw2B9B7fgNBktCuH9vzgWm9Dr1mju/JUGAMVid/NyDzmlnxjEoBONHVIL0XzG5kaPRXGd
-Kf0ISbS1LQ==</DigestValue></Reference></SignedInfo><SignatureValue>Ly2bdLwUFBg97kRNPx2ECrTAr+1RbWYGmZoiXs1B2vcYghFoNX9YJI/XnFEV03TlZq+UlzjKqwKv
-pbRqqLBXha1iH7dbm6Y19GwDHABz141etfr4P3WxP+tFTQdWtQkM/ZMphpnpuTPFZ4tytzqzX2Sg
-hmxN8HGFiTJQSAxPhpU5QiZ8QZmMWMkmJuIN+Ls3jq0Rv+9mR0oAfkLIVGkykhUS/xCdiPZMdMnw
-NyF5/IUPoG2+6lwl+fxFZL7O8GWnLWQ7tUEf73F/EIrE1HyHAHqHPxYbLFnbkLca8oP6R/+Ni+Th
-/4t0BU776A4/vd//e5SM4pZrGDWIAD8+/S25Vg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a9796e5f-1f32-434c-9228-c041c00179f2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lIoIskaNloNDdaaT78ZpJCYffW1gzxKi6kZ5pGGTqKy9yc2DRov5NasfzyCUexQ8XwjWZNw9AZRu
++5PC3RkxGw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b696d03c-68b4-4ea3-b070-d4b93540c09b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YpULHs7za/IYh1ZCf/eanhtq5a7T2E11rimUBwl/eRSc6g0zbaKaFkdIZFIudS3nISJucOlHsOuV
+RWhAj/jZ+g==</DigestValue></Reference></SignedInfo><SignatureValue>kKRNnFL5fWBW6X6DU3mGEQY2flvekXjbkIeeTSz1bxZOLmHtfENRDSMSRGoS6T7ZMtR4ipcEFVUX
+QtF56BJ3vDSRGr64Vvkq4o5/g23mp+QIXlVcTalctjP8+TRTpfjgoLJrsXub+mnyESc7geLMbn8g
+OmnNIATsGsggFs/DeSTxWPAVvi4gdvSODTrMm3Q/rRZvF+z/q6gsuPP5MYXKddhzrcXyie2ZWCet
+ln2YEiOFxtLvGNSY0U0RKegnhqCtsz301r5v4lU0sw4SjKnXBG3NOb8dgOZSvsj6kl8Q9L2CoCm6
+zKX0s1ZhJUpKVSKihrxm4WAZdfFoKW23QGFmKQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -8358,4 +8358,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_80efcbd5-8a87-4d3e-bacd-3af64b7e970a" Target="#_df4b059b-12f2-4a76-b1e7-126a94edc0ae"><Timestamp>2022-03-15 22:25:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b696d03c-68b4-4ea3-b070-d4b93540c09b" Target="#_a9796e5f-1f32-434c-9228-c041c00179f2"><Timestamp>2022-03-15 22:29:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

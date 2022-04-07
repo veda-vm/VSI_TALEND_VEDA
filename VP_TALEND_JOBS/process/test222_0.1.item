@@ -1013,35 +1013,6 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="d">
-      <column comment="" key="false" length="-1" name="DT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="DT"/>
-      </column>
-      <column comment="" key="false" length="-1" name="VENDOR" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="VENDOR"/>
-      </column>
-      <column comment="" key="false" length="-1" name="ORDER_HEADER_KEY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_HEADER_KEY"/>
-      </column>
-      <column comment="" key="false" length="-1" name="ORDER_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_NO"/>
-      </column>
-      <column comment="" key="false" length="-1" name="ORIGINAL_ORDER_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORIGINAL_ORDER_NO"/>
-      </column>
-      <column comment="" key="false" length="-1" name="ORDER_LINE_KEY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_LINE_KEY"/>
-      </column>
-      <column comment="" key="false" length="-1" name="ITEM_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ITEM_ID"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="ORDERED_QTY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDERED_QTY"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="DEMAND_" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="DEMAND_"/>
-      </column>
-    </metadata>
     <metadata connector="FLOW" name="d1">
       <column comment="" defaultValue="" key="false" length="-1" name="DT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="DT"/>
@@ -1074,7 +1045,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="d" sizeState="INTERMEDIATE">
+      <outputTables name="d1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row6.DT" name="DT" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.VENDOR" name="VENDOR" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.ORDER_HEADER_KEY" name="ORDER_HEADER_KEY" nullable="true" type="id_String"/>
@@ -1084,17 +1055,6 @@
         <mapperTableEntries expression="row6.ITEM_ID" name="ITEM_ID" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.ORDERED_QTY" name="ORDERED_QTY" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="row6.DEMAND_" name="DEMAND_" nullable="true" type="id_BigDecimal"/>
-      </outputTables>
-      <outputTables name="d1" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="DT" nullable="true" type="id_String"/>
-        <mapperTableEntries name="VENDOR" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ORDER_HEADER_KEY" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ORDER_NO" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ORIGINAL_ORDER_NO" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ORDER_LINE_KEY" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ITEM_ID" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ORDERED_QTY" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="DEMAND_" nullable="true" type="id_BigDecimal"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row6" sizeState="INTERMEDIATE">
         <mapperTableEntries name="DT" nullable="true" type="id_String"/>
@@ -1257,13 +1217,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_47a24681-a817-4272-ae0f-6651975f3879"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>92eKKzNInKqJ5wQdV8c9jxt3IM0y2tAMmrp61AB7ddV4XoXlsVYtcq9Bv3M2YBd6NUuiNKyXMMUl
-ZTBCkdrCVw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_33f934cb-8410-4c07-8d95-e9b5d699081c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wNhlHFKzeEolfncXOF4/TkK790wKRsI70HQ1wDU+iv9CZpXnJBHnh9AzY0RCKx7VCXVbmWXnjk8i
-XPQAXiSmig==</DigestValue></Reference></SignedInfo><SignatureValue>OmGiBjgxRWc5jb3F3o8KASpRmLgkSrOAx5V+MTo6meW0EdqgVKOWIePSDn/q09Y+/luKEMGuHpFT
-s3p7FLqb56AVrnBp4I+es6nPpTu2cQBf0XCld2kvHc0J5N/cCmcDn792gu4uNeL8IqGYD4bKNHna
-V7U0EjbKnydHDaIJMFC+5hzV7Em6X/LW7vY+4o+AAIiaLMTKADdmdDyuu0uwCXK2fBOsyg4nqFpG
-N+HuAprxtzcHsR18iBz7a8R7DfAITg9hq3xjL9OltIVYXSFErIfjLwPVMMMXiilDaNLFRVWAd1JP
-IJUxYSKrEdAezFx68MoOR4CNNceqqaybdmrCeQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f34959cc-c7df-448c-abd9-7b9b531251e7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8ysZb5hnbIENE74MPGO7WNvLw0jEoQW//Mt2JxW65xJ95rkIDjb4ppNva+VqIMmCgtBun+fc/afN
+qF2GwjD7pA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d30a2ed7-d0d6-4a77-91f0-cb97b7c4c612"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ASjdb5y0jwqMjOsApZ7jeQ5hwasCrHhbUQsRPfkMIxU+CBtj/F5kyhXkLZyIU2YIl+46N3FzLfHu
+69pCIxC7dA==</DigestValue></Reference></SignedInfo><SignatureValue>UCWqC/BqzGFyFil4EPIBBLT9AI6YCniSmy2Mxksrm2E3leqXBbSSIekghsDWWPHhLUxefgOVgQiX
+m0KIMZQdHklKGN5ziMcmxwu8k1IxGgXrjin5m/Ldmw4HYvTPUCAb7LaIJGgfFlogFngisouvqnpi
+RvypGXfeJkYiNRh57tSJZt0tIl1GH6acRh+kwn/wBVC1zkSEkcYvWVkZnzpAgs1uZr5wmFI/yNIy
+ID8+B7RfpKFyLm5ZIjqxne7r/mMwKMRXSG8S/ePTao+AIgElS7G6cYe6wJ3OdPDTbzMBYOKW0NdH
+JPCAl5Lzp5MJ6kpKTJV1HjDNZvtqjic/rbswNA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1285,4 +1245,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_33f934cb-8410-4c07-8d95-e9b5d699081c" Target="#_47a24681-a817-4272-ae0f-6651975f3879"><Timestamp>2022-04-07 20:01:18</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d30a2ed7-d0d6-4a77-91f0-cb97b7c4c612" Target="#_f34959cc-c7df-448c-abd9-7b9b531251e7"><Timestamp>2022-04-07 20:03:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

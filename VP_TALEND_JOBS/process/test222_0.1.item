@@ -988,33 +988,15 @@
     <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_7">
-      <column comment="" defaultValue="" key="false" length="-1" name="DT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="DT"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="VENDOR" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="VENDOR"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="ORDER_HEADER_KEY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_HEADER_KEY"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="ORDER_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_NO"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="ORIGINAL_ORDER_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORIGINAL_ORDER_NO"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="ORDER_LINE_KEY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_LINE_KEY"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="ITEM_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ITEM_ID"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="ORDERED_QTY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDERED_QTY"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="DEMAND_" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="DEMAND_"/>
-      </column>
+      <column comment="" key="false" length="0" name="DT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="24" name="VENDOR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="24" name="ORDER_HEADER_KEY" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="ORDER_NO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="ORIGINAL_ORDER_NO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="24" name="ORDER_LINE_KEY" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="40" name="ITEM_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="ORDERED_QTY" nullable="false" originalLength="-1" pattern="" precision="4" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="DEMAND_" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="416">
@@ -1075,14 +1057,14 @@
         <mapperTableEntries expression="row6.DEMAND_" name="DEMAND_" nullable="true" type="id_BigDecimal"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row6" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="DT" nullable="true" type="id_String"/>
-        <mapperTableEntries name="VENDOR" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ORDER_HEADER_KEY" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ORDER_NO" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ORIGINAL_ORDER_NO" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ORDER_LINE_KEY" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ITEM_ID" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ORDERED_QTY" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="DT" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="VENDOR" type="id_String"/>
+        <mapperTableEntries name="ORDER_HEADER_KEY" type="id_String"/>
+        <mapperTableEntries name="ORDER_NO" type="id_String"/>
+        <mapperTableEntries name="ORIGINAL_ORDER_NO" type="id_String"/>
+        <mapperTableEntries name="ORDER_LINE_KEY" type="id_String"/>
+        <mapperTableEntries name="ITEM_ID" type="id_String"/>
+        <mapperTableEntries name="ORDERED_QTY" type="id_BigDecimal"/>
         <mapperTableEntries name="DEMAND_" nullable="true" type="id_BigDecimal"/>
       </inputTables>
     </nodeData>
@@ -1235,13 +1217,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_35507bdf-ee9a-4d57-95b5-6c889740a3a5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fKJR/KvrvM58+yAbc3p5Bg2SiH6kJoqdcQ2jeNE3hbgmXn6pN/AD9UxIc6zRG56L3w9SJ1B4yph5
-zy461rK2hA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_798e4f91-698b-4753-b7d2-9a1de1bb91fd"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gkBU0k5+Q3HdicLsi8PYdbGDGILIe98CZexFZPzMpwsJokN6rGiXRaVX+04w+TlBWE873YW3aPEM
-rqRQfl+1uQ==</DigestValue></Reference></SignedInfo><SignatureValue>IOQL6zfZwfQAw/qtZHrex3bZ6v7gyE83gtipwMVXo1QUadm/Tvh2F7N/YEwhVfXT/gbM0Hg76LwC
-h4IsKTQQ6Z+HjmeD+akvy9NwcJKvH6XyyeTzyFQFuB/K0HLnF96WSQSU7Ghg1OcHoVyHAzr5LQXl
-DFjLsbqM8m+1cbUPeBRjiWf0uixwk0E5ShGIfcB01F/uBctInouGrd3NHf44HLWi9w/+kpMFCi7e
-lJ2GyRWYnDMfdUyk5zvmm/1tKzGbvZg7qn3lzrH8RojJZ2FP8IX79vWwykpZaB2meEmqJTGVCSHy
-hVk8ZSS+g913AI0A6aQowjfCPTPVX/iy49vKfg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6dadde35-9a12-4e3c-a683-c0f7867840ac"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6fbhx43s7+DSOVLwJG4Q2CCMjWwxkJKFUDEmh6XzSugCT6XlCjP9wO6gsIv2WUfbn4h0oyXlRjay
+1Q8DdesT5A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_caa25360-d281-4203-9bdc-b56b7d54b7f8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NiMwO1DrWjOvfkKaDO4X/8gEjmv2ovyAHD+G6z7/Ifoj7uIHsenWnPP9TdkSBkc6fBtAzVeTWAKu
+4Wjyj7Mt+A==</DigestValue></Reference></SignedInfo><SignatureValue>mnBAg3VuB+faDtqpk8vIKb0KOSw9Hz0S5dJnj3/ul88exj+w6yZCzgFiX9agWBgRMEKsAXYQjnmf
+67H2i250UjeJu3vm17AGlDWUkNcMsxTbsmllpFvTnjM7hs1V2vj2U8uultKrME80Wk90YGD1ia/w
+KsIvAyqBd2HiwAcIrEmbXDPxYgVqLZJGF2a3sIgGGIvaNfJiGDa/RUbgwT0bPaVspHuH/7rpHMWe
+SC4mhqrT7AUDo3mLcfFL7VoYos5SeVZiPxcjlyS6ku7RuVU89744Pnm0jMLTFPTVRCQpffmK1Y71
+AKHialvKMF1LuUhmZNx6XTa7/W3Fx1lervGv/g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1263,4 +1245,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_798e4f91-698b-4753-b7d2-9a1de1bb91fd" Target="#_35507bdf-ee9a-4d57-95b5-6c889740a3a5"><Timestamp>2022-04-07 19:52:10</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_caa25360-d281-4203-9bdc-b56b7d54b7f8" Target="#_6dadde35-9a12-4e3c-a683-c0f7867840ac"><Timestamp>2022-04-07 19:55:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

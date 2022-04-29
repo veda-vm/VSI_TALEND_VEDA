@@ -1791,7 +1791,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_h_ngULdmEeyT2umAeCj8bQ-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_h_ngULdmEeyT2umAeCj8bQ-tMap_4-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -1800,7 +1800,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="copyOfGA_PLAN">
+    <metadata connector="FLOW" name="GA_FORECAST1">
       <column comment="" key="false" length="-1" name="DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
         <additionalField key="di.date.date" value="true"/>
         <additionalField key="AVRO_TECHNICAL_KEY" value="DATE"/>
@@ -1809,25 +1809,25 @@
       <column comment="" key="false" length="-1" name="PERIOD" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="PERIOD"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="SESSIONS_PLAN" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SESSIONS_PLAN"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="SESSIONS_FORECAST" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SESSIONS_FORECAST"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="TRANSACTIONS_PLAN" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TRANSACTIONS_PLAN"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="TRANSACTIONS_FORECAST" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TRANSACTIONS_FORECAST"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="DEMAND_PLAN" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="DEMAND_PLAN"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="DEMAND_FORECAST" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DEMAND_FORECAST"/>
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="copyOfGA_PLAN" sizeState="INTERMEDIATE">
+      <outputTables name="GA_FORECAST1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row8.Date" name="DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="row8.Period" name="PERIOD" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.Sessions " name="SESSIONS_PLAN" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="row8.Transactions " name="TRANSACTIONS_PLAN" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="row8.Demand " name="DEMAND_PLAN" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row8.Sessions " name="SESSIONS_FORECAST" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row8.Transactions " name="TRANSACTIONS_FORECAST" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row8.Demand " name="DEMAND_FORECAST" nullable="true" type="id_BigDecimal"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row8" sizeState="INTERMEDIATE">
         <mapperTableEntries name="Date" nullable="true" type="id_Date"/>
@@ -1972,9 +1972,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
   </connection>
-  <connection connectorName="FLOW" label="copyOfGA_PLAN" lineStyle="0" metaname="copyOfGA_PLAN" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tDBOutput_8">
+  <connection connectorName="FLOW" label="GA_FORECAST1" lineStyle="0" metaname="GA_FORECAST1" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tDBOutput_8">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfGA_PLAN"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="GA_FORECAST1"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
@@ -2046,13 +2046,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ad869c80-7aab-42e3-bd35-c915d49e0152"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SW2d+x6eRmMjkVEE0oxLR8pAtSjTjpM8UlNxDYvCvt1hby7haNP95us4AAlWr67Nf237Tnk1GEJT
-67MX+Bn0mQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7cfa0295-4098-4dcb-be6c-50f4da1a730e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MPd/tyAwNVhAYf7yQsRWHqg3bDGT/7bRqBNUUiqVvp3n+vGGzD2w9j95wqm3td5+OhZXJGbw92AA
-KzEvkHnq9g==</DigestValue></Reference></SignedInfo><SignatureValue>bCGebGB8dSIG6AZFVisikLbLoscDfFZIFdskxqlTKWISMYmpEjmFiSeUFWuoaURuHj+mQWRh/0b3
-K2VBQ4y0tWXrhRw2FAWKRgbjQXIxeDGByKWR5BO63beWPX7ma23jO15cG/YL/VZ+nXmsRfq09RnZ
-50/dvjz9u7nwxs99mivhO9PKQ6TP3tiqiR5IX4h+4oDCpKzjDogfo0T4zvj+z+yJbX4g8poXz8er
-tXGbne31uzGqQAuPacfTlLZvSnEGwW737E3ZcMhS960qQqqkywF5HCCX5aN7XsGj0c+yXecfUhsJ
-kkLH2Jfm+orh/Dg93Oji29WyairAf+8JdLLusQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e6c15406-a2aa-4463-982b-a5f4f0209706"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fHc/hNwT4WOR1AzEEnn9CSjCPfaGub0HPcBLcfUqr+s8hIQ1dOtZefabIJnAL1acyQ/bZv9D/LFK
+iDdB4+ItRQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9b027afd-a2b5-49b2-a8a7-b2190b61b432"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>K1K5tUVYuwtGWLLJxgSrhPdCxXBkGlRK4VmeZXK+dSLXvXz1pI/p08bh2zHeOmOkLy3ZJIdTpwRN
+d48uHGhQ3w==</DigestValue></Reference></SignedInfo><SignatureValue>UG86Gf0B/LsD8YFtLErogGOlSmVM0fUYmkpgFpAx9jPFGCNUJ2nW92c2xSrjW6Y4+SoKqksHwsrk
+HSWuYoQUfaencOYPQme3ZnpqXbEw3ULsvjiuNAobmrbdIY7O7s8bxslCSIyNOPatEIRfdtKDnEPW
+mqRidNbALx5awzZ+0CI/6Q8oRIP2zzvRoyMFrrNw3lehS4ssXpoJtm6k/6rKkHAfODit5YBanBnB
+XSD8/1VXZfHgOIP2OPRJDmZem5f5cQ0DXbDK5ACvJhPPOO7RrAImyOAbRqTzcNR3oitcV/P4ajTJ
+tgDFXfr2CM3Faz/gHoB0MVuM5hT2tsIDbDex8Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -2074,4 +2074,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7cfa0295-4098-4dcb-be6c-50f4da1a730e" Target="#_ad869c80-7aab-42e3-bd35-c915d49e0152"><Timestamp>2022-04-29 19:28:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9b027afd-a2b5-49b2-a8a7-b2190b61b432" Target="#_e6c15406-a2aa-4463-982b-a5f4f0209706"><Timestamp>2022-04-29 21:27:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

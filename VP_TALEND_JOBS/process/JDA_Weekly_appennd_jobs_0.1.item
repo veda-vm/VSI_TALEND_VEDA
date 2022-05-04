@@ -6007,17 +6007,17 @@
     <metadata connector="FLOW" name="tDBInput_18">
       <column comment="" defaultValue="" key="false" length="5" name="ITRLOC" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="1" name="ITRCEN" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="6" name="ITRDAT" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="ITRDAT" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="3" name="ITRTYP" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="9" name="INUMBR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="ITRQTY" nullable="false" originalLength="-1" pattern="" precision="3" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="9" name="ITRRET" nullable="false" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="11" name="ITRCS2" nullable="false" originalLength="-1" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="11" name="ITRCST" nullable="false" originalLength="-1" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="ITREXT" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ITREXT" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="9" name="ITRREG" nullable="false" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="12" name="ITRREF" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="PGMNAM" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="12" name="ITRREF" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="PGMNAM" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="LGUSER" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="4" name="CSRSTP" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="4" name="CSDRSN" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
@@ -6087,7 +6087,7 @@
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row18" sizeState="INTERMEDIATE">
         <mapperTableEntries name="ITRLOC" type="id_BigDecimal"/>
         <mapperTableEntries name="ITRCEN" type="id_BigDecimal"/>
-        <mapperTableEntries name="ITRDAT" type="id_BigDecimal"/>
+        <mapperTableEntries name="ITRDAT" type="id_String"/>
         <mapperTableEntries name="ITRTYP" type="id_BigDecimal"/>
         <mapperTableEntries name="INUMBR" type="id_BigDecimal"/>
         <mapperTableEntries name="ITRQTY" type="id_BigDecimal"/>
@@ -6385,13 +6385,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1cf79813-4bd9-4d3e-a8b8-dc0c9321709d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xmqU6zYoJIQ2rUfbC/FyEER5B8GvN3DOiZflZD0x8PzRhz4vUi4RXJCZI46P/x9nDh70Irjazfez
-/7Fb3BeCTA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f771d0b8-4704-47fb-a13f-9b5c2e8f3fb6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zbGRQZwir8mGt9l1WvcpBZPy/U1hfxtI2airZPnx33p7nZK336934tiDOapK1UdY51MORYYTI/Vg
-34atc2qyEQ==</DigestValue></Reference></SignedInfo><SignatureValue>ayL0BiOMQe/ydR/GpwLLJLEr9VzBci/6wElggiFQxo81PQkps2vOzgMqCfXMg5brwImVBaveqDQj
-l+Zm1/SrIP4YnUFPjhZnXWXBswgTbvaih5aHKZXtKzo731H6g47oaBcjjuqRZdInmtglrPbDJjAC
-EIz1bsCGH9QbeS0nu2Dnthx1uc7we/anxYaGDYWBwHxRvS37pumZjJC8W4FS5VfGc3Bd4qL9HAgT
-uMachW7LYh2aLpIvp6bcXVSm1TQgE6kyEhgqLg1qPDEOVsY0dCv0poA3FxtQkcojTu4b03SIo9v6
-oP/+fOaGk5WkTgjkabJZ+Ii6ASpF3giji59bYQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e1ec33bb-77dd-48b7-9ca8-030f1ba9ed71"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zboNUZDVHerj38GYk4iL+fUgWjSXtbElvwZ1ZdOZ1q4Wkuy+0qBAj+WGRzyKfG9jHZ9nE4941JP2
+QCa4P3o7Ug==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_04bb2094-d5c6-4686-8d26-3a747f56fbaf"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KIWFu73VtErTxmRtpI4qYPm/p3ORvK8B/YkwawLO3XaKxIcpbtKiu3LOPwd8pzWFghCP+Kw+Mje3
+m5Qm95Tv0g==</DigestValue></Reference></SignedInfo><SignatureValue>KD1+oJSXSgKhiHgMBieILZ7uEgrq/9HWeP5odTuV6dRs0E4hs+TOCEnOmRq8WDvShTVs3HQFFuX1
+8zXsE8q6RyJjrbWGUkIqudEEXC132iztja0EeYAX0jzj+M73gxynZj37ccEOjdh/ezkGzUy/RhbD
++oY5AUvc6+HN6LI7UDyKhZVuW86H439l4u/HAWxTVuEOysg7Ufq8mK7U4qPOa+ylB6iqNqu+SGq7
+leWPHTgFVxL8UwUrpOy86yGGQOgZkA8+v/nerlw9DlhdrPoILbOF8lREkxKX3v8YN4bhN4/ZuyOt
+8p0ude4XjGf7q8roOG7ghGI3/AuRHOYz0IjN4Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -6413,4 +6413,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f771d0b8-4704-47fb-a13f-9b5c2e8f3fb6" Target="#_1cf79813-4bd9-4d3e-a8b8-dc0c9321709d"><Timestamp>2022-05-04 15:16:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_04bb2094-d5c6-4686-8d26-3a747f56fbaf" Target="#_e1ec33bb-77dd-48b7-9ca8-030f1ba9ed71"><Timestamp>2022-05-04 15:16:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

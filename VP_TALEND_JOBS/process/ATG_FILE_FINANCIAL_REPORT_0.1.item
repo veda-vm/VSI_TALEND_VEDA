@@ -686,7 +686,6 @@
   </node>
   <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SERVICE_NAME"/>
@@ -706,7 +705,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;WITH &#13;&#10;\&quot;SQL3\&quot; AS &#13;&#10;    (&#13;&#10;    SELECT&#13;&#10;        \&quot;SQL3\&quot;.\&quot;SHIPNODE_KEY\&quot; AS \&quot;SHIPNODE_KEY\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;DT\&quot; AS \&quot;DT\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;ENTERPRISE_KEY\&quot; AS \&quot;ENTERPRISE_KEY\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;ORDER_NO\&quot; AS \&quot;ORDER_NO\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;ITEM_ID\&quot; AS \&quot;ITEM_ID\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;ORDERED_QTY\&quot; AS \&quot;ORDERED_QTY\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;Released_Qty\&quot; AS \&quot;Released_Qty\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;EXTN_LINE_TOTAL\&quot; AS \&quot;EXTN_LINE_TOTAL\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;EXTN_TOTAL_TAX\&quot; AS \&quot;EXTN_TOTAL_TAX\&quot;&#13;&#10;    FROM&#13;&#10;        (&#13;&#10;        SELECT distinct  YOR.SHIPNODE_KEY,to_char(YOR.createts, 'YYYYMMDD') dt ,YOH.Enterprise_key ,YOH.Order_no,YOL.Item_id, yol.ordered_qty, yors.total_quantity as \&quot;Released_Qty\&quot; ,&#13;&#10;YOL.EXTN_LINE_TOTAL , YOL.EXTN_TOTAL_TAX &#13;&#10;FROM STERLING.YFS_ORDER_RELEASE YOR &#13;&#10;INNER JOIN STERLING.YFS_ORDER_RELEASE_STATUS YORS&#13;&#10;ON YOR.ORDER_RELEASE_KEY =  YORS.ORDER_RELEASE_KEY &#13;&#10;INNER JOIN STERLING.YFS_ORDER_LINE YOL&#13;&#10;ON YORS.ORDER_LINE_KEY = YOL.ORDER_LINE_KEY&#13;&#10;inner join sterling.yfs_order_header YOH&#13;&#10;on YOL.ORDER_HEADER_KEY = YOH.ORDER_HEADER_KEY&#13;&#10;where trim(YOL.line_type) = 'SHIP_TO_HOME'&#13;&#10;and YOH.DOCUMENT_TYPE = '0001'&#13;&#10;and YOH.draft_order_flag = 'N'&#13;&#10;AND to_char(YOR.createts, 'YYYYMMDD') = to_char(sysdate-1, 'YYYYMMDD')&#13;&#10;and trim(YOR.shipnode_key) not in ('CALL_CENTER','9004','9005')&#13;&#10;AND YORS.STATUS = '3350.10'&#13;&#10;&#13;&#10;&#13;&#10;        ) \&quot;SQL3\&quot;&#13;&#10;    )&#13;&#10;SELECT&#13;&#10;    CAST(TO_DATE(\&quot;SQL3\&quot;.\&quot;DT\&quot;,'YYYY-MM-DD') AS DATE) AS \&quot;DT\&quot;, &#13;&#10;    \&quot;SQL3\&quot;.\&quot;ENTERPRISE_KEY\&quot; AS \&quot;ENTERPRISE_KEY\&quot;, &#13;&#10;    SUM(((\&quot;SQL3\&quot;.\&quot;EXTN_LINE_TOTAL\&quot; - \&quot;SQL3\&quot;.\&quot;EXTN_TOTAL_TAX\&quot;) / NULLIF(\&quot;SQL3\&quot;.\&quot;ORDERED_QTY\&quot;, 0)) * \&quot;SQL3\&quot;.\&quot;Released_Qty\&quot;) AS \&quot;Demand__\&quot;&#13;&#10;FROM&#13;&#10;    \&quot;SQL3\&quot; &#13;&#10;GROUP BY &#13;&#10;    CAST(TO_DATE(\&quot;SQL3\&quot;.\&quot;DT\&quot;,'YYYY-MM-DD') AS DATE), &#13;&#10;    \&quot;SQL3\&quot;.\&quot;ENTERPRISE_KEY\&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;WITH &#13;&#10;\&quot;SQL3\&quot; AS &#13;&#10;    (&#13;&#10;    SELECT&#13;&#10;        \&quot;SQL3\&quot;.\&quot;SHIPNODE_KEY\&quot; AS \&quot;SHIPNODE_KEY\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;DT\&quot; AS \&quot;DT\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;ENTERPRISE_KEY\&quot; AS \&quot;ENTERPRISE_KEY\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;ORDER_NO\&quot; AS \&quot;ORDER_NO\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;ITEM_ID\&quot; AS \&quot;ITEM_ID\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;ORDERED_QTY\&quot; AS \&quot;ORDERED_QTY\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;Released_Qty\&quot; AS \&quot;Released_Qty\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;EXTN_LINE_TOTAL\&quot; AS \&quot;EXTN_LINE_TOTAL\&quot;, &#13;&#10;        \&quot;SQL3\&quot;.\&quot;EXTN_TOTAL_TAX\&quot; AS \&quot;EXTN_TOTAL_TAX\&quot;&#13;&#10;    FROM&#13;&#10;        (&#13;&#10;        SELECT distinct  YOR.SHIPNODE_KEY,to_char(YOR.createts, 'YYYYMMDD') dt ,YOH.Enterprise_key ,YOH.Order_no,YOL.Item_id, yol.ordered_qty, yors.total_quantity as \&quot;Released_Qty\&quot; ,&#13;&#10;YOL.EXTN_LINE_TOTAL , YOL.EXTN_TOTAL_TAX &#13;&#10;FROM STERLING.YFS_ORDER_RELEASE YOR &#13;&#10;INNER JOIN STERLING.YFS_ORDER_RELEASE_STATUS YORS&#13;&#10;ON YOR.ORDER_RELEASE_KEY =  YORS.ORDER_RELEASE_KEY &#13;&#10;INNER JOIN STERLING.YFS_ORDER_LINE YOL&#13;&#10;ON YORS.ORDER_LINE_KEY = YOL.ORDER_LINE_KEY&#13;&#10;inner join sterling.yfs_order_header YOH&#13;&#10;on YOL.ORDER_HEADER_KEY = YOH.ORDER_HEADER_KEY&#13;&#10;where trim(YOL.line_type) = 'SHIP_TO_HOME'&#13;&#10;and YOH.DOCUMENT_TYPE = '0001'&#13;&#10;and YOH.draft_order_flag = 'N'&#13;&#10;AND to_char(YOR.createts, 'YYYYMMDD') = to_char(sysdate-2, 'YYYYMMDD')&#13;&#10;and trim(YOR.shipnode_key) not in ('CALL_CENTER','9004','9005')&#13;&#10;AND YORS.STATUS = '3350.10'&#13;&#10;&#13;&#10;&#13;&#10;        ) \&quot;SQL3\&quot;&#13;&#10;    )&#13;&#10;SELECT&#13;&#10;    CAST(TO_DATE(\&quot;SQL3\&quot;.\&quot;DT\&quot;,'YYYY-MM-DD') AS DATE) AS \&quot;DT\&quot;, &#13;&#10;    \&quot;SQL3\&quot;.\&quot;ENTERPRISE_KEY\&quot; AS \&quot;ENTERPRISE_KEY\&quot;, &#13;&#10;    SUM(((\&quot;SQL3\&quot;.\&quot;EXTN_LINE_TOTAL\&quot; - \&quot;SQL3\&quot;.\&quot;EXTN_TOTAL_TAX\&quot;) / NULLIF(\&quot;SQL3\&quot;.\&quot;ORDERED_QTY\&quot;, 0)) * \&quot;SQL3\&quot;.\&quot;Released_Qty\&quot;) AS \&quot;Demand__\&quot;&#13;&#10;FROM&#13;&#10;    \&quot;SQL3\&quot; &#13;&#10;GROUP BY &#13;&#10;    CAST(TO_DATE(\&quot;SQL3\&quot;.\&quot;DT\&quot;,'YYYY-MM-DD') AS DATE), &#13;&#10;    \&quot;SQL3\&quot;.\&quot;ENTERPRISE_KEY\&quot;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -746,7 +745,6 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="576" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_4"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -1013,6 +1011,7 @@
   </node>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;//avw-hansolodw/ATG/ga/&quot;"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
@@ -1035,6 +1034,7 @@
   </node>
   <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="true"/>
@@ -1143,6 +1143,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -1226,6 +1227,7 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="480" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -2304,7 +2306,6 @@
   </connection>
   <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBOutput_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row13"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_2" offsetLabelX="0" offsetLabelY="0" source="tDBRow_2" target="tDBRow_3">
@@ -2326,14 +2327,17 @@
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileInputExcel_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate3"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <connection connectorName="FLOW" label="ga" lineStyle="0" metaname="ga" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tDBOutput_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ga"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_5" offsetLabelX="0" offsetLabelY="0" source="tDBRow_5" target="tDBRow_1">
@@ -2529,13 +2533,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_606b566d-4e91-4708-ad3f-1b5f97fe47ad"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xts6vob/rpD9wD0rIa8pisVqL0He58VJsnpYFF+BUIsYu/S0TMC5Z22xY07glmuFVRsP4LsL4Awb
-+XIWrpjl4Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_97863768-9b72-413b-af59-53af4eb1508e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cgFzVKSpBd/3q0AuNADMJsGE9lnZ+kwQfEbcHDdrCwLWyUdC27iQbToMgNvgfl0SXgkvVCQ7IHny
-ZLji691V6g==</DigestValue></Reference></SignedInfo><SignatureValue>Gny3JWGnJ+OQWztfINCOi/Mvdg6Nv1xA47z67bw4vNKCpkzl+dfhzjJ+VhXFUGfETvZOkK7uhV/T
-HXK81LE9yEsM0kWlmrl48l7lXzGBuTzUQzQaWp3rSblpPbsASS8Rrmb3NeO42Yr4nQ/b6c+8BAgO
-ykI73N2LG/RirYbrj79pOeM9OWM6SmUpaZTji1you0yNbASbJQp3t3DAMlkffn03a9MNffeqY8Lb
-aiUwh+4HwucS8DHfVya0tN7MWeB6USCXPRRh+AYjYc/0+3Z/KPz2z7nwWEs4dtdXny5kQHKIc+qd
-GHt0pEN/RAHJwe2EL+UE32aZbz+Wfy85l7+QFw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e3b1f0be-8307-40b6-903d-4e9f57a949cd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QQ81p3uag8F5R3OZ8885rNSAgx7LwAtEnIhvoL9GEC7qzJ/YmF6z6E1xTE7flAGvmcswH343x3Fu
+IxSuMnVysQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1450d8b9-feb4-4e68-a136-92e9822d8fda"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2QkXknKM06E0uG+qeo5xEt/xI3gMLblmevDUWNb2q5vuZ4awxdrUxwbNsgl1RvRrGVH44TVe8kA6
+EYuANE6O4A==</DigestValue></Reference></SignedInfo><SignatureValue>pynREN+3pfY5edvbOtD131XVGDBbbRKvGqOd+jqMFhNuqDmeE4jESz0b8kmpUZZkZFGHeq9CZ6a7
+IcBUnZW7KNPKQJvHeN76ZOLM/EtYI4LN43QfjDRnc/rZbvWQOOLEcSZd8e3FOq5cMKakHJf1PDWe
+t26U+hBBlOqCySOIPHkl+8SktX5aZg0IOmuORAWDlmRf0GHwjw18HV/97DZtY7AnhOzAytEbZnRO
+4xifjOWteoQIjhSGAP5pVdnof89WwNiTdhIJvfdM1s9nknceQJ83WdXCS0YcxL95H/EhH4dLpnVI
+0TR8DKyZyVdAVlu4Vo8huheP0ufQki1j8T/1gQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -2557,4 +2561,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_97863768-9b72-413b-af59-53af4eb1508e" Target="#_606b566d-4e91-4708-ad3f-1b5f97fe47ad"><Timestamp>2022-05-15 20:24:06</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1450d8b9-feb4-4e68-a136-92e9822d8fda" Target="#_e3b1f0be-8307-40b6-903d-4e9f57a949cd"><Timestamp>2022-05-15 20:27:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

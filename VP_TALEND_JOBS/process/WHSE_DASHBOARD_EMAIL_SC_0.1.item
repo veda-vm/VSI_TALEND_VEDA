@@ -619,6 +619,8 @@
     <elementParameter field="TEXT" name="FIRST_COLUMN" value="1"/>
     <elementParameter field="TEXT" name="LAST_COLUMN" value=""/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_dcoKwNxcEeyRF5-iFP5FcA - metadata"/>
     <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
     <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
     <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
@@ -652,31 +654,15 @@
     <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="USER_MODE"/>
     <elementParameter field="CHECK" name="INCLUDE_PHONETICRUNS" show="false" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFileInputExcel_3">
-      <column comment="" defaultValue="" key="false" length="-1" name="DATE_UPLOADED" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="di.date.date" value="true"/>
-        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_UPLOADED"/>
-        <additionalField key="di.column.logicalType" value="date"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="PALLETS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PALLETS"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="MAX_PALLETS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="MAX_PALLETS"/>
-      </column>
+    <metadata connector="FLOW" label="metadata" name="tFileInputExcel_3">
+      <column comment="" key="false" length="4" name="PALLETS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="MAX_PALLETS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DATE_UPLOADED" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
     </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column comment="" defaultValue="" key="false" length="-1" name="DATE_UPLOADED" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="di.date.date" value="true"/>
-        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_UPLOADED"/>
-        <additionalField key="di.column.logicalType" value="date"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="PALLETS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PALLETS"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="MAX_PALLETS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="MAX_PALLETS"/>
-      </column>
+    <metadata connector="REJECT" label="metadata" name="REJECT">
+      <column comment="" key="false" length="-1" name="DATE_UPLOADED" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PALLETS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="MAX_PALLETS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -718,8 +704,8 @@
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
         <mapperTableEntries name="DATE_UPLOADED" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="PALLETS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="MAX_PALLETS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="PALLETS" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="MAX_PALLETS" nullable="true" type="id_Integer"/>
       </inputTables>
     </nodeData>
   </node>
@@ -820,13 +806,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9dbf2fff-a12e-4aa0-99d7-1d239619b5b8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qWpYsfeFiswQ4GbiNt9qaSLyjhFDrBubSFGbaeLboyWPmHGRKgb9vSBzx69hC2FoZh2Yo6Nlm+EK
-1GyO3bidZQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5aca6ee7-c9ca-41da-b223-c63339707e57"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OhFoQOO223QY0pK85/yyeqjLOcKeZNQkqCaOnp0UMqosaE2Qy1ggwNHdbyjliSX45T+A6/nlRiYr
-eklXg6Gsvw==</DigestValue></Reference></SignedInfo><SignatureValue>BGJQHru1i6qhQXFWRt7BQ1lILL+e+yvZfEKYjJek2C1lkPwkvfCCyfpiJHzh5HnM6AEe8TmtYIfC
-jtiIEKAmV998uAgIAxuBQr5b/Uw4wSs0QAfQbTVCwI1SciFnSffeiMwrL3OWj+zfKMLGY/nHkuLZ
-3QDCAmocoeMuRiS8EDLofMHTjKM+DSs0U8EaQ1jsqjAJbhrlRNr8aheWipf5qqTQHd0b2nnxsPDy
-B47l7/BRI6sNAFuQ3aaO0TskiOug4+QKUP67nMiOFVthp0BH26eYAmzwcjEFLlV14wkTiYZ6D9ki
-2gXdPukmuMcRrSKqJx6klLNmhdNCa0kv280AvQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d857e9a2-2845-4c68-ae7d-f444ca03527c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>i4VAyjTJR0LXCTCYDM3i289K0EbO0QR2M8qssllcSOuKC+kYR5o4Ppw9Fw8l84l9NoLGjZ85YVTr
+OOzg3KAYdA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_65f26eb9-88cd-4bc5-a383-78626aabdbfe"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rDjJaAvz2lvSnASRXWbj8MNx4rmweesQLCd4uuK0D/S5tqjBFxI116WMx0UJX+XhwgvWy/KYSHJ/
+gk45y2Tuig==</DigestValue></Reference></SignedInfo><SignatureValue>GLq8Yhp8Yv/HKlIojqF/K8aYfVQeqeMa6jkPHAPTX5kmxSweuSOZTDjEyQlGQVYdU/DXko1Qk5UF
+W8kT96yziPMmydIKSvhUAjLKipRaLR0oMPGDLhpLkpJlC5v7azSTt/Z0Csyrd5j9Tea6sLTMhAUJ
+BKJVn2OSwEkr0jTXqh2XGFfB25Lenju4urQHER/ge2HtQcBRFRerlc6PclM/4BfRiMN6E+fclAhZ
+aqcOEiiIVaLHxNlgwpyJpJjxzkVsnkLG+76XHYJK6INh/11P3tC1tgmk8P7SD/TsXtKMv19OIpIB
+PKtPucQknMC4G/SNDRm4Ge0xl+ZvTnNPlpF9Vg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -848,4 +834,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5aca6ee7-c9ca-41da-b223-c63339707e57" Target="#_9dbf2fff-a12e-4aa0-99d7-1d239619b5b8"><Timestamp>2022-05-25 18:54:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_65f26eb9-88cd-4bc5-a383-78626aabdbfe" Target="#_d857e9a2-2845-4c68-ae7d-f444ca03527c"><Timestamp>2022-05-25 18:58:11</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -681,7 +681,49 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="352" posY="224">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_3"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_Ll5jEEDHEeymTcTr3cECgw-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="RIVER">
+      <column comment="" key="false" length="-1" name="DATE_UPLOADED" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_UPLOADED"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="PALLETS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PALLETS"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="MAX_PALLETS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MAX_PALLETS"/>
+      </column>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="RIVER" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row3.DATE_UPLOADED" name="DATE_UPLOADED" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row3.PALLETS" name="PALLETS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row3.MAX_PALLETS" name="MAX_PALLETS" nullable="true" type="id_BigDecimal"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="DATE_UPLOADED" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PALLETS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="MAX_PALLETS" nullable="true" type="id_BigDecimal"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="416" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_3"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -755,9 +797,13 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out2"/>
   </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFileInputExcel_3" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_3" target="tDBOutput_3">
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFileInputExcel_3" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_3" target="tMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
+  <connection connectorName="FLOW" label="RIVER" lineStyle="0" metaname="RIVER" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tDBOutput_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="RIVER"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
@@ -774,13 +820,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_eab32b72-d62b-4e36-8c81-5a8de126d7db"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gPELvUhlhTqUWp74jz1volU/BIPrh4LYlZosTEUCPNRkWkprJU+Vz/CwZJno3SDe0D+1yZa5b1HO
-V/zibGIW7A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9ead6dbd-0feb-47f2-9da2-c735ca8f1ee1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>y5uxMd9LFBoGdygV8SgXO4Z2Nj9PwIA2yF86Bw/mURzrcizgYqRZcLcqoDQD4S2jgC/bF4v+Gstu
-Fv0PrqcdhA==</DigestValue></Reference></SignedInfo><SignatureValue>k7iMwW1C20zZ5ydIg9xUj/yueuEvqsWBC/Et8g3JpI38hXOVXqbjCmwfegJoXYEnuu2EUX4dW9ja
-luLcFbJizON7MKgl4NrqEFACxet/tN8vYBVeLH3FKE4VpnuqpSXEOXZZ7QIVMOUkBcfMVyq85jbl
-xlE8iYEuGnB4d59PZvQn77uDAq+KJU8w9JVUdjTsoOb4Yq6OvO/+md2ukoegToZDFc8D9VWUofmF
-j45IKghFaVef2qbQJw9oFKDAP+QNiuqqG18xv/bXUW43xeUoCz4qylVS7k9fe5D7cxR1ccYJjLmd
-H9pYVZwNEZpEhCzCVCOZ1eYkKcc6sHnfqxgEew==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9dbf2fff-a12e-4aa0-99d7-1d239619b5b8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qWpYsfeFiswQ4GbiNt9qaSLyjhFDrBubSFGbaeLboyWPmHGRKgb9vSBzx69hC2FoZh2Yo6Nlm+EK
+1GyO3bidZQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5aca6ee7-c9ca-41da-b223-c63339707e57"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OhFoQOO223QY0pK85/yyeqjLOcKeZNQkqCaOnp0UMqosaE2Qy1ggwNHdbyjliSX45T+A6/nlRiYr
+eklXg6Gsvw==</DigestValue></Reference></SignedInfo><SignatureValue>BGJQHru1i6qhQXFWRt7BQ1lILL+e+yvZfEKYjJek2C1lkPwkvfCCyfpiJHzh5HnM6AEe8TmtYIfC
+jtiIEKAmV998uAgIAxuBQr5b/Uw4wSs0QAfQbTVCwI1SciFnSffeiMwrL3OWj+zfKMLGY/nHkuLZ
+3QDCAmocoeMuRiS8EDLofMHTjKM+DSs0U8EaQ1jsqjAJbhrlRNr8aheWipf5qqTQHd0b2nnxsPDy
+B47l7/BRI6sNAFuQ3aaO0TskiOug4+QKUP67nMiOFVthp0BH26eYAmzwcjEFLlV14wkTiYZ6D9ki
+2gXdPukmuMcRrSKqJx6klLNmhdNCa0kv280AvQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -802,4 +848,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9ead6dbd-0feb-47f2-9da2-c735ca8f1ee1" Target="#_eab32b72-d62b-4e36-8c81-5a8de126d7db"><Timestamp>2022-05-25 18:52:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5aca6ee7-c9ca-41da-b223-c63339707e57" Target="#_9dbf2fff-a12e-4aa0-99d7-1d239619b5b8"><Timestamp>2022-05-25 18:54:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

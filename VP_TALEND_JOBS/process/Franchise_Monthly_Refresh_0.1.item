@@ -556,6 +556,7 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -637,6 +638,7 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="320" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -705,7 +707,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -723,7 +724,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;with cte as (&#13;&#10;&#9;  select distinct  a.*,b.Zip,b.store_of_loyalty&#13;&#10;&#9;  --,b.customer_identifier,b.brand_category,b.store_of_loyalty&#13;&#10;  FROM [TenTenData].[dbo].[ADP_shipped_sales] a&#13;&#10;  left outer join [TenTenData].[dbo].[Web_sales_category] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;  where a.transaction_date between  '2022-04-24' and '2022-05-21'&#13;&#10;  and a.originating_store = '6101'&#13;&#10;  --order by 9&#13;&#10;  )&#13;&#10; -- ,cte2 as (&#13;&#10;  select  &#13;&#10;   transaction_id,netamount as sales,NULL as customer_identifier,transaction_date, category&#13;&#10;  ,zip,store_of_loyalty,register_no,'ADP' as FLAG from cte &#13;&#10;  where zip is  not null&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;with cte as (&#13;&#10;&#9;  select distinct  a.*,b.Zip,b.store_of_loyalty&#13;&#10;&#9;  --,b.customer_identifier,b.brand_category,b.store_of_loyalty&#13;&#10;  FROM [TenTenData].[dbo].[ADP_shipped_sales] a&#13;&#10;  left outer join [TenTenData].[dbo].[Web_sales_category] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;  where a.transaction_date between  '2022-05-22' and '2022-07-23'&#13;&#10;  and a.originating_store = '6101'&#13;&#10;  --order by 9&#13;&#10;  )&#13;&#10; -- ,cte2 as (&#13;&#10;  select  &#13;&#10;   transaction_id,netamount as sales,NULL as customer_identifier,transaction_date, category&#13;&#10;  ,zip,store_of_loyalty,register_no,'ADP' as FLAG from cte &#13;&#10;  where zip is  not null&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -787,7 +788,6 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="896" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -865,11 +865,11 @@
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBOutput_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tDBOutput_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row15"/>
   </connection>
   <subjob>
@@ -903,13 +903,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c96568ca-7805-49c2-85f2-0c015473ab75"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>n8xlrQRRjeVjkrNMOQ8dEWLLFgfZT0ROpvOMQbTh7feT1TyjXPrFMzDkVCsBL36AgezGkFIuzX0R
-U/F9mAqbIg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b5aca770-dd8d-441e-9baa-f7f9c1430b20"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>miCfGvSFXilOh1AUJcqZL2UCzkiSOzt8/xka4klBz5fZBmj9hoNARsLMusLp9Gk5yVOYXEIvVJS7
-wHC9HdcOFA==</DigestValue></Reference></SignedInfo><SignatureValue>npjSb/hkfGF/JhFNdse86ORHcAqVW87u1O8G+qgeNUGuIPX+aIPBg1zxCoqdM9g7afdqpC+yv2mX
-8Ht6BoUdO5lNIze46KiExX2rKOymSGCji9WjIh15cPrIiqx1qVdkRRqVQQJjSLu7BtbV30rYINHc
-GWyNCz5igaErjaK1qwrVn4tEpN13AuYqKBtoG9nlTZgN+mEJNxCyB/iwTiPJe0sSPh4bMDCRvG8H
-6dVTsQo0jyRY0KDYMae0vUGQItBgvB1XcX/dMZri3Tne13X9JEpgGDsy6Bq07wGbDfnOorrZl3mM
-iwwJ/TZcA2AfIJeBvqa92t5okMGuHRnwy7TEhA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1a3e420f-7a9e-43ee-85dd-06a84f52eca2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HwyCSK2eRc6B4p3RQajIUGxT2hmtR2VAlTUQWyrYEiimSkAI676RgZbF2zuiOOpZO7rCmukPFJaL
+xrYud8LebA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_005755c9-29e7-4236-8229-8da6ec639fc5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GYJgD+3qm6Mf2CDufgerNkrmxoSam/QXzF7VYQPf2c83pYFPA8PQRTAUBpiFUwrDOTsZSP21m1Jm
+ONUkHv0kyA==</DigestValue></Reference></SignedInfo><SignatureValue>RZOT6MdAahJ3zH/xokQKIJaNVWNjwGrhxw6GAvcj7jrDlgYB4o4ffEArXbIEI4CSe2d20BJB+W+S
+rXVQ6QDnMLPZxWhrgeClt5rmwM+gEOGJLpQvAQvJ3vNYtPOeCkYspxy6oSQXSYrwbTe7KRCcgpoO
+nxVeUu/LT6PVBYYFHyp+EXpQyBqXmFt1xv8MBYQY2o7bn8pEd2MvnRMxQkztxxChGJ4KhO9ZzQLf
+HxAIOhktcVBfrK1nvH1XSKVyKXsbsgEKZx7Cdh9x08t0PMG/mfL6Dk2MekyNk6ZaSqF8z+grW5+S
+E2kiZh2jvBK/8e4nQhqO+JaJCxmohMorrDKQuA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -931,4 +931,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b5aca770-dd8d-441e-9baa-f7f9c1430b20" Target="#_c96568ca-7805-49c2-85f2-0c015473ab75"><Timestamp>2022-06-27 19:04:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_005755c9-29e7-4236-8229-8da6ec639fc5" Target="#_1a3e420f-7a9e-43ee-85dd-06a84f52eca2"><Timestamp>2022-06-27 19:08:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

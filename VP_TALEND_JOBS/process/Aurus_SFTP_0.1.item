@@ -111,6 +111,7 @@
   </parameters>
   <node componentName="tFTPGet" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPGet_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TEXT" name="HOST" value="&quot;pos2.auruspay.com&quot;"/>
@@ -158,12 +159,14 @@
   </node>
   <node componentName="tInfiniteLoop" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tInfiniteLoop_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="WAIT_MS" value="900000"/>
     <elementParameter field="TEXT" name="LABEL" value="loop_instore_file"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tFTPFileExist" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPFileExist_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tFTPConnection_1"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;pos2.auruspay.com&quot;"/>
@@ -202,6 +205,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;Aurus_file_&quot;+TalendDate.formatDate(&quot;MMddyyyy&quot;,TalendDate.getCurrentDate())+&quot;*.csv&quot;);&#10;&#10;//TalendDate.formatDate(&quot;MMddyyyy&quot;,TalendDate.getCurrentDate())&#10;//Vitamin_Shoppe_cancelled_subscriptions_09102019014014"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -209,6 +213,7 @@
   </node>
   <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="TO" value="&quot;vaishali.patil@vitaminshoppe.com&quot;"/>
     <elementParameter field="TEXT" name="FROM" value="&quot;FROM_MAIL@vitaminshoppe.com&quot;"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
@@ -239,7 +244,7 @@
   </node>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
-    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/sqlftp/Aurus_SFTP/&quot;"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;//wva-sql-etl/SFTP/FTP_FILES/Aurus_SFTP&quot;"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
     <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="YES"/>
@@ -469,20 +474,25 @@
   </node>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFTPGet_1" offsetLabelX="0" offsetLabelY="0" source="tFTPGet_1" target="tJava_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value=" !((Boolean)globalMap.get(&quot;tFTPFileExist_1_EXISTS&quot;))"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If1"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFTPGet_1" offsetLabelX="0" offsetLabelY="0" source="tFTPGet_1" target="tFileList_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tInfiniteLoop_1" offsetLabelX="0" offsetLabelY="0" source="tInfiniteLoop_1" target="tFTPFileExist_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFTPFileExist_1" offsetLabelX="0" offsetLabelY="0" source="tFTPFileExist_1" target="tFTPGet_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tSendMail_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileInputDelimited_1">
@@ -523,13 +533,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d531d49f-cc99-42f8-b119-89ac25934752"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1ELYEyizplbc4pb95P2Vke/yGkZNpLlFAxjmpRXpDmpcdX+mWzK1OmlLZl7dErUul8fYm0EbioZ7
-0p1332sHbg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7edfd00e-0664-4087-b9c8-09e71ce3d59d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8EWWt8IQqLUoSQFwOK/fIFwGv93MBIPfjgJoknJ7H9ZOdDNqAJFQk3ZLvMshi9s8+djdBxt9zXy2
-LrwvNWe08Q==</DigestValue></Reference></SignedInfo><SignatureValue>gaK0WW0YPbI9gOvH6RgQKKWQbgYf3CncVffbtVBIna9hRRz2h4+Y6zTDo3HavrtmD16hzDkgb+Tz
-c5S0F0rm2CcFc4lVrv3kYsFcGLo7xpkJ/TOFff72zcLVuIPYNYHBKPw4nWEdW9XBmIwiCTu23Ey+
-O5t/8AtXGsYCeo4uCjrh/E4DcWGEiGdRvuHP44z7pwfMMwZZ/yMCQKOJOV8+S5CDrzCLa1M5o74m
-Qh+2Nn+nzzKQWgz5WK+kI9kNk9KtIyjNr6zya0WBn75BRQqBWts/hxifyQupyffn2Au4RfL+XwWg
-dQScHxUnRhuYQvjsQpVXS+qJKr68ux9q8kDmVg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4594931e-2d8d-4427-be34-fe477bcfd8c6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2qzuyLUfgNvcpZLFwwCHNJDBDDOKl7MbqWFiRZI9k8q+HIhPWBG+agkPi6J/GSn7i/xhQfLGjLPt
+U1xQJFHT8Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_deb3189a-b4bb-4243-a242-2a61efbe02b4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>I7nA8Lvb6vkWsrI9a0FC/249rTXcrujEnT53TiJBv4HkEDmfrNS3Kr2wU3XyFgXV+r6BusLz9YwE
+KLS0TOaPlg==</DigestValue></Reference></SignedInfo><SignatureValue>Q+uTAsgbSBoMR3F600eKNGaBInQSPLfVgOJEip3oLIP4/kYwOm1vtLyI4+db2veJwoyIU+O478v5
+4ok/7kMefusrnYUogy0anr21KGiTM+CMQKDQKfsfx3Aq/bXqvUuOj9VNbhYaxe1fGPjf0L9/y7Nn
+brbDCoXdcL6x6FZmFDAfp8ySC1rI77gXdAM2DpZFkEqYB4TnVDEiTIfkz8Tw4R1Xrhi1GYiYi426
+n7BejcHY77SxJLiDZoV2cBU3K7+f2X9RurxJzCVBjXWhT1qsNbvT+gFRMJElH/RwRS2MkQavq8pv
+wl6+/YaxHOqU5haB3yBS0jKsDdXQK3xN1sg8vw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -551,4 +561,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7edfd00e-0664-4087-b9c8-09e71ce3d59d" Target="#_d531d49f-cc99-42f8-b119-89ac25934752"><Timestamp>2022-06-28 12:33:19</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_deb3189a-b4bb-4243-a242-2a61efbe02b4" Target="#_4594931e-2d8d-4427-be34-fe477bcfd8c6"><Timestamp>2022-06-28 15:27:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

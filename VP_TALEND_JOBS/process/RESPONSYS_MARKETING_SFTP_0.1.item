@@ -241,10 +241,10 @@
       <column comment="" defaultValue="" key="false" length="-1" name="CUSTOMER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_ID"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="EMAIL_ADDRESS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="EMAIL_ADDRESS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="EMAIL_ADDRESS"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="FIRST_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="FIRST_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="FIRST_NAME"/>
       </column>
       <column comment="" defaultValue="" key="false" length="-1" name="EMAIL_INDICATOR" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
@@ -259,13 +259,13 @@
       <column comment="" defaultValue="" key="false" length="-1" name="CHURN_PROBABILITY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="CHURN_PROBABILITY"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="PROBABILITY_RANGE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PROBABILITY_RANGE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="PROBABILITY_RANGE"/>
       </column>
       <column comment="" defaultValue="" key="false" length="-1" name="DECILE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="DECILE"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="NEW_CUST" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="NEW_CUST" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="NEW_CUST"/>
       </column>
       <column comment="" defaultValue="" key="false" length="-1" name="STATUS_TYPE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
@@ -464,9 +464,10 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
-  <connection connectorName="MAIN" label="row1" lineStyle="0" metaname="MAIN" offsetLabelX="0" offsetLabelY="0" source="tDBRow_1" target="tDBRow_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tDBRow_1" offsetLabelX="0" offsetLabelY="0" source="tDBRow_1" target="tDBRow_2">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPConnection_1"/>
@@ -483,13 +484,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_61381e41-7076-4c43-82e7-d5a9ca411234"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>uBDyuaRZxtkIuaBsvHrwEooZRMSVram2gP3k2BPG833a7hsgLe2+RqxVdkMmthQ8fvq5N2nVWSvK
-Xh7+7MsiPg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0e23969e-1599-4853-a818-2e9196b1a643"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tM1VV3NLB6L8SV0V8eRIObfZDsutWJICuIhEgZ+rOFq3m5eZm7KQrMOg+j9Pj8bjryI3ojzC/alo
-MixG2votSQ==</DigestValue></Reference></SignedInfo><SignatureValue>bYXfDS+GBbNgHFTUkr9r0FxQ8GE2IHl0iBjUTLU2kwNZoX9UEvNsOeMwj6us30g+2iApyqvJlk/Y
-y4xeUaacv4URos8C9Re7oJkO7Bvuc4wlcVLr/+SRkExisWzXA4tzYEzItOzAHQo3MzXx3JtuJQUq
-uL8BttanddF5VW5vIx8pUaQYxV+FT/x0lLvjWCU1dAMQ9cTLmNEnVOB1nr2qu2Ku5FaMrnw6fdyi
-trjCvy/l5Ss5f3kNtxpVOxZe5lSHEg/t0HuhNZgRCITMyhVy9qstGDm3+DtKHOBfbJAnO0bYI9o2
-tIcuv2hLHEYNgQTVsQg9obxGD7VFKYOjCMrB3w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f879103c-e0de-4259-be16-23faae4ca730"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PI0hcrhSYaPBWd2vD30u/HhsfhstyA9O4RDy9a3SFp4zvL4YSTIOH36Iw9jCL6CcZjvGDdNLnGvG
+ZyiRZwU0xw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0c97bf0d-9a16-477e-93cf-152689da0cd9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ufj3yjpELNRioUNdMXwFUHDlJF8JXRpvJb3NR/CxXWS76t2rTXJdLkbLpcbG4UPwl9aBRxoYK+tK
+gWhLJ/jj6w==</DigestValue></Reference></SignedInfo><SignatureValue>mjcKtFprf5n3lJN13hUDA5NvZJyqPew+S+cOczRvL/rt9yQd26WhA9jo3/z7c+Yy9wMCE/fP0k1D
+C3K+ijky/ZjeBYKg1noR5IdKV8jSTDqqpII81h5AGZ1dnwC2QoIYi07FTgacbJHUWZ8znskww4dw
+RcnepQzwjjqxTFLYIYdGnDh9WXg7Y9Ruo+fR30iHiS7XAKi7MQ/Ts1OyjDQ9mpZjQD5us7y7Upkb
++pTkO4UA7BRj6S2SdmZaIBM39OHloCa5Gbg5fzwnCTGDwt1BUK5OZABmke2z6NWnMoyEn+G9AzsJ
+Z2OzkR6Xb4K59sRFO3QagjmpFC245gYy2pubOA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -511,4 +512,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0e23969e-1599-4853-a818-2e9196b1a643" Target="#_61381e41-7076-4c43-82e7-d5a9ca411234"><Timestamp>2022-07-15 18:10:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0c97bf0d-9a16-477e-93cf-152689da0cd9" Target="#_f879103c-e0de-4259-be16-23faae4ca730"><Timestamp>2022-07-15 18:11:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

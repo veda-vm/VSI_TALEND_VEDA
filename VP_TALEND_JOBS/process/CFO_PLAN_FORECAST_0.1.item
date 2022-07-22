@@ -1511,6 +1511,7 @@
   </node>
   <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;//w2k12-find-prod/Plan&amp;Forecast/New Business Flash Reporting Loads/Digital/July  (GA CORRECTED) Fcst and Plan Financial Reporting Load Data EMAIL.xlsx&quot;"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
@@ -1589,6 +1590,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="224" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -1641,6 +1643,7 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="384" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_7"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -2217,10 +2220,12 @@
   </connection>
   <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tFileInputExcel_3" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_3" target="tMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
   </connection>
   <connection connectorName="FLOW" label="GA_PLAN" lineStyle="0" metaname="GA_PLAN" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tDBOutput_7">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="GA_PLAN"/>
   </connection>
   <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tFileInputExcel_4" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_4" target="tMap_4">
@@ -2318,13 +2323,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_00617040-8c88-4942-aff9-0a9c869ad950"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TJ4EPDD5O4lfm4EkuN1mRMjRgft4ucXx/ciBBB2YIn1z1nrBcIkvM25heSX1oJAT+r08lf8LTMyM
-Pu46Xr9Huw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3635db7a-44bf-40d8-a34c-ad6fc608400d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xDeDVuuphJnsy/DLtXjlxJAPIJGLLrNMKUGkTNyrr7bu5rRJosxvuxOXkX1nyidcabyobdMM3hQu
-OP8TGVgqFA==</DigestValue></Reference></SignedInfo><SignatureValue>RkdjSP4/Qv+xnBXPtoooU4gJ20KfVquLHnvfsiBcHmj8htXoUTGgqc74dIjuB17kWcdChCWWsysn
-ZC5mfHnyp8nsFAnMe2NUTHNsyyjd8wbEBifu1FgX1MbvvtbX/GH+rgRijBGSqKZlHwL2t/csy55t
-ljE6Py2Z+Ue4IG2EQXwHGMRccfe1AWDlrMAJkLikaB1c2dqZFl46RaycHzD4rgQz05tsiPkI/r4U
-z8U53VOjKnF6GcSlgAoG+sw8SsFmGpWh3ceKJGU/LHyWhCggIptbKbak5giXYqtRgn+skYU7Rtpq
-qo4eWdHPCFeV1xJ7ENESLX8PV7A9vC84cltvAg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_914483d7-dd50-4f0f-976d-c6ecc56eaeb2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NZ+V5y21cYfGIqe5h0PwKmgT/G0i40F6ef0r3uLnP1NW02aqer6he25VEISieaHnO4/5YT/aEK9G
+yIAsSkMFEA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_693d7d7a-7477-4cb6-87e5-d451673c056f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ma6NyexMzoKsnDH56Qh2SGNBc8EKHevvJ8LFxqDqtyzZoQ36bmBSQeA5pOkYjdtOpyqhRhLSE5B/
++XhBYdwUqQ==</DigestValue></Reference></SignedInfo><SignatureValue>dXlkjRfctPII/+vrMYYNa4WqDfrVGFmiNoBPNOtUKEmYyEaVibtSwQYHZHIJQPyWwlz3uOT8AkKV
+8Tkks/KNy+RA4NTI1zdsIKI99e6o4QUBGZnqfpR3wplK7Sp3TeiIX6U/T+e16gMov9JSiVMqIW9A
+aisQcsozTUSaJYoCByBC6bwFcK2w5lypjJwJxajJ/OLHsqmyE7OxSipvMSA1Wpek9jPXqlGuRnzL
+xqY2d/fHAsmthL4iTS3RUyHrVSb7IoH7LtQhPxQCgPHhir1mE3UwktnbEMPbpRaTi1ew+vQixEB4
+BTGWZBMb40qYhcE/Nn0NfZm4sOM4rW+Jz1Mcfw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -2346,4 +2351,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3635db7a-44bf-40d8-a34c-ad6fc608400d" Target="#_00617040-8c88-4942-aff9-0a9c869ad950"><Timestamp>2022-07-22 18:20:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_693d7d7a-7477-4cb6-87e5-d451673c056f" Target="#_914483d7-dd50-4f0f-976d-c6ecc56eaeb2"><Timestamp>2022-07-22 20:12:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

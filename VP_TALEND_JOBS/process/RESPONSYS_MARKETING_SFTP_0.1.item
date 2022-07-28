@@ -113,7 +113,6 @@
   </parameters>
   <node componentName="tSnowflakeRow" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="160" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_4"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -215,7 +214,6 @@
   </node>
   <node componentName="tSnowflakeInput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="320" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -258,7 +256,6 @@
   </node>
   <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;//wva-sql-etl/SFTP/FTP_FILES/CHURN_LIST/EM-CHURN.csv&quot;"/>
@@ -600,6 +597,7 @@
   </node>
   <node componentName="tFileRowCount" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileRowCount_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;//wva-sql-etl/SFTP/FTP_FILES/CHURN_LIST/EM-CHURN.csv&quot;"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="IGNORE_EMPTY_ROW" value="false"/>
@@ -612,6 +610,7 @@
   </node>
   <node componentName="tFileRowCount" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileRowCount_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;//wva-sql-etl/SFTP/FTP_FILES/CHURN_LIST/EM_Promotional_Data.csv&quot;"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="IGNORE_EMPTY_ROW" value="false"/>
@@ -624,6 +623,7 @@
   </node>
   <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="TO" value="&quot;Vaishali.patil@vitaminshoppe.com&quot;"/>
     <elementParameter field="TEXT" name="FROM" value="&quot;From_Mail@vitaminshoppe.com&quot;"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
@@ -656,7 +656,6 @@
     </metadata>
   </node>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_4" offsetLabelX="0" offsetLabelY="0" source="tDBRow_4" target="tDBInput_1">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
   </connection>
   <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDie_1">
@@ -669,7 +668,6 @@
   </connection>
   <connection connectorName="MAIN" label="row1" lineStyle="0" metaname="MAIN" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFTPPut_1" offsetLabelX="0" offsetLabelY="0" source="tFTPPut_1" target="tFileRowCount_3">
@@ -696,9 +694,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileRowCount_2" offsetLabelX="0" offsetLabelY="0" source="tFileRowCount_2" target="tFileRowCount_4">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk6"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileRowCount_4" offsetLabelX="0" offsetLabelY="0" source="tFileRowCount_4" target="tSendMail_3">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk7"/>
   </connection>
   <subjob>
@@ -756,13 +756,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_30ac2f24-c4ee-4f87-8f7a-52d92833f1e8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>i17jGIfuGkVmcOTi5NLV4AcfKJequS7QYg9zVYH1Z9enLR9MKlqir5AeIQahe58SMj3MlqX3t7ae
-Ayly51pCRQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_43a36012-a8b9-4d76-b9ec-f0b25e9bcc47"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qf2Y2Fi2fqLvBE60xDhKqpEqmNW7T1+2COQRlCoJHTLRhduBcIEowkaSeQwjpopZE5QbQNeAunp0
-YNN5BHteCg==</DigestValue></Reference></SignedInfo><SignatureValue>MCEdRlILwquh56zmG0+rewtiFE1OiswnrzgUDD2iWW5V1HLh9tqmAMN8DiiIc5DVYkLRLSh8R/pc
-TnHd/uFeLr6GQlCMT7bsW1KG19/DnTkZvfguz9PYikAK4WKJaEsySnX3X1wp1sHQSI0hjN8PLuLH
-8uz6N7oqi7/im3Z/RBNAP90zUj/8ZnFhI1gMWlIgd0kSxeR2ZD+hnjhVhgvU8A0ldHAS9C9Rv7th
-BqfAgX/mB1jyKM+vXM1vPmigxdNSQX9C/ie7gw7jVFCToX09t+Q9IL1Wc/lv6AuJ/f8NioHo2QG3
-kn/qk+UjwptCRRBHcH56NW7BFhViRq+eCJXauw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fcbd8c73-a46e-491c-b78a-461b580b9597"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>i0AU0auPx1rFKWN/Pnhu+lxRWhBArFmBYpQxyP6IXOn4EtuGAVwaJ6M9tZt6d3B8uFaPuoPIBh9O
+3MzcehEfHg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_24ec4aee-1bb8-4005-8413-c5e66d8b1180"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VJ1qOH2p4INwroeQBiXs/VH9wEGrTvBsORxg70haShgBMKJ/4g/30OqNrWuiEX7clZJIVZDDAHlH
+ffsXidSyXg==</DigestValue></Reference></SignedInfo><SignatureValue>iR3/f+60j3ycGN7Vq1VpDlxqVEiuggamy63Hx0qrEmZUBOgWvzfR24buXehJ82ycuz+CgfJE81Pw
+KEMG8H7VU8E+DvaxMUggjthjL/UjsUmR/dkedAswgZm5RcVN+yxTblEgfGHjydDTLaru6RbWCFAe
+r9Cd2TkcA58MlGuOi5bId0K3tZHgE9vYmuCPDAkQLNNz5ReP1AE/bbACl8pO6uArF0oR8FaUwU4n
+0xNtqk0PR+vIY+siA0t/BVvIP6m3dIWs1nBBo1ggIevnXVz1R5kb1z742GFSLMHVPI950b+wZ9Md
+cw/01mOcTItVtHx96fx+KGfS6q5WUdYncfBX0A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -784,4 +784,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_43a36012-a8b9-4d76-b9ec-f0b25e9bcc47" Target="#_30ac2f24-c4ee-4f87-8f7a-52d92833f1e8"><Timestamp>2022-07-28 01:45:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_24ec4aee-1bb8-4005-8413-c5e66d8b1180" Target="#_fcbd8c73-a46e-491c-b78a-461b580b9597"><Timestamp>2022-07-28 14:59:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

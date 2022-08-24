@@ -556,6 +556,7 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -637,6 +638,7 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="320" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -705,7 +707,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -723,7 +724,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;with cte as (&#13;&#10;&#9;  select distinct  a.*,b.Zip,b.store_of_loyalty&#13;&#10;&#9;  --,b.customer_identifier,b.brand_category,b.store_of_loyalty&#13;&#10;  FROM [TenTenData].[dbo].[ADP_shipped_sales] a&#13;&#10;  left outer join [TenTenData].[dbo].[Web_sales_category] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;  where a.transaction_date between  '2022-06-26' and '2022-07-23'&#13;&#10;  and a.originating_store = '6101'&#13;&#10;  --order by 9&#13;&#10;  )&#13;&#10; -- ,cte2 as (&#13;&#10;  select  &#13;&#10;   transaction_id,netamount as sales,NULL as customer_identifier,transaction_date, category&#13;&#10;  ,zip,store_of_loyalty,register_no,'ADP' as FLAG from cte &#13;&#10;  where zip is  not null&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;with cte as (&#13;&#10;&#9;  select distinct  a.*,b.Zip,b.store_of_loyalty&#13;&#10;&#9;  --,b.customer_identifier,b.brand_category,b.store_of_loyalty&#13;&#10;  FROM [TenTenData].[dbo].[ADP_shipped_sales] a&#13;&#10;  left outer join [TenTenData].[dbo].[Web_sales_category] b&#13;&#10;  on a.transaction_id = b.transaction_id&#13;&#10;  where a.transaction_date between  '2022-07-24' and '2022-08-20'&#13;&#10;  and a.originating_store = '6101'&#13;&#10;  --order by 9&#13;&#10;  )&#13;&#10; -- ,cte2 as (&#13;&#10;  select  &#13;&#10;   transaction_id,netamount as sales,NULL as customer_identifier,transaction_date, category&#13;&#10;  ,zip,store_of_loyalty,register_no,'ADP' as FLAG from cte &#13;&#10;  where zip is  not null&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -787,7 +788,6 @@
   </node>
   <node componentName="tSnowflakeOutput" componentVersion="0.27.3" offsetLabelX="0" offsetLabelY="0" posX="896" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -1016,11 +1016,11 @@
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBOutput_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tDBOutput_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row15"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tDBOutput_4">
@@ -1064,13 +1064,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_722e746e-2eaf-4480-9536-1217f428ce8d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HjCUTCF4KjbEWE3OIstbPrWHkGPZtFa1UPH3n7WyGKoANF9d8jpwezJxXuO3CvZc2PbfGZMqFzun
-M9RAVDkUHg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_029ed62f-2a6f-420d-b9e4-4a3695002acf"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+a+BcS2rIKnLNVUnRR6TPHIv3lHJBuSOCpfo9Ur3YayzYi0qiWe4GzIBmoW2eRSQ/ZX07yX+Iq6B
-URaK8URI/w==</DigestValue></Reference></SignedInfo><SignatureValue>gVCYRJsmllAZFBquEcTx+5SAspCcLonfmc9lITIH3LgrxQpLEAmQIVfPI8Ho7xXMNBqDXBqzTuZP
-Py2K2zj7wavY4fik0wEb/DAMF0zDCY5632vYsI2X3jw+WKjAy/efHHeTC8dmZdy94XFR2kpgmyTy
-/QlK5mxGifJo30zNVCYmR6ejMgqbyMbUcZDX8q61cpe9AxdurYKXl8MdYxt9AhXlPIr/FPci2TvG
-II6EDbAheoSXI2SKW0V25Xz76ZSNFJ55hLpsrQq+QNoDwsGufIV9zi9gUxXagzJEoXHIrtCIWfQ6
-a7a0vz6vu3VpFAv9B3z1J+tYQAVjJ5vXmNWBcQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d583a5a5-b242-4123-94bf-b8a580fd5c7b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2CewuzzBiOw7aHwP1zj02u7VJ6HxOQJy89GwqWCCdOKXrbpmBww5Rzo6Ex1Bs8svEgudRmVcKxJO
+TjLSTJm/gQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6b6bdf96-c1aa-47a0-ad5d-787a245201d5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>i+S6o1LW7dRAyHyDDp+M0GPqwSdnni0cN63lktDMfh23SqHY7Q6EtuDPrPgsd1vgOPKOyQut7MnG
+WuWkab13Mg==</DigestValue></Reference></SignedInfo><SignatureValue>ZRjQuCQ0klTt4YlyTTTEDIb682lzoOco3s/+Tkmj2XKMXEKdl4xpG+XyHzFA2pR4RbaOYxhQuZek
+XT9Y5Xwtp9id2rkgA771ZlAccHMjYezc1GZyzTSyq32JOJHkaz2UAVb6HedZFE6epOJctVDbkpEa
+yseyLjCH5YqFmpkBCu2SxnO3Bk8TyeUqPv3TFSIItq0Ka+ad0r35eOI3COOQs7BeCeuSfjaBVVun
+22C0ggSiudkb30VJmQdyoA3yw0Cwr9pwXtgcsLi9SZt1tE58a7kj5Q3cnw8bb7c/FIQ5iln7zFU/
+pIRZCbaKISYVHq5bZudVo6fRlb395nb3xGqoaQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1092,4 +1092,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_029ed62f-2a6f-420d-b9e4-4a3695002acf" Target="#_722e746e-2eaf-4480-9536-1217f428ce8d"><Timestamp>2022-08-24 15:26:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6b6bdf96-c1aa-47a0-ad5d-787a245201d5" Target="#_d583a5a5-b242-4123-94bf-b8a580fd5c7b"><Timestamp>2022-08-24 15:28:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
